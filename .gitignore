@@ -3,3 +3,12 @@ env/
 
 # Database
 db.sqlite3
+
+# Pycache
+accounts/__pycache__/
+accounts/migrations/__pycache__/
+backend/__pycache__/
+reviews/__pycache__/
+reviews/migrations/__pycache__/
+stays/__pycache__/
+stays/migrations/__pycache__/

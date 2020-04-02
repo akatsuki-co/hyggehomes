@@ -28,7 +28,6 @@ INSTALLED_APPS = [
 
     # Apps
     'accounts',
-    'amenities',
     'reviews',
     'stays'
 
@@ -44,6 +43,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Debug Toolbar
+MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
+INSTALLED_APPS.append('debug_toolbar')
+INTERNAL_IPS = ('127.0.0.1', 'localhost')
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -114,3 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
