@@ -11,7 +11,10 @@ class Review(models.Model):
     """
     subject = models.CharField(max_length=30)
     body = models.CharField(max_length=1250)
-    stars = models.IntegerField(default=5)
+    stars = models.IntegerField(default=5, blank=True, null=True)
+    location = models.IntegerField(default=5, blank=True, null=True)
+    cleanliness = models.IntegerField(default=5, blank=True, null=True)
+    hospitality = models.IntegerField(default=5, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -21,4 +24,3 @@ class Review(models.Model):
 
     def __str__(self):
         return self.subject
-
