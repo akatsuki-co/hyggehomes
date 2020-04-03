@@ -4,6 +4,9 @@ env/
 # Database
 db.sqlite3
 
+# Static files
+static/
+
 # Pycache
 accounts/__pycache__/
 accounts/migrations/__pycache__/
