@@ -6,6 +6,7 @@ from .settings import DEBUG
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('rooms/', include(
         ('stays.urls', 'stay'),
         namespace='stays')
