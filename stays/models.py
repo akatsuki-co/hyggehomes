@@ -104,6 +104,7 @@ class Stay(models.Model):
     country = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
 
     objects = StayManager()
 
