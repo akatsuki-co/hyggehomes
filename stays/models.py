@@ -38,7 +38,7 @@ def upload_image_path(instance, filename):
     return f'{final_filename}'
 
 
-class Stays(models.Model):
+class Stay(models.Model):
     """The Stay model
 
     Arguments:
