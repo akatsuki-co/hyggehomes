@@ -1,0 +1,38 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#world .world-inner,
+#image-banner .image-banner-inner {
+  padding-top: 75px;
+}
+
+.navbar {
+  background-color: white;
+  opacity: 0.9;
+}
+
+#world h4 {
+  letter-spacing: -0.05em;
+}
+
+.rounded {
+  border-radius: 25px !important;
+}
+
+.stars {
+  color: red;
+}
+
+.green-stars {
+  color: green;
+}
+
+#footer i {
+  color: darkgray;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
