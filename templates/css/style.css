@@ -12,6 +12,10 @@ body {
   opacity: 0.9;
 }
 
+#signup-navlink {
+  display: none;
+}
+
 #world h4 {
   letter-spacing: -0.05em;
 }
@@ -36,3 +40,12 @@ body {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 768px) {
+  #signup-button {
+    display: none;
+  }
+
+  #signup-navlink {
+    display: block;
+  }
+}
