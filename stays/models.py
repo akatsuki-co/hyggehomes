@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 import os
 
 from accounts.models import User
@@ -38,6 +39,50 @@ def upload_image_path(instance, filename):
     return f'{final_filename}'
 
 
+class StayQuerySet(models.query.QuerySet):
+    def active(self):
+        """docstring for is_active"""
+        return self.filter(active=True)
+
+    def featured(self):
+        """docstring for featured"""
+        return self.filter(featured=True)
+
+    def search(self, query):
+        """docstring for search"""
+        lookups = (
+            Q(title__icontains=query) |
+            Q(description__icontains=query) |
+            Q(price__icontains=query) |
+            Q(city__icontains=query) |
+            Q(state__icontains=query) |
+            Q(country__icontains=query)
+        )
+        return self.filter(lookups).distinct()
+
+
+class StayManager(models.Manager):
+    def get_queryset(self):
+        """docstring for get_queryset"""
+        return StayQuerySet(self.model, using=self._db)
+
+    def all(self):
+        """docstring for all """
+        return self.get_queryset().active()
+
+    def featured(self):
+        """docstring for featured"""
+        return self.get_queryset().featured()
+
+    def get_by_id(self, id):
+        qs = self.get_queryset().filter(id=id)
+        return qs.first() if qs.count() == 1 else None
+
+    def search(self, query):
+        """docstring for search"""
+        return self.get_queryset().active().search(query)
+
+
 class Stay(models.Model):
     """The Stay model
 
@@ -47,14 +92,30 @@ class Stay(models.Model):
     title = models.CharField(max_length=30)
     host = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=1250)
-    main_image = models.ImageField(upload_to='images')
-    second_image = models.ImageField(upload_to='images')
-    third_image = models.ImageField(upload_to='images')
+    price = models.DecimalField(decimal_places=2, max_digits=20)
+    main_image = models.ImageField(
+        upload_to=upload_image_path, null=True, blank=True)
+    second_image = models.ImageField(
+        upload_to=upload_image_path, null=True, blank=True)
+    third_image = models.ImageField(
+        upload_to=upload_image_path, null=True, blank=True)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
     country = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     featured = models.BooleanField(default=False)
 
+    objects = StayManager()
+
+    # def get_absolute_url(self):
+    #     """docstring for get_absolute_url"""
+    #     # return f'/products/{self.slug}/'
+    #     return reverse("products:detail", kwargs={"slug": self.slug})
+
     def __str__(self):
+        """docstring for __str__"""
+        return self.title
+
+    def __unicode__(self):
+        """docstring for __unicode__"""
         return self.title
