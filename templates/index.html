@@ -29,38 +29,7 @@
         <title>Airbnb | Welcome!</title>
     </head>
     <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-sm navbar-light border-bottom fixed-top">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="{% static "img/airbnb.jpg" %}" width="125" alt="" class="img-fluid" />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    data-toggle="collapse"
-                    data-target="#navbarCollapse"
-                    >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-3">
-                            <a href="index.html" class="nav-link text-dark">Help</a>
-                        </li>
-                        <li id="signup-navlink" class="nav-item mx-3">
-                            <a href="index.html" class="nav-link text-dark">Sign Up</a>
-                        </li>
-                        <li id="signup-button" class="nav-item">
-                            <a
-                                href="index.html"
-                                class="btn btn-outline-secondary rounded nav-link text-dark"
-                                >Sign Up</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        {% include "index/navbar.html" %}
 
         <!-- World panel -->
         <section id="world" class="py-5">
