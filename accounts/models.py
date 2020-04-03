@@ -84,6 +84,7 @@ class User(AbstractBaseUser):
     )
     full_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
+    superhost = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)
