@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Stays
+from .models import Stay
 
-admin.site.register(Stays)
+admin.site.register(Stay)
