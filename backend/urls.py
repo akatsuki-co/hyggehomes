@@ -9,7 +9,7 @@ from .views import home_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
-    path('rooms/', include(
+    path('stays/', include(
         ('stays.urls', 'stay'),
         namespace='stays')
          ),
