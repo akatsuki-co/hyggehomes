@@ -16,6 +16,7 @@ body {
   display: none;
 }
 
+#main-header h4,
 #world h4 {
   letter-spacing: -0.05em;
 }
@@ -38,6 +39,25 @@ body {
 
 #footer a {
   text-decoration: none;
+}
+
+#main-header {
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  /* background-position: cover; */
+  background-size: cover;
+  min-height: 1000px;
+  margin-top: 90px;
+}
+
+.datepicker {
+  top: 120px !important;
+}
+
+.table-condensed {
+  width: 250px;
+  height: 250px;
+  margin-left: 22px;
 }
 
 @media only screen and (max-width: 768px) {
