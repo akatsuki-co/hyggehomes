@@ -7,6 +7,9 @@ db.sqlite3
 # Static files
 static/
 
+# Media files
+media/
+
 # Pycache
 accounts/__pycache__/
 accounts/migrations/__pycache__/
