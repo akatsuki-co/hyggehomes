@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import Q
 import os
 
-from accounts.models import User
+from apps.accounts.models import User
 
 
 def get_filename_ext(filepath):
@@ -17,8 +17,6 @@ def get_filename_ext(filepath):
     """
     base_name = os.path.basename(filepath)
     name, ext = os.path.splitext(base_name)
-    print(name)
-    print(ext)
     return name, ext
 
 
@@ -32,7 +30,7 @@ def upload_image_path(instance, filename):
     Returns:
         path -- path of the uploaded image file
     """
-    new_filename = instance.name.replace(' ', '_').lower()
+    new_filename = instance.title.replace(' ', '_').lower()
     name, ext = get_filename_ext(filename)
     final_filename = f'{new_filename}{ext}'
     print(final_filename)

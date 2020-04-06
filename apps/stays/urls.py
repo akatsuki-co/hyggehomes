@@ -1,6 +1,6 @@
 from django.urls import path
 
-from stays.views import (
+from apps.stays.views import (
     StayListView,
     StayDetailView,
 )

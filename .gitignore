@@ -7,12 +7,15 @@ db.sqlite3
 # Static files
 static/
 
+# Media files
+media/
+
 # Pycache
-accounts/__pycache__/
-accounts/migrations/__pycache__/
+apps/accounts/__pycache__/
+apps/accounts/migrations/__pycache__/
+apps/reviews/__pycache__/
+apps/reviews/migrations/__pycache__/
+apps/stays/__pycache__/
+apps/stays/migrations/__pycache__/
 backend/__pycache__/
-reviews/__pycache__/
-reviews/migrations/__pycache__/
-stays/__pycache__/
-stays/migrations/__pycache__/
 .vscode/settings.json

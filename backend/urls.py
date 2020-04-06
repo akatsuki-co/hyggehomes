@@ -4,13 +4,14 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
 
-from .views import home_page
+from .views import home_page, landing_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
-    path('rooms/', include(
-        ('stays.urls', 'stay'),
+    path('landing', landing_page, name='landing'),
+    path('stays/', include(
+        ('apps.stays.urls', 'stay'),
         namespace='stays')
          ),
 ]

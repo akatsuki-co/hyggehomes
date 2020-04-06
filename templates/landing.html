@@ -1,127 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous"
-    />
-    <!-- Bootstrap 4 -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Airbnb | Welcome!</title>
-  </head>
+{% extends "index.html" %}
+{% load static %}
 
-  <body id="home">
-    {% include "index/navbar.html" %}
-
-    <section id="main-header" class="py-5">
-      <div class="container-fluid">
+{% block content %}
+<section id="main-header" class="py-5">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3 py-5 px-3 mx-5 bg-light">
-            <h4 class="pb-3 font-weight-bold">
-              Book unique places to stay and things to do.
-            </h4>
-            <div class="card">
-              <div class="card-body">
-                <div class="form-group">
-                  <label for="where" class="font-weight-bold">Where</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Anywhere"
-                  />
+            <div class="col-sm-6 col-md-4 col-lg-3 py-5 px-3 mx-5 bg-light">
+                <h4 class="pb-3 font-weight-bold">
+                    Book unique places to stay and things to do.
+                </h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="where" class="font-weight-bold">Where</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Anywhere"
+                                />
+                        </div>
+                        <!-- Datepicker -->
+                        <div id="datepicker-container" class="form-group">
+                            <div class="d-flex font-weight-bold justify-content-between">
+                                <label for="check-in">Check In</label>
+                                <label for="check-in">Check Out</label>
+                            </div>
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input
+                                    type="text"
+                                    class="input-sm form-control"
+                                    name="start"
+                                    />
+                                <span class="input-group-addon mx-2">to</span>
+                                <input
+                                    type="text"
+                                    class="input-sm form-control"
+                                    name="end"
+                                    />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>1 guest</option>
+                                <option>2 guest</option>
+                                <option>3 guest</option>
+                                <option>4 guest</option>
+                                <option>5 guest</option>
+                            </select>
+                        </div>
+                        <div class="form-group py-2">
+                            <input
+                                type="submit"
+                                value="submit"
+                                class="btn btn-outline-danger btn-block"
+                                />
+                        </div>
+                    </div>
                 </div>
-                <!-- Datepicker -->
-                <div id="datepicker-container" class="form-group">
-                  <div class="d-flex font-weight-bold justify-content-between">
-                    <label for="check-in">Check In</label>
-                    <label for="check-in">Check Out</label>
-                  </div>
-                  <div class="input-daterange input-group" id="datepicker">
-                    <input
-                      type="text"
-                      class="input-sm form-control"
-                      name="start"
-                    />
-                    <span class="input-group-addon mx-2">to</span>
-                    <input
-                      type="text"
-                      class="input-sm form-control"
-                      name="end"
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <select class="form-control">
-                    <option>1 guest</option>
-                    <option>2 guest</option>
-                    <option>3 guest</option>
-                    <option>4 guest</option>
-                    <option>5 guest</option>
-                  </select>
-                </div>
-                <div class="form-group py-2">
-                  <input
-                    type="submit"
-                    value="submit"
-                    class="btn btn-outline-danger btn-block"
-                  />
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-
-    {% include "index/footer.html" %}
-
-    <!-- JQuery -->
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Datepicker -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
-      integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(document).ready(function () {
-        $("#datepicker-container .input-daterange").datepicker({
-          todayHighlight: true,
-          autoclose: true,
-        })
-      })
-    </script>
-  </body>
-</html>
+    </div>
+</section>
+{% endblock %}
