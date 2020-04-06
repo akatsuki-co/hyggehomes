@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from stays.models import Stay
+from apps.stays.models import Stay
 
 
 class Review(models.Model):

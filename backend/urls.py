@@ -11,7 +11,7 @@ urlpatterns = [
     path('', home_page, name='home'),
     path('landing', landing_page, name='landing'),
     path('stays/', include(
-        ('stays.urls', 'stay'),
+        ('apps.stays.urls', 'stay'),
         namespace='stays')
          ),
 ]

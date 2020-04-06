@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import Q
 import os
 
-from accounts.models import User
+from apps.accounts.models import User
 
 
 def get_filename_ext(filepath):
