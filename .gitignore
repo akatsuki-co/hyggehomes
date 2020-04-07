@@ -12,6 +12,7 @@ media/
 
 # Pycache
 *.pyc
+*__pycache__/*
 
 # VScode
 .vscode/settings.json
