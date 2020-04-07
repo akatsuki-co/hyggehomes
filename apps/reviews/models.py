@@ -2,8 +2,6 @@ from django.db import models
 from django.conf import settings
 import uuid
 
-from apps.stays.models import Stay
-
 
 class Review(models.Model):
     """The Review model is for user reviews on each Trail.
