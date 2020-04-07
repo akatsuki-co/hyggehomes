@@ -2,7 +2,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-sm navbar-light border-bottom fixed-top">
   <div class="container">
-    <a href="index.html" class="navbar-brand">
+    <a href="/" class="navbar-brand">
       <img src="{% static "img/airbnb.jpg" %}" width="125" alt=""
       class="img-fluid" />
     </a>
@@ -18,17 +18,20 @@
         <li class="nav-item">
           <a href="{% url 'explore' %}" class="nav-link text-dark">Explore</a>
         </li>
-        <li class="nav-item mx-3">
-          <a href="" class="nav-link text-dark">Help</a>
-        </li>
-        <li id="signup-navlink" class="nav-item mx-3">
-          <a href="" class="nav-link text-dark">Sign Up</a>
-        </li>
-        <li id="signup-button" class="nav-item">
+        <li id="signup-navlink" class="nav-item">
           <a
-            href=""
+            data-toggle="modal"
+            data-target="#contactModal"
+            class="nav-link text-dark"
+            >Sign In</a
+          >
+        </li>
+        <li id="signup-button" class="nav-item mx-3">
+          <a
+            data-toggle="modal"
+            data-target="#contactModal"
             class="btn btn-outline-secondary rounded nav-link text-dark"
-            >Sign Up</a
+            >Sign In</a
           >
         </li>
       </ul>

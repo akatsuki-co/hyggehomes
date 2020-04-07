@@ -44,7 +44,6 @@ body {
 #main-header {
   background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
-  /* background-position: cover; */
   background-size: cover;
   min-height: 1000px;
   margin-top: 90px;
@@ -68,5 +67,9 @@ body {
 
   #signup-navlink {
     display: block;
+  }
+
+  #main-header {
+    min-height: 500px !important;
   }
 }
