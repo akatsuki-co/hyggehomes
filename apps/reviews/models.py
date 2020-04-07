@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+import uuid
+
 from apps.stays.models import Stay
 
 
@@ -9,6 +11,7 @@ class Review(models.Model):
     Arguments:
         models {Model} -- Django builtin Model
     """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     subject = models.CharField(max_length=30)
     body = models.CharField(max_length=1250)
     stars = models.IntegerField(default=5, blank=True, null=True)
