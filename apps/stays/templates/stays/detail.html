@@ -1,229 +1,217 @@
 {% extends "index.html" %}
+
+{% load static %}
+
 {% block content %}
 
 <!-- Image banner -->
 <section id="image-banner" class="py-5">
-    <div class="image-banner-inner container">
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <img
-                    src="https://source.unsplash.com/random/500x500"
-                    alt=""
-                    class="img-fluid"
-                    />
-            </div>
-            <div class="col-md-5">
-                <img
-                    src="https://source.unsplash.com/random/501x501"
-                    alt=""
-                    class="img-fluid"
-                    />
-            </div>
-        </div>
+  <div class="image-banner-inner container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <img
+          src="https://source.unsplash.com/random/500x500"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-5">
+        <img
+          src="https://source.unsplash.com/random/501x501"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Stay details -->
 <section id="details" class="py-3">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h1>Lorem ipsum dolor sit.</h1>
-                <p>Armenia, Quindio, Colombia</p>
-                <p>
-                <span id="guests">2</span> guests <span id="beds">2</span> beds
-                <span id="baths">1</span> bath
-                </p>
-                <hr />
-                <h5>Entire home</h5>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <h5>Sparkling clean</h5>
-                <p>Lorem ipsum dolor sit.</p>
-                <h5>Lorem, ipsum.</h5>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
-                enim!
-                </p>
-                <hr />
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
-                aspernatur dignissimos, quaerat laudantium veritatis similique
-                labore voluptas culpa praesentium aut? Alias perspiciatis dolore
-                cum provident vitae tenetur impedit expedita nisi.
-                </p>
-                <h5>Amenities</h5>
-                <div class="row py-2">
-                    <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
-                    <div class="col-6">
-                        <i class="fas fa-parking mr-2"></i> Parking
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-6">
-                        <i class="fas fa-coffee mr-2"></i> Breakfast
-                    </div>
-                    <div class="col-6">
-                        <i class="fas fa-shower mr-2"></i> Showers
-                    </div>
-                </div>
-                <hr />
-                <h4>Reviews</h4>
-                <div class="d-flex">
-                    <i class="fas fa-star green-stars mx-1"></i>
-                    <p class="mx-1">4.93</p>
-                    <p class="border-left ml-3 pl-3">269 reviews</p>
-                </div>
-                <div class="row">
-                    <div class="col">Cleanliness</div>
-                    <div class="col">
-                        <div class="progress">
-                            <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 90%"
-                                aria-valuenow="90"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                                ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">Location</div>
-                    <div class="col">
-                        <div class="progress">
-                            <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 75%"
-                                aria-valuenow="75"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                                ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">Hospitality</div>
-                    <div class="col">
-                        <div class="progress">
-                            <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 80%"
-                                aria-valuenow="80"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                                ></div>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="review-item">
-                    <div class="d-flex align-items-center py-2">
-                        <img
-                            src="img/person1.jpg"
-                            width="40"
-                            height="40"
-                            alt=""
-                            class="img-fluid rounded circle"
-                            />
-                        <span class="font-weight-bold px-2">Sonya</span>
-                        <span>February 2020</span>
-                    </div>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    consequatur inventore quos modi tenetur ut sapiente quaerat,
-                    ipsa officia ab?
-                    </p>
-                </div>
-                <div class="review-item">
-                    <div class="d-flex align-items-center py-2">
-                        <img
-                            src="img/person2.jpg"
-                            width="40"
-                            height="40"
-                            alt=""
-                            class="img-fluid rounded circle"
-                            />
-                        <span class="font-weight-bold px-2">Sonya</span>
-                        <span>February 2020</span>
-                    </div>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                    minima sapiente praesentium autem eius illo quisquam asperiores
-                    eum.
-                    </p>
-                </div>
-                <div class="review-item">
-                    <div class="d-flex align-items-center py-2">
-                        <img
-                            src="img/person3.jpg"
-                            width="40"
-                            height="40"
-                            alt=""
-                            class="img-fluid rounded circle"
-                            />
-                        <span class="font-weight-bold px-2">Sonya</span>
-                        <span>February 2020</span>
-                    </div>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                    minima sapiente praesentium autem eius illo quisquam asperiores
-                    eum.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Reserve form -->
-            <div class="col-md-4">
-                <div class="card py-4">
-                    <div class="card-body">
-                        <h5>
-                            <span class="price font-weight-bold">$40 </span> per night
-                        </h5>
-                        <span class="stars"><i class="fas fa-star"></i></span> 4.93
-                        <span>(269 reviews)</span>
-                        <hr />
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Dates"
-                                        />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option>1 guest</option>
-                                        <option>2 guest</option>
-                                        <option>3 guest</option>
-                                        <option>4 guest</option>
-                                        <option>5 guest</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input
-                                        type="submit"
-                                        value="Reserve"
-                                        class="btn btn-danger btn-block"
-                                        />
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-center text-muted">You won’t be charged yet.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Armenia, Quindio, Colombia</p>
+        <p>
+          <span id="guests">2</span> guests <span id="beds">2</span> beds
+          <span id="baths">1</span> bath
+        </p>
+        <hr />
+        <h5>Entire home</h5>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <h5>Sparkling clean</h5>
+        <p>Lorem ipsum dolor sit.</p>
+        <h5>Lorem, ipsum.</h5>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, enim!
+        </p>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+          aspernatur dignissimos, quaerat laudantium veritatis similique labore
+          voluptas culpa praesentium aut? Alias perspiciatis dolore cum
+          provident vitae tenetur impedit expedita nisi.
+        </p>
+        <h5>Amenities</h5>
+        <div class="row py-2">
+          <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
+          <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
         </div>
+        <div class="row py-2">
+          <div class="col-6"><i class="fas fa-coffee mr-2"></i> Breakfast</div>
+          <div class="col-6"><i class="fas fa-shower mr-2"></i> Showers</div>
+        </div>
+        <hr />
+        <h4>Reviews</h4>
+        <div class="d-flex">
+          <i class="fas fa-star green-stars mx-1"></i>
+          <p class="mx-1">4.93</p>
+          <p class="border-left ml-3 pl-3">269 reviews</p>
+        </div>
+        <div class="row">
+          <div class="col">Cleanliness</div>
+          <div class="col">
+            <div class="progress">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 90%;"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">Location</div>
+          <div class="col">
+            <div class="progress">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 75%;"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">Hospitality</div>
+          <div class="col">
+            <div class="progress">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 80%;"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="review-item">
+          <div class="d-flex align-items-center py-2">
+            <img
+              src="img/person1.jpg"
+              width="40"
+              height="40"
+              alt=""
+              class="img-fluid rounded circle"
+            />
+            <span class="font-weight-bold px-2">Sonya</span>
+            <span>February 2020</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            consequatur inventore quos modi tenetur ut sapiente quaerat, ipsa
+            officia ab?
+          </p>
+        </div>
+        <div class="review-item">
+          <div class="d-flex align-items-center py-2">
+            <img
+              src="img/person2.jpg"
+              width="40"
+              height="40"
+              alt=""
+              class="img-fluid rounded circle"
+            />
+            <span class="font-weight-bold px-2">Sonya</span>
+            <span>February 2020</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+            sapiente praesentium autem eius illo quisquam asperiores eum.
+          </p>
+        </div>
+        <div class="review-item">
+          <div class="d-flex align-items-center py-2">
+            <img
+              src="img/person3.jpg"
+              width="40"
+              height="40"
+              alt=""
+              class="img-fluid rounded circle"
+            />
+            <span class="font-weight-bold px-2">Sonya</span>
+            <span>February 2020</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+            sapiente praesentium autem eius illo quisquam asperiores eum.
+          </p>
+        </div>
+      </div>
+
+      <!-- Reserve form -->
+      <div class="col-md-4">
+        <div class="card py-4">
+          <div class="card-body">
+            <h5><span class="price font-weight-bold">$40 </span> per night</h5>
+            <span class="stars"><i class="fas fa-star"></i></span> 4.93
+            <span>(269 reviews)</span>
+            <hr />
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Dates" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <select class="form-control">
+                    <option>1 guest</option>
+                    <option>2 guest</option>
+                    <option>3 guest</option>
+                    <option>4 guest</option>
+                    <option>5 guest</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    value="Reserve"
+                    class="btn btn-danger btn-block"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-muted">You won’t be charged yet.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 {% endblock %}
