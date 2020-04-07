@@ -93,7 +93,7 @@ class User(AbstractBaseUser):
     last_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
 
