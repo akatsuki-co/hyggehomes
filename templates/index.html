@@ -71,5 +71,18 @@
         })
       })
     </script>
+
+    <!-- Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoidHV2bzExMDYiLCJhIjoiY2swYmwwY2IzMHZjbDNucjd1NHl3c3l5OSJ9.oUI6fhdDOx5rzmYV5dGjjg"
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [2.352222, 48.856613],
+        zoom: 9,
+      })
+    </script>
   </body>
 </html>
