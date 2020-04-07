@@ -7,5 +7,5 @@ from apps.stays.views import (
 
 urlpatterns = [
     path('', StayListView.as_view(), name='list'),
-    path('<int:id>', StayDetailView.as_view(), name='detail'),
+    path('<uuid:stay_id>', StayDetailView.as_view(), name='stay_detail'),
 ]
