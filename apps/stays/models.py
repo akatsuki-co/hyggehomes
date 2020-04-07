@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Q
+import uuid
 import os
 
 from apps.accounts.models import User
@@ -87,6 +88,7 @@ class Stay(models.Model):
     Arguments:
         models {Model} -- Django builtin Model
     """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=30)
     host = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=1250)

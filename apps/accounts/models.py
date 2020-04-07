@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
+import uuid
 
 
 class UserManager(BaseUserManager):
@@ -20,9 +21,9 @@ class UserManager(BaseUserManager):
 
         Keyword Arguments:
             full_name {string} -- Full name of the new user (default: {None})
-            is_active {bool} -- Status of if the user is active or not (default: {True})
-            is_staff {bool} -- Status of if the user is staff or not (default: {False})
-            is_admin {bool} -- Status of if the user is an admin or not (default: {False})
+            is_active {bool} -- Status if the user is active (default: {True})
+            is_staff {bool} -- Status if the user is staff (default: {False})
+            is_admin {bool} -- Status if the user is admin (default: {False})
 
         Raises:
             ValueError: If there is no email
@@ -78,6 +79,7 @@ class User(AbstractBaseUser):
     Arguments:
         models {Model} -- Django builtin Model
     """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(
         verbose_name='email address',
         max_length=255, unique=True
@@ -124,3 +126,19 @@ class User(AbstractBaseUser):
     def is_admin(self):
         return self.admin
 
+
+class Host(models.Model):
+    """Profile for Hosts"""
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
+    email = models.EmailField()
+    active = models.BooleanField(default=True)
+    update = models.DateTimeField(auto_now=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    # customer_id for Stripe
+
+    def __str__(self):
+        """__str__"""
+        return self.id
