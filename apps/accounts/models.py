@@ -11,7 +11,7 @@ class UserManager(BaseUserManager):
     Arguments:
         serializers {ModelSerializer} -- Django builtin Serializer
     """
-    def create_user(self, email, password, full_name=None,
+    def create_user(self, email, password, first_name=None, last_name=None,
                     is_active=True, is_staff=False, is_admin=False):
         """Creates a User instance
 
@@ -20,7 +20,8 @@ class UserManager(BaseUserManager):
             password {string} -- password of the new user
 
         Keyword Arguments:
-            full_name {string} -- Full name of the new user (default: {None})
+            first_name {string} -- Full name of the new user (default: {None})
+            last_name {string} -- Full name of the new user (default: {None})
             is_active {bool} -- Status if the user is active (default: {True})
             is_staff {bool} -- Status if the user is staff (default: {False})
             is_admin {bool} -- Status if the user is admin (default: {False})
@@ -42,14 +43,16 @@ class UserManager(BaseUserManager):
         )
 
         user.set_password(password)
-        user.full_name = full_name,
+        user.first_name = first_name,
+        user.last_name = last_name,
         user.active = is_active
         user.staff = is_staff
         user.admin = is_admin
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, password=None, full_name=None):
+    def create_superuser(self, email, password=None,
+                         first_name=None, last_name=None):
         """Creates a Superuser
 
         Arguments:
@@ -63,7 +66,8 @@ class UserManager(BaseUserManager):
             [type] -- [description]
         """
         user = self.create_user(
-            full_name=full_name,
+            first_name=first_name,
+            last_name=last_name,
             email=email,
             password=password
         )
@@ -84,11 +88,12 @@ class User(AbstractBaseUser):
         verbose_name='email address',
         max_length=255, unique=True
     )
-    full_name = models.CharField(
+    first_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
-    superhost = models.BooleanField(default=False)
+    last_name = models.CharField(
+        max_length=60, default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
 
@@ -134,6 +139,7 @@ class Host(models.Model):
         on_delete=models.CASCADE,
     )
     email = models.EmailField()
+    superhost = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
     update = models.DateTimeField(auto_now=True)
     timestamp = models.DateTimeField(auto_now_add=True)

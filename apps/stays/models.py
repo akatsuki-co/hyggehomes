@@ -4,6 +4,8 @@ import uuid
 import os
 
 from apps.accounts.models import User
+from apps.amenities.models import Amenity
+from apps.reviews.models import Review
 
 
 def get_filename_ext(filepath):
@@ -89,21 +91,30 @@ class Stay(models.Model):
         models {Model} -- Django builtin Model
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=50)
     host = models.ForeignKey(User, on_delete=models.CASCADE)
-    description = models.CharField(max_length=1250)
+    city = models.CharField(max_length=30)
+    state = models.CharField(max_length=30)
+    country = models.CharField(max_length=30)
+    guests = models.IntegerField(default=1)
+    bedroom = models.IntegerField(default=1)
+    beds = models.IntegerField(default=1)
+    baths = models.IntegerField(default=1)
     price = models.DecimalField(decimal_places=2, max_digits=20)
+    plus = models.BooleanField(default=False)
+    entire_home = models.BooleanField(default=False)
+    check_in = models.CharField(max_length=30)
+    description = models.CharField(max_length=1250)
+    amenities = models.ManyToManyField(Amenity)
+    reviews = models.ManyToManyField(Review)
+    featured = models.BooleanField(default=False)
     main_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     second_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     third_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
-    city = models.CharField(max_length=30)
-    state = models.CharField(max_length=30)
-    country = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
-    featured = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
 
     objects = StayManager()
