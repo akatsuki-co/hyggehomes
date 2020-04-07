@@ -91,7 +91,7 @@ class Stay(models.Model):
         models {Model} -- Django builtin Model
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=50)
     host = models.ForeignKey(User, on_delete=models.CASCADE)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
