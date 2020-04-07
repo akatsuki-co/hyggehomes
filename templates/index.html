@@ -26,7 +26,8 @@
       rel="stylesheet"
     />
     <!-- Custom -->
-    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
     <title>Airbnb | Welcome!</title>
   </head>
   <body>
@@ -62,14 +63,9 @@
       integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8="
       crossorigin="anonymous"
     ></script>
-    <script>
-      console.log("Date Picker")
-      $(document).ready(function () {
-        $("#datepicker-container .input-daterange").datepicker({
-          todayHighlight: true,
-          autoclose: true,
-        })
-      })
-    </script>
+    <!-- Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
