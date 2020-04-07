@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     # Apps
     'apps.accounts',
+    'apps.amenities',
     'apps.reviews',
     'apps.stays'
 
@@ -80,6 +81,10 @@ DATABASES = {
     }
 }
 
+# Database Fixtures
+FIXTURE_DIRS = (
+   'apps/fixtures',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
