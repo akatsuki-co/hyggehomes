@@ -11,11 +11,8 @@ static/
 media/
 
 # Pycache
-apps/accounts/__pycache__/
-apps/accounts/migrations/__pycache__/
-apps/reviews/__pycache__/
-apps/reviews/migrations/__pycache__/
-apps/stays/__pycache__/
-apps/stays/migrations/__pycache__/
-backend/__pycache__/
+*.pyc
+*__pycache__/*
+
+# VScode
 .vscode/settings.json
