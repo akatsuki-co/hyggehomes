@@ -1,21 +1,8 @@
 from django.views.generic import ListView, DetailView
 from django.http import Http404
+from django.shortcuts import render
 
 from .models import Stay
-
-
-class StayListView(ListView):
-    """Product List View"""
-    queryset = Stay.objects.all()
-    template_name = 'stays/list.html'
-
-    def get_context_data(self, *args, **kwargs):
-        """Method for getting context data"""
-        context = super(StayListView, self)\
-            .get_context_data(*args, **kwargs)
-        # cart_obj, new_obj = Cart.objects.new_or_get(self.request)
-        # context['cart'] = cart_obj
-        return context
 
 
 class StayDetailView(DetailView):

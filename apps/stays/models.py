@@ -79,6 +79,10 @@ class StayManager(models.Manager):
         qs = self.get_queryset().filter(id=id)
         return qs.first() if qs.count() == 1 else None
 
+    def by_city(self, city):
+        queryset = self.get_queryset().filter(city=city)
+        return queryset
+
     def search(self, query):
         """docstring for search"""
         return self.get_queryset().active().search(query)

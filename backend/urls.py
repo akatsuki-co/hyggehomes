@@ -4,16 +4,17 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
 
-from .views import explore_page, landing_page
+from .views import explore_page, landing_page, StayCityListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('explore/', explore_page, name='explore'),
     path('', landing_page, name='landing'),
     path('stays/', include(
-        ('apps.stays.urls', 'stay'),
+        ('apps.stays.urls', 'stays'),
         namespace='stays')
          ),
+    path('places/<city>', StayCityListView.as_view(), name='places')
 ]
 
 if settings.DEBUG:
