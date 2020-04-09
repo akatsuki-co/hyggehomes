@@ -4,7 +4,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
 
-from .views import explore_page, landing_page, StayCityListView, ExploreView
+from .views import landing_page, StayCityListView, ExploreView
 
 
 urlpatterns = [
