@@ -10,6 +10,7 @@ class Booking(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT
     )
+    stay = models.ForeignKey(Stay, on_delete=models.PROTECT)
     start_date = models.DateField(u'Start date', help_text=u'Start date')
     end_date = models.DateField(u'End date', help_text=u'End date')
 

@@ -111,7 +111,6 @@ class Stay(models.Model):
     check_in = models.CharField(max_length=30)
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
-    bookings = models.ManyToManyField(Booking)
     reviews = models.ManyToManyField(Review)
     featured = models.BooleanField(default=False)
     main_image = models.ImageField(
