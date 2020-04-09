@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Q
+from django.urls import reverse
 import uuid
 import os
 
@@ -123,10 +124,9 @@ class Stay(models.Model):
 
     objects = StayManager()
 
-    # def get_absolute_url(self):
-    #     """docstring for get_absolute_url"""
-    #     # return f'/products/{self.slug}/'
-    #     return reverse("products:detail", kwargs={"slug": self.slug})
+    def get_absolute_url(self):
+        """docstring for get_absolute_url"""
+        return reverse("stays:stay_detail", kwargs={"id": self.id})
 
     def __str__(self):
         """docstring for __str__"""
