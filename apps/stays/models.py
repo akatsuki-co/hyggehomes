@@ -5,6 +5,7 @@ import os
 
 from apps.accounts.models import User
 from apps.amenities.models import Amenity
+from apps.bookings.models import Booking
 from apps.reviews.models import Review
 
 
@@ -96,7 +97,7 @@ class Stay(models.Model):
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=50)
-    host = models.ForeignKey(User, on_delete=models.CASCADE)
+    host = models.ForeignKey(User, on_delete=models.PROTECT)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
     country = models.CharField(max_length=30)
@@ -110,6 +111,7 @@ class Stay(models.Model):
     check_in = models.CharField(max_length=30)
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
+    bookings = models.ManyToManyField(Booking)
     reviews = models.ManyToManyField(Review)
     featured = models.BooleanField(default=False)
     main_image = models.ImageField(
