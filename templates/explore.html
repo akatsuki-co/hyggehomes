@@ -9,6 +9,7 @@
   <div class="world-inner container">
     <h4 class="py-3">Travel the world with Airbnb</h4>
     <div class="card-deck">
+        <a href="{% url 'places' city="Paris" %}">
       <div class="card rounded">
         <img
           src="https://source.unsplash.com/random/300x200"
@@ -19,6 +20,8 @@
           <small class="text-muted">Paris</small>
         </div>
       </div>
+        </a>
+        <a href="{% url 'places' city="New York" %}">
       <div class="card rounded">
         <img
           src="https://source.unsplash.com/random/301x201"
@@ -32,6 +35,7 @@
       <div class="w-100 d-none d-sm-block d-md-none py-2">
         <!-- wrap every 2 on sm-->
       </div>
+        <a href="{% url 'places' city="Sydney" %}">
       <div class="card rounded">
         <img
           src="https://source.unsplash.com/random/302x202"
@@ -42,9 +46,11 @@
           <small class="text-muted">Sydney</small>
         </div>
       </div>
+        </a>
       <div class="w-100 d-none d-md-block d-lg-none py-2">
         <!-- wrap every 3 on md-->
       </div>
+        <a href="{% url 'places' city="Cape Town" %}">
       <div class="card rounded">
         <img
           src="https://source.unsplash.com/random/303x203"
@@ -55,12 +61,14 @@
           <small class="text-muted">Cape Town</small>
         </div>
       </div>
+        </a>
       <div class="w-100 d-none d-sm-block d-md-none py-2">
         <!-- wrap every 2 on sm-->
       </div>
       <div class="w-100 d-none d-lg-block d-xl-none py-2">
         <!-- wrap every 4 on lg-->
       </div>
+        <a href="{% url 'places' city="Tokyo" %}">
       <div class="card rounded">
         <img
           src="https://source.unsplash.com/random/304x204"
@@ -71,11 +79,29 @@
           <small class="text-muted">Tokyo</small>
         </div>
       </div>
+        </a>
     </div>
   </div>
 </section>
 
 <!-- Top places to Stay -->
+
+<div class='container'>
+    <div class='row'>
+        {% for stay in featured_stays_list %}
+        <div class='col'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ stay.title }}</h5>
+                    <h5 class="card-title">{{ stay.price }}</h5>
+                    <p class="card-text">{{ stay.description|truncatewords:15 }}</p>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+</div>
+
+
 <section id="top-places" class="py-3">
   <div class="container">
     <h5>Top-rated places to stay</h5>
@@ -176,6 +202,23 @@
 </section>
 
 <!-- Places to stay -->
+
+<div class='container'>
+    <div class='row'>
+        {% for stay in sf_stays_list %}
+        <div class='col'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ stay.title }}</h5>
+                    <h5 class="card-title">{{ stay.price }}</h5>
+                    <p class="card-text">{{ stay.description|truncatewords:15 }}</p>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+</div>
+
+
 <section id="places-to-stay" class="py-3">
   <div class="container">
     <h5 class="py-2">Places to stay in San Francisco</h5>

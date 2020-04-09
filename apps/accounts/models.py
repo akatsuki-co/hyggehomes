@@ -136,7 +136,7 @@ class Host(models.Model):
     """Profile for Hosts"""
     user = models.OneToOneField(
         User,
-        on_delete=models.CASCADE,
+        on_delete=models.PROTECT,
     )
     email = models.EmailField()
     superhost = models.BooleanField(default=False)
