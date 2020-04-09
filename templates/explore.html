@@ -85,6 +85,23 @@
 </section>
 
 <!-- Top places to Stay -->
+
+<div class='container'>
+    <div class='row'>
+        {% for stay in featured_stays_list %}
+        <div class='col'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ stay.title }}</h5>
+                    <h5 class="card-title">{{ stay.price }}</h5>
+                    <p class="card-text">{{ stay.description|truncatewords:15 }}</p>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+</div>
+
+
 <section id="top-places" class="py-3">
   <div class="container">
     <h5>Top-rated places to stay</h5>
@@ -185,6 +202,23 @@
 </section>
 
 <!-- Places to stay -->
+
+<div class='container'>
+    <div class='row'>
+        {% for stay in sf_stays_list %}
+        <div class='col'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ stay.title }}</h5>
+                    <h5 class="card-title">{{ stay.price }}</h5>
+                    <p class="card-text">{{ stay.description|truncatewords:15 }}</p>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+</div>
+
+
 <section id="places-to-stay" class="py-3">
   <div class="container">
     <h5 class="py-2">Places to stay in San Francisco</h5>

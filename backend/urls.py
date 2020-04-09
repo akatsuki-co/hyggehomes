@@ -4,11 +4,12 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
 
-from .views import explore_page, landing_page, StayCityListView
+from .views import explore_page, landing_page, StayCityListView, ExploreView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('explore/', explore_page, name='explore'),
+    path('explore/', ExploreView.as_view(), name='explore'),
     path('', landing_page, name='landing'),
     path('stays/', include(
         ('apps.stays.urls', 'stays'),
