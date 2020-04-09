@@ -14,7 +14,6 @@ def landing_page(request):
 
 class StayCityListView(ListView):
     """Stay for each City List View"""
-    queryset = Stay.objects.all()
     context_object_name = 'stays_list'
     template_name = 'city.html'
 
