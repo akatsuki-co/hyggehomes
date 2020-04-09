@@ -5,7 +5,6 @@ import os
 
 from apps.accounts.models import User
 from apps.amenities.models import Amenity
-from apps.bookings.models import Booking
 from apps.reviews.models import Review
 
 
