@@ -141,101 +141,46 @@
   <div class="container">
     <h5 class="py-2">Places to stay in San Francisco</h5>
     <div class="card-deck">
+      {% for stay in sf_stays_list %}
       <div class="card rounded">
-        <img
-          src="https://source.unsplash.com/random/309x209"
+        <a href="">
+          <img
+          src="{{ stay.main_image }}""
           alt=""
           class="img-fluid card-img-top"
-        />
+          />
+        </a>
         <div class="card-body">
           <div class="d-flex justify-content-between">
-            <small>Isla Mujeres</small>
+            <small>{{ stay.city }}</small>
             <div>
               <span class="stars"><i class="fas fa-star"></i></span>
               <small>4.75</small>
             </div>
           </div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p><strong>$299</strong> / night</p>
+          <a href="">
+            <p>{{ stay.title }}</p>
+          </a>
+          <p><strong>${{stay.price}}</strong> / night</p>
         </div>
       </div>
-      <div class="card rounded">
-        <img
-          src="https://source.unsplash.com/random/310x210"
-          alt=""
-          class="img-fluid card-img-top"
-        />
-        <div class="card-body">
-          <div
-            class="d-flex justify-content-between pb-2 align-items-center"
-          >
-            <small class="mx-0">Oakland</small>
-            <div>
-              <span class="stars"><i class="fas fa-star"></i></span>
-              <small>4.75</small>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p><strong>$299</strong> / night</p>
-        </div>
-      </div>
-      <div class="w-100 d-none d-sm-block d-md-none py-2">
-        <!-- wrap every 2 on sm-->
-      </div>
-      <div class="card rounded">
-        <img
-          src="https://source.unsplash.com/random/311x211"
-          alt=""
-          class="img-fluid card-img-top"
-        />
-        <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <div class="d-flex mx-0 pb-2 align-items-center">
-              <span class="btn btn-sm btn-outline-danger ml-0 mr-1"
-                ><small>Plus</small></span
-              >
-              <small class="mx-0">Oakland</small>
-            </div>
-            <div>
-              <span class="stars"><i class="fas fa-star"></i></span>
-              <small>4.75</small>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <p><strong>$299</strong> / night</p>
-        </div>
-      </div>
-      <div class="w-100 d-none d-md-block d-lg-none py-2">
-        <!-- wrap every 3 on md-->
-      </div>
-      <div class="card rounded">
-        <img
-          src="https://source.unsplash.com/random/312x212"
-          alt=""
-          class="img-fluid card-img-top"
-        />
-        <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <small>Isla Mujeres</small>
-            <div>
-              <span class="stars"><i class="fas fa-star"></i></span>
-              <small>4.75</small>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p><strong>$299</strong> / night</p>
-        </div>
+      {% if forloop.counter|divisibleby:2 %}
         <div class="w-100 d-none d-sm-block d-md-none py-2">
-          <!-- wrap every 2 on sm-->
         </div>
+      {% endif %}
+      {% if forloop.counter|divisibleby:3 %}
+        <div class="w-100 d-none d-md-block d-lg-none py-2">
+        </div>
+      {% endif %}
+      {% if forloop.counter|divisibleby:4 %}
         <div class="w-100 d-none d-lg-block d-xl-none py-2">
-          <!-- wrap every 4 on lg-->
-        </div>
+        </div> 
+      {% endif %}
+      {% endfor %}
       </div>
     </div>
   </div>
 </section>
 
-    {% endblock %}
-  </div>
-</div>
+{% endblock %}
+  
