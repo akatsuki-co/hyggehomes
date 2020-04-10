@@ -1,1 +1,799 @@
-[{"model": "stays.stay", "pk": "03591d61-8578-46d6-b6ad-2f7de5f04139", "fields": {"title": "Calm House near Shinjuku/Shibuya #201", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Tokyo", "state": "Tokyo", "country": "Japan", "guests": 7, "bedroom": 1, "beds": 5, "baths": 1, "price": "37.00", "plus": false, "entire_home": true, "check_in": "smartlock", "description": "A comfortable space that can accommodate up to 7 people. This apartment is 3mins from Shinjuku by train and also close to Shibuya ! It is a 6-minute walk from the nearest station of the apartment. The apartment is in a residential area so you can sleep peacefully and sleep at night. It is tourist friendly town includes a shopping street.  [Please check my other rooms, all in the same building!!] https://www.airbnb.com/users/43751877/listings", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:45:53.013Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "ff01dd7a-9964-4d63-a952-0f3f338579d6"], "reviews": ["061e77bb-56c7-466a-960d-9ab8113c3f7b"]}}, {"model": "stays.stay", "pk": "11f45671-5241-4a31-96f4-3c7638bf07c2", "fields": {"title": "Oceanside/Garden View Suite - Private Entrance", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Daly City", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "35.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "Beautiful and Comfy Bedroom Room right on the border of San Francisco... Our Daly City home is in a sweet quiet neighborhood with Ocean Views right on the picturesque cliffs Fort Funston. It\u2019s a pretty home with lots of street parking. The design is clean and modern, which really puts someone at ease.. Easily take public transport or drive into the city as the San Francisco border is a 4 min car ride. 11 min to Bart!  We are a kind couple who aim to please and make your stay comfy and fun!", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T06:00:38.892Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d"], "reviews": ["36d2ab8b-2ebf-4170-9f7f-3f96f8db32b6", "7cd28f33-000a-4dc6-bd6b-7827de939246"]}}, {"model": "stays.stay", "pk": "1f5aa714-110a-424a-a491-eebf5561697d", "fields": {"title": "Quiet Sun Filled Studio", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Oakland", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "109.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "This small but efficient studio is filled with light and looks out to a garden. It sits behind the main house and has it's own private yard and garden area. Entry is through a locked gate. Includes a queen bed with an extremely comfy memory foam topper, full kitchen and small bath w/ shower.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:49:21.893Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d"], "reviews": ["58e1e710-937e-4b2f-9bee-f5ab958afdbb"]}}, {"model": "stays.stay", "pk": "2da194fb-7d03-4010-af0a-9f632c2f9881", "fields": {"title": "Stunning Harbour Views from a City Apartment", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Cape Town", "state": "Western Cape", "country": "South Africa", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "44.00", "plus": true, "entire_home": true, "check_in": "keypad", "description": "Brew morning espresso and admire sweeping sunrise views of the harbor and mountainous landscape beyond. Prepare breakfast in a modern, well-equipped kitchen. Freshen up in spacious, luxurious bathroom with walk-in shower and soaking tub.  Relax on the comfy leather sofa and enjoy your favorite Netflix series. Drift away in a sumptuous king-size bed with a gentle breeze from the ceiling fan.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:42:51.381Z", "active": true, "amenities": ["077adc4d-8880-4051-b2a4-a6eb06acaed5", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d", "ff01dd7a-9964-4d63-a952-0f3f338579d6"], "reviews": ["54d6ef7e-0a0c-446c-94f6-443ed4616370", "f8aafaa1-0bb8-47d3-b3ff-e44873636c87"]}}, {"model": "stays.stay", "pk": "3247fb0c-cda6-4f60-8c0a-36dc43b4d7b8", "fields": {"title": "Chambre privative dans bel appartement parisien", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Paris", "state": "Paris", "country": "France", "guests": 1, "bedroom": 1, "beds": 1, "baths": 1, "price": "11.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "Located in the heart of the new district Clichy Batignolles, my apartment is equidistant from Montmartre and the Champs Elysees. There is a park next door and shopping streets with lots of nice restaurants. The new courthouse with its park is 5 minutes walk.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T06:38:21.262Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["5b9ebea6-881e-44f3-9c8c-2f8ae9076440", "8df38bff-1475-4e65-b327-607d7de6b263"]}}, {"model": "stays.stay", "pk": "486588d6-74e9-4cea-b943-3af5689bc4a6", "fields": {"title": "N Oakland Bungalow near Emeryville", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Oakland", "state": "California", "country": "USA", "guests": 6, "bedroom": 2, "beds": 4, "baths": 1, "price": "143.00", "plus": false, "entire_home": true, "check_in": "lockbox", "description": "Settle into a cozy bungalow in the heart of the newly developed Emeryville shopping area. Just up from San Pablo Ave, across from the new Community Life Center. Close to BART & AC Transit. A quiet street in the middle of everything. Studio in rear.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:58:58.567Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "1b31c6c8-6821-4f42-be49-aac54c38c614", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["0a63b769-e8f0-40bc-a123-6082893d20b5", "6b0ead29-c9b8-40fc-b8ea-7a8946002777"]}}, {"model": "stays.stay", "pk": "48f5b9c3-bf8a-4088-b918-71d0717925b9", "fields": {"title": "Mission Dolores Suite", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "San Francisco", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "135.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "Enjoy a luxurious stay in this private 1Bed/1Bath suite in an historic 1912 building. Perfectly located between the Castro and the Mission, walk to all the restaurants, entertainment, shopping, and amenities that these neighborhoods have to offer.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T06:02:32.780Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d"], "reviews": ["7dbfbffd-846f-4c97-a3aa-5bc37785842d", "7fd382e8-9b54-4bea-b2cc-23a257871745", "fa2d6ce0-81d1-40ff-9e8f-8fe5cfc32ed6"]}}, {"model": "stays.stay", "pk": "6145b411-495c-4059-9de9-821284663a9d", "fields": {"title": "Sonder | Hayes Valley | Modern Guest Room + Lounge", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "San Francisco", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "62.00", "plus": false, "entire_home": false, "check_in": "keypad", "description": "We want everyone to have a comfortable place to stay. Our digital check-in and the ability to manage your stay from our app, means you won't need to interact with anyone in person. Our staff has been trained in proper disinfection techniques and will deep clean your Sonder before and after your stay. We're here for you during this time of uncertainty and can be reached 24/7 via text or call.  Named the most innovative travel company of 2019 by Fast Company, Sonder has hosted a million guests in 5,000+ spaces with an average rating of 4.6 stars. Each space is designed and run by us, so you\u2019ll always know what to expect from your stay. At Sonder, we\u2019ve combined the best parts of home and hotel.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T06:03:55.675Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "1b31c6c8-6821-4f42-be49-aac54c38c614", "3d24cf41-4bb5-4cbb-a8fd-e1532b65a6e5", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["4d56452f-af04-4394-b97f-6038fa16194c", "90319981-ca6f-4757-82ff-8f4d03773eb2"]}}, {"model": "stays.stay", "pk": "63bc9c2f-5638-44c9-a2e2-fc78769f9514", "fields": {"title": "Light-Filled Hillside Studio Apartment", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "San Francisco", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "121.00", "plus": false, "entire_home": false, "check_in": "keypad", "description": "Enjoy peace and quiet in our sunny studio apartment in the hills of San Francisco, while being a quick walk to restaurants, public transportation, & parks. We are a 15-20 min walk to Glen Park & Bernal Heights and 20-30 min to the Mission District (a prime restaurant area).  Our private, self-contained studio is located above the detached garage (separate from the main house) and has a queen bed, full kitchen, and private bathroom. There is ample free street parking & easy access to the highway.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:52:01.528Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "1b31c6c8-6821-4f42-be49-aac54c38c614", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["316d5c9b-97f8-478e-8729-1e69ecfbca85", "ef1f8c5d-8c07-44bb-9461-5ea0482dc728"]}}, {"model": "stays.stay", "pk": "80b0b252-064b-40b2-90a4-b9971ae7408e", "fields": {"title": "Room 1 queensize bed Saint-Germain des Pr\u00e9s center", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Paris", "state": "Paris", "country": "France", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "46.00", "plus": false, "entire_home": false, "check_in": "keycard", "description": "It's an hotel room, from different kind: single (1 bed 120x200 or 160x200), double (1 bed 180x200), twin (2 beds 100x200), suite (2 rooms), triple, quadruple, even quintuple, all with recent top quality beds. Rooms are located on 7 floors, on street or on our private courtyard, with nice windows, even in the bathroom, and some with double doors or shower cabine, or balcony. All are equipped with numerous electrical outlets, a modern telephone with hands-free and speaker, and a mini-fridge. The housekeeping is done daily, and the towels in the bathroom are changed. The hotel is ancient, its foundations are millennial, may be build at the time of the Roman Empire, when Paris was called Lutece : we are near the roman thermal baths of Cluny (Thermes). The ambiance is both, family and multicultural. Many artists, writers, musicians, authors and publishers, journalists, professors and academics, filmmakers, have always stayed there, but also entrepreneurs and start-upers, from all over the world. But the most important thing is not your room, it's the magnificent atmosphere of the neighborhood : the busy streets, rue de Seine and rue de Buci, are just under the hotel windows (witch have double glass).", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T06:32:19.247Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["0b78cc0a-0786-4a39-b2a2-342bce58d0e8", "3dda3c6a-f23a-499d-aab0-e7a9357b7a10"]}}, {"model": "stays.stay", "pk": "91bc91ef-8b79-43be-a6bf-60f2d6c1a2ae", "fields": {"title": "Fantastic City Views - City Apartment With Balcony", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Cape Town", "state": "Western Cape", "country": "South Africa", "guests": 3, "bedroom": 1, "beds": 1, "baths": 1, "price": "21.00", "plus": false, "entire_home": true, "check_in": "doorman", "description": "Welcome to the Iconic brand new Wex Building!  The Wex offers high standards of architecture, and interior design that incorporates brilliant lifestyle and user-friendly features, as if it was built for the young professional on the go, and not because it\u2019s only 2KM from the Cape Town CBD.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:44:13.166Z", "active": true, "amenities": ["6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["50ba4619-f370-4f6d-9562-060352562544", "c5bd0e24-2f5a-45b5-a10e-f24421624dee"]}}, {"model": "stays.stay", "pk": "95a0b7dd-8ea7-401e-93ae-d740ea87499a", "fields": {"title": "Single Cabins (Chelsea, Manhattan, NYC)", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "New York", "state": "New York", "country": "USA", "guests": 1, "bedroom": 1, "beds": 1, "baths": 3, "price": "35.00", "plus": false, "entire_home": false, "check_in": "keypad", "description": "This Vegetarian House and Non-Smoking property offers our guests cozy single cabins. To complement your stay at this unique little property we throw in the price a luggage storage space and complimentary breakfast with a selection of organic teas, coffee, bread and cereal as well as milk, almond milk and fruit. Get yourself the best good night's sleep one can possibly find in NYC for the price asked. Zzzzzzzzz", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:35:14.737Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "1b31c6c8-6821-4f42-be49-aac54c38c614", "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["4d450aed-d16a-4a4a-91b4-e566cd5309cc"]}}, {"model": "stays.stay", "pk": "9d2520a5-fbc2-4c03-8302-880a7825d97e", "fields": {"title": "Huge Loft Room in City Centre Victorian Terrace", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Sydney", "state": "New South Wales", "country": "Australia", "guests": 3, "bedroom": 1, "beds": 2, "baths": 2, "price": "15.00", "plus": false, "entire_home": false, "check_in": "keypad", "description": "Huge Loft Space in $3 Million Victorian Terrace House located in the Absolute City Centre. Just a 4 minute walk to Central Station and Museum Station. 3 Minute Walk to Chinatown. 15 Minute walk to the Famous Opera House and Cicular Quay. Ideal for Sightseeing and Business Trips. Please note that the access stairs are steep and although there are 3 handrails, it would only be suitable for guests with no mobility issues.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:39:50.222Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "e21eb298-2423-4952-92fc-2d0f696e4cf6"], "reviews": ["5c16c50e-60a1-4a1d-9f1b-75b5d6f30fee"]}}, {"model": "stays.stay", "pk": "a362fdbd-7e9a-4cfe-ab02-a6fdfd474ef0", "fields": {"title": "charmante studette Edgar QUINET", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Paris", "state": "Paris", "country": "France", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "32.00", "plus": false, "entire_home": true, "check_in": "lockbox", "description": "Ideally located in the famous district of La Gait\u00e9 Montparnasse, two minutes from the Montparnasse train station and its Breton district, in the heart of the rue de la gaiety famous for its theaters, restaurants and bars open late even on weekends end. the Raspail district is just a stone's throw from the street and the Saint Germain district is a 15-minute walk away. it is a studio of 11 m2 IN SOUS PLEX with a window overlooking a very quiet and pleasantly flowery courtyard.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T06:36:45.030Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"], "reviews": ["1834e643-9d1a-4e75-b7c6-76a8aa681eaf", "d7d98ef0-74f9-4f89-b701-933b95d3f7c2"]}}, {"model": "stays.stay", "pk": "a5798898-ad79-44b0-85e3-1fc92e483188", "fields": {"title": "\u2600 Cozy/Quiet \u2600 TIMES SQUARE \u2605 2BDR Apt \u2605 LOCATION", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "New York", "state": "New York", "country": "USA", "guests": 6, "bedroom": 2, "beds": 3, "baths": 1, "price": "70.00", "plus": false, "entire_home": true, "check_in": "keypad", "description": "Comfortable, well appointed and wonderfully maintained two bedroom apartment in the heart of it all! Spacious apartment with 2 queen size bedrooms, living room, office/dining room, kitchen with stainless steel frost-free fridge, dishwasher etc.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:33:59.656Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["885dbece-504c-4795-88f1-8241ae7eac5c", "b9b8662e-b6d5-486e-a89d-8e0cc2f34a1e"]}}, {"model": "stays.stay", "pk": "a5bea5e3-eaa0-447e-b8cc-b9eab0870bea", "fields": {"title": "Modern cozy studio next to the Airport", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "San Bruno", "state": "California", "country": "USA", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "70.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "Newly remodeled in-law suite/studio with private entrance.  Convenient location close to the Airport (5 min drive), Caltrain (less than 10 min walk) and BART (15 min walk). Easy access to freeway 101 and 280. About 20 min drive to San Francisco.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:57:25.005Z", "active": true, "amenities": ["962234c6-165e-4f28-bb30-f849133adcc0", "ff01dd7a-9964-4d63-a952-0f3f338579d6"], "reviews": ["8a9f6fc9-a51b-426e-8fef-8a97b897f44c", "d868c0fc-1a24-404d-8c78-43499d7aa476"]}}, {"model": "stays.stay", "pk": "a8c44827-75ab-4c32-8810-54ce7630dcf7", "fields": {"title": "Industrial | MODERN | 1 Bd/1Ba Suite. 1min to BART", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Oakland", "state": "California", "country": "USA", "guests": 3, "bedroom": 1, "beds": 1, "baths": 1, "price": "38.00", "plus": false, "entire_home": false, "check_in": "smartlock", "description": "Beautifully furnished 1BD/1BA guest suite 10 minutes from San Francisco (Embarcadero Station) and 1 min away from BART.  In one of the best neighborhoods in West Oakland, it is super safe and convenient! We are a few streets from West Oakland BART (Bay Area Rapid Transit) Station and from there you can get to: San Francisco = 7 minutes Downtown Oakland = 5 minutes Berkeley = 17 minutes Oak Airport = 27 minutes SFO = 41 minutes", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T06:05:59.123Z", "active": true, "amenities": ["077adc4d-8880-4051-b2a4-a6eb06acaed5", "2b8c2fb6-ee85-4bf7-8e20-7229c988e18e", "639c067f-390f-478b-abd8-17870d46968f", "962234c6-165e-4f28-bb30-f849133adcc0"], "reviews": ["03cd913c-9eba-48b2-9e4d-dbb04027e25c", "3b7ceb4e-9a70-4807-ace5-5f55880f2276"]}}, {"model": "stays.stay", "pk": "bf430d97-aea8-47b5-bfff-402bad09ae0c", "fields": {"title": "Apartment-like rooms in PacHeights", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "San Francisco", "state": "California", "country": "USA", "guests": 4, "bedroom": 1, "beds": 1, "baths": 1, "price": "200.00", "plus": false, "entire_home": false, "check_in": "keypad", "description": "This one-bedroom space comes with a large bedroom with a king-size bed, a living room with a sofa bed that sleeps two, and a full bath and a wet bar with a compact refrigerator/freezer, microwave, mini dishwasher, toaster oven induction burner & sink.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:54:20.702Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d"], "reviews": ["2cd4065c-2f01-4d81-bf87-d7ebb79d4361", "aa88bc05-8714-47a7-9f55-f37eeba27780"]}}, {"model": "stays.stay", "pk": "c5f709a9-1226-4aab-be48-5a9962ed5eb6", "fields": {"title": "Japanese-Style Economy Single Room w Shared Bath", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Tokyo", "state": "Tokyo", "country": "Japan", "guests": 1, "bedroom": 1, "beds": 1, "baths": 0, "price": "28.00", "plus": false, "entire_home": false, "check_in": "reception", "description": "\"Juyoh Hotel is located 650 m or an 8-minute walk from Minami-Senju Subway Station. Free WiFi is provided in all guest rooms along with air conditioning and heating.  All guest rooms at this property are private rooms. The hotel provides both Japanese-style rooms with futon bedding and rooms with Western-style beds. Showers and toilets are shared for all guests. A refrigerator, Japanese-style yukata robes and towels are included in rooms. If two persons stay in a single room, we ask you to pay an additional charge for one person.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:48:15.097Z", "active": true, "amenities": ["16dd42c9-9644-4e8a-900f-9b7f5b8f65aa", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb"], "reviews": ["995185e3-4996-41ec-a15f-223d37bbe0fa", "fcc68a27-ef44-453e-add6-19c80a7d307f"]}}, {"model": "stays.stay", "pk": "d738e7bb-8fdb-4698-a6ba-684ebf96428b", "fields": {"title": "Wonderful in Paris !", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Paris", "state": "Paris", "country": "France", "guests": 4, "bedroom": 1, "beds": 2, "baths": 1, "price": "33.00", "plus": false, "entire_home": true, "check_in": "keypad", "description": "Superb architect studio refurbished! for 4 people A large double bed and a sofa bed await you to relax after long days of visiting Paris! You will find there all the comfort of a large studio. The kitchen is fully equipped, Nespresso etc The bathroom is spacious and complete. We provide the lines of beds and 1 towel per person, toilet paper and hand soap  The neighborhood is really great, trendy and very secure.", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T06:34:59.207Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc", "6c8f801d-1497-491a-85e2-fb59810872eb", "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"], "reviews": ["69e6a172-87ef-4617-b316-db8d23a2af37", "f7ea37a8-5e25-4cd3-b1c5-4dd29d9f988c"]}}, {"model": "stays.stay", "pk": "e66f0753-6071-4202-82c1-600efc1b5ef8", "fields": {"title": "Private room in an ideally located flat!", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Paris", "state": "Paris", "country": "France", "guests": 2, "bedroom": 1, "beds": 1, "baths": 1, "price": "27.00", "plus": false, "entire_home": false, "check_in": "lockbox", "description": "Private room in a 50 m\u00b2 apartment, very pleasant and ideally located in the 6th arrondissement. Near the Luxembourg garden and the Montparnasse district, in a beautiful old building. Very quiet room with a beautiful view of the Montparnasse tower. Declaration number: 7510602399383", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T06:29:30.731Z", "active": true, "amenities": ["639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"], "reviews": ["936f8cb1-48cf-41dc-8761-30732e2ace03", "ae8a97a3-20cf-44ef-ad42-e9dc8b64f148"]}}, {"model": "stays.stay", "pk": "ec6bf0e5-7f17-42cd-8551-1ebf0c56f9b0", "fields": {"title": "Huge Master Bedroom Central Sydney!", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Sydney", "state": "New South Wales", "country": "Australia", "guests": 3, "bedroom": 1, "beds": 2, "baths": 1, "price": "15.00", "plus": false, "entire_home": true, "check_in": "keypad", "description": "Quite Possibly the Best Location in Sydney!! Just moments from Sydney CBD but situated in a very quiet street  We are Right behind the famous Oxford street with great restaurants and Nightlife + buses running every 3-5 minutes direct to Bondi Beach", "featured": false, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-09T07:37:56.368Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "639c067f-390f-478b-abd8-17870d46968f", "6c8f801d-1497-491a-85e2-fb59810872eb", "bd13b0d3-dbac-45b3-827c-876954c7366d"], "reviews": ["53587f4e-75c0-4aaf-bc1b-d51bfbb410a5"]}}, {"model": "stays.stay", "pk": "fe873fb2-7ecb-4956-8f44-301eb73dbb2e", "fields": {"title": "Private Pool House with Amazing Views!", "host": "e58a9dcb-6765-468a-a5a2-aa477978d452", "city": "Los Angeles", "state": "California", "country": "USA", "guests": 6, "bedroom": 4, "beds": 1, "baths": 1, "price": "2600.00", "plus": true, "entire_home": true, "check_in": "keypad", "description": "Private location with breathtaking views and access to pool and spa with free gated parking! Centrally located in LA, close to Downtown LA, Hollywood and our neighboring cities of Glendale and Pasadena.", "featured": true, "main_image": "", "second_image": "", "third_image": "", "created_at": "2020-04-07T05:44:39.754Z", "active": true, "amenities": ["02cf5797-5622-4aba-8e9a-4a4ba0e745ea", "077adc4d-8880-4051-b2a4-a6eb06acaed5", "16dd42c9-9644-4e8a-900f-9b7f5b8f65aa", "1b31c6c8-6821-4f42-be49-aac54c38c614", "2b8c2fb6-ee85-4bf7-8e20-7229c988e18e", "3aaf128b-9397-4465-b603-2fb6eb02a4fa"], "reviews": ["e960eaa1-bd05-4b36-9599-bcd305efb177"]}}]
+[
+  {
+    "model": "stays.stay",
+    "pk": "03591d61-8578-46d6-b6ad-2f7de5f04139",
+    "fields": {
+      "title": "Calm House near Shinjuku/Shibuya #201",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Tokyo",
+      "state": "Tokyo",
+      "country": "Japan",
+      "guests": 7,
+      "bedroom": 1,
+      "beds": 5,
+      "baths": 1,
+      "price": 37,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "smartlock",
+      "description": "A comfortable space that can accommodate up to 7 people. This apartment is 3mins from Shinjuku by train and also close to Shibuya ! It is a 6-minute walk from the nearest station of the apartment. The apartment is in a residential area so you can sleep peacefully and sleep at night. It is tourist friendly town includes a shopping street.  [Please check my other rooms, all in the same building!!] https://www.airbnb.com/users/43751877/listings",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/300x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:45:53.013Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "ff01dd7a-9964-4d63-a952-0f3f338579d6"
+      ],
+      "reviews": ["061e77bb-56c7-466a-960d-9ab8113c3f7b"]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "11f45671-5241-4a31-96f4-3c7638bf07c2",
+    "fields": {
+      "title": "Oceanside/Garden View Suite - Private Entrance",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Daly City",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 35.0,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "Beautiful and Comfy Bedroom Room right on the border of San Francisco... Our Daly City home is in a sweet quiet neighborhood with Ocean Views right on the picturesque cliffs Fort Funston. It\u2019s a pretty home with lots of street parking. The design is clean and modern, which really puts someone at ease.. Easily take public transport or drive into the city as the San Francisco border is a 4 min car ride. 11 min to Bart!  We are a kind couple who aim to please and make your stay comfy and fun!",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/301x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T06:00:38.892Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d"
+      ],
+      "reviews": [
+        "36d2ab8b-2ebf-4170-9f7f-3f96f8db32b6",
+        "7cd28f33-000a-4dc6-bd6b-7827de939246"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "1f5aa714-110a-424a-a491-eebf5561697d",
+    "fields": {
+      "title": "Quiet Sun Filled Studio",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Oakland",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 109,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "This small but efficient studio is filled with light and looks out to a garden. It sits behind the main house and has it's own private yard and garden area. Entry is through a locked gate. Includes a queen bed with an extremely comfy memory foam topper, full kitchen and small bath w/ shower.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/302x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:49:21.893Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d"
+      ],
+      "reviews": ["58e1e710-937e-4b2f-9bee-f5ab958afdbb"]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "2da194fb-7d03-4010-af0a-9f632c2f9881",
+    "fields": {
+      "title": "Stunning Harbour Views from a City Apartment",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Cape Town",
+      "state": "Western Cape",
+      "country": "South Africa",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 44,
+      "plus": true,
+      "entire_home": true,
+      "check_in": "keypad",
+      "description": "Brew morning espresso and admire sweeping sunrise views of the harbor and mountainous landscape beyond. Prepare breakfast in a modern, well-equipped kitchen. Freshen up in spacious, luxurious bathroom with walk-in shower and soaking tub.  Relax on the comfy leather sofa and enjoy your favorite Netflix series. Drift away in a sumptuous king-size bed with a gentle breeze from the ceiling fan.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/303x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:42:51.381Z",
+      "active": true,
+      "amenities": [
+        "077adc4d-8880-4051-b2a4-a6eb06acaed5",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d",
+        "ff01dd7a-9964-4d63-a952-0f3f338579d6"
+      ],
+      "reviews": [
+        "54d6ef7e-0a0c-446c-94f6-443ed4616370",
+        "f8aafaa1-0bb8-47d3-b3ff-e44873636c87"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "3247fb0c-cda6-4f60-8c0a-36dc43b4d7b8",
+    "fields": {
+      "title": "Chambre privative dans bel appartement parisien",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Paris",
+      "state": "Paris",
+      "country": "France",
+      "guests": 1,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 11,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "Located in the heart of the new district Clichy Batignolles, my apartment is equidistant from Montmartre and the Champs Elysees. There is a park next door and shopping streets with lots of nice restaurants. The new courthouse with its park is 5 minutes walk.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/304x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T06:38:21.262Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "5b9ebea6-881e-44f3-9c8c-2f8ae9076440",
+        "8df38bff-1475-4e65-b327-607d7de6b263"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "486588d6-74e9-4cea-b943-3af5689bc4a6",
+    "fields": {
+      "title": "N Oakland Bungalow near Emeryville",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Oakland",
+      "state": "California",
+      "country": "USA",
+      "guests": 6,
+      "bedroom": 2,
+      "beds": 4,
+      "baths": 1,
+      "price": 143,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "lockbox",
+      "description": "Settle into a cozy bungalow in the heart of the newly developed Emeryville shopping area. Just up from San Pablo Ave, across from the new Community Life Center. Close to BART & AC Transit. A quiet street in the middle of everything. Studio in rear.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/305x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:58:58.567Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "1b31c6c8-6821-4f42-be49-aac54c38c614",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "0a63b769-e8f0-40bc-a123-6082893d20b5",
+        "6b0ead29-c9b8-40fc-b8ea-7a8946002777"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "48f5b9c3-bf8a-4088-b918-71d0717925b9",
+    "fields": {
+      "title": "Mission Dolores Suite",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 135,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "Enjoy a luxurious stay in this private 1Bed/1Bath suite in an historic 1912 building. Perfectly located between the Castro and the Mission, walk to all the restaurants, entertainment, shopping, and amenities that these neighborhoods have to offer.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/306x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T06:02:32.780Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d"
+      ],
+      "reviews": [
+        "7dbfbffd-846f-4c97-a3aa-5bc37785842d",
+        "7fd382e8-9b54-4bea-b2cc-23a257871745",
+        "fa2d6ce0-81d1-40ff-9e8f-8fe5cfc32ed6"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "6145b411-495c-4059-9de9-821284663a9d",
+    "fields": {
+      "title": "Sonder | Hayes Valley | Modern Guest Room + Lounge",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 62,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keypad",
+      "description": "We want everyone to have a comfortable place to stay. Our digital check-in and the ability to manage your stay from our app, means you won't need to interact with anyone in person. Our staff has been trained in proper disinfection techniques and will deep clean your Sonder before and after your stay. We're here for you during this time of uncertainty and can be reached 24/7 via text or call.  Named the most innovative travel company of 2019 by Fast Company, Sonder has hosted a million guests in 5,000+ spaces with an average rating of 4.6 stars. Each space is designed and run by us, so you\u2019ll always know what to expect from your stay. At Sonder, we\u2019ve combined the best parts of home and hotel.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/307x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T06:03:55.675Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "1b31c6c8-6821-4f42-be49-aac54c38c614",
+        "3d24cf41-4bb5-4cbb-a8fd-e1532b65a6e5",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "4d56452f-af04-4394-b97f-6038fa16194c",
+        "90319981-ca6f-4757-82ff-8f4d03773eb2"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "63bc9c2f-5638-44c9-a2e2-fc78769f9514",
+    "fields": {
+      "title": "Light-Filled Hillside Studio Apartment",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 121,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keypad",
+      "description": "Enjoy peace and quiet in our sunny studio apartment in the hills of San Francisco, while being a quick walk to restaurants, public transportation, & parks. We are a 15-20 min walk to Glen Park & Bernal Heights and 20-30 min to the Mission District (a prime restaurant area).  Our private, self-contained studio is located above the detached garage (separate from the main house) and has a queen bed, full kitchen, and private bathroom. There is ample free street parking & easy access to the highway.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/308x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:52:01.528Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "1b31c6c8-6821-4f42-be49-aac54c38c614",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "316d5c9b-97f8-478e-8729-1e69ecfbca85",
+        "ef1f8c5d-8c07-44bb-9461-5ea0482dc728"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "80b0b252-064b-40b2-90a4-b9971ae7408e",
+    "fields": {
+      "title": "Room 1 queensize bed Saint-Germain des Pr\u00e9s center",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Paris",
+      "state": "Paris",
+      "country": "France",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 46,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keycard",
+      "description": "It's an hotel room, from different kind: single (1 bed 120x200 or 160x200), double (1 bed 180x200), twin (2 beds 100x200), suite (2 rooms), triple, quadruple, even quintuple, all with recent top quality beds. Rooms are located on 7 floors, on street or on our private courtyard, with nice windows, even in the bathroom, and some with double doors or shower cabine, or balcony. All are equipped with numerous electrical outlets, a modern telephone with hands-free and speaker, and a mini-fridge. The housekeeping is done daily, and the towels in the bathroom are changed. The hotel is ancient, its foundations are millennial, may be build at the time of the Roman Empire, when Paris was called Lutece : we are near the roman thermal baths of Cluny (Thermes). The ambiance is both, family and multicultural. Many artists, writers, musicians, authors and publishers, journalists, professors and academics, filmmakers, have always stayed there, but also entrepreneurs and start-upers, from all over the world. But the most important thing is not your room, it's the magnificent atmosphere of the neighborhood : the busy streets, rue de Seine and rue de Buci, are just under the hotel windows (witch have double glass).",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/310x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T06:32:19.247Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "0b78cc0a-0786-4a39-b2a2-342bce58d0e8",
+        "3dda3c6a-f23a-499d-aab0-e7a9357b7a10"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "91bc91ef-8b79-43be-a6bf-60f2d6c1a2ae",
+    "fields": {
+      "title": "Fantastic City Views - City Apartment With Balcony",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Cape Town",
+      "state": "Western Cape",
+      "country": "South Africa",
+      "guests": 3,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 21,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "doorman",
+      "description": "Welcome to the Iconic brand new Wex Building!  The Wex offers high standards of architecture, and interior design that incorporates brilliant lifestyle and user-friendly features, as if it was built for the young professional on the go, and not because it\u2019s only 2KM from the Cape Town CBD.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/311x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:44:13.166Z",
+      "active": true,
+      "amenities": ["6c8f801d-1497-491a-85e2-fb59810872eb"],
+      "reviews": [
+        "50ba4619-f370-4f6d-9562-060352562544",
+        "c5bd0e24-2f5a-45b5-a10e-f24421624dee"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "95a0b7dd-8ea7-401e-93ae-d740ea87499a",
+    "fields": {
+      "title": "Single Cabins (Chelsea, Manhattan, NYC)",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "New York",
+      "state": "New York",
+      "country": "USA",
+      "guests": 1,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 3,
+      "price": 35,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keypad",
+      "description": "This Vegetarian House and Non-Smoking property offers our guests cozy single cabins. To complement your stay at this unique little property we throw in the price a luggage storage space and complimentary breakfast with a selection of organic teas, coffee, bread and cereal as well as milk, almond milk and fruit. Get yourself the best good night's sleep one can possibly find in NYC for the price asked. Zzzzzzzzz",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/312x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:35:14.737Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "1b31c6c8-6821-4f42-be49-aac54c38c614",
+        "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": ["4d450aed-d16a-4a4a-91b4-e566cd5309cc"]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "9d2520a5-fbc2-4c03-8302-880a7825d97e",
+    "fields": {
+      "title": "Huge Loft Room in City Centre Victorian Terrace",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Sydney",
+      "state": "New South Wales",
+      "country": "Australia",
+      "guests": 3,
+      "bedroom": 1,
+      "beds": 2,
+      "baths": 2,
+      "price": 15,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keypad",
+      "description": "Huge Loft Space in $3 Million Victorian Terrace House located in the Absolute City Centre. Just a 4 minute walk to Central Station and Museum Station. 3 Minute Walk to Chinatown. 15 Minute walk to the Famous Opera House and Cicular Quay. Ideal for Sightseeing and Business Trips. Please note that the access stairs are steep and although there are 3 handrails, it would only be suitable for guests with no mobility issues.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/313x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:39:50.222Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "e21eb298-2423-4952-92fc-2d0f696e4cf6"
+      ],
+      "reviews": ["5c16c50e-60a1-4a1d-9f1b-75b5d6f30fee"]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "a362fdbd-7e9a-4cfe-ab02-a6fdfd474ef0",
+    "fields": {
+      "title": "charmante studette Edgar QUINET",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Paris",
+      "state": "Paris",
+      "country": "France",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 32,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "lockbox",
+      "description": "Ideally located in the famous district of La Gait\u00e9 Montparnasse, two minutes from the Montparnasse train station and its Breton district, in the heart of the rue de la gaiety famous for its theaters, restaurants and bars open late even on weekends end. the Raspail district is just a stone's throw from the street and the Saint Germain district is a 15-minute walk away. it is a studio of 11 m2 IN SOUS PLEX with a window overlooking a very quiet and pleasantly flowery courtyard.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/314x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T06:36:45.030Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"
+      ],
+      "reviews": [
+        "1834e643-9d1a-4e75-b7c6-76a8aa681eaf",
+        "d7d98ef0-74f9-4f89-b701-933b95d3f7c2"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "a5798898-ad79-44b0-85e3-1fc92e483188",
+    "fields": {
+      "title": "\u2600 Cozy/Quiet \u2600 TIMES SQUARE \u2605 2BDR Apt \u2605 LOCATION",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "New York",
+      "state": "New York",
+      "country": "USA",
+      "guests": 6,
+      "bedroom": 2,
+      "beds": 3,
+      "baths": 1,
+      "price": 70,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "keypad",
+      "description": "Comfortable, well appointed and wonderfully maintained two bedroom apartment in the heart of it all! Spacious apartment with 2 queen size bedrooms, living room, office/dining room, kitchen with stainless steel frost-free fridge, dishwasher etc.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/315x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:33:59.656Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "885dbece-504c-4795-88f1-8241ae7eac5c",
+        "b9b8662e-b6d5-486e-a89d-8e0cc2f34a1e"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "a5bea5e3-eaa0-447e-b8cc-b9eab0870bea",
+    "fields": {
+      "title": "Modern cozy studio next to the Airport",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "San Bruno",
+      "state": "California",
+      "country": "USA",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 70,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "Newly remodeled in-law suite/studio with private entrance.  Convenient location close to the Airport (5 min drive), Caltrain (less than 10 min walk) and BART (15 min walk). Easy access to freeway 101 and 280. About 20 min drive to San Francisco.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/316x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:57:25.005Z",
+      "active": true,
+      "amenities": [
+        "962234c6-165e-4f28-bb30-f849133adcc0",
+        "ff01dd7a-9964-4d63-a952-0f3f338579d6"
+      ],
+      "reviews": [
+        "8a9f6fc9-a51b-426e-8fef-8a97b897f44c",
+        "d868c0fc-1a24-404d-8c78-43499d7aa476"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "a8c44827-75ab-4c32-8810-54ce7630dcf7",
+    "fields": {
+      "title": "Industrial | MODERN | 1 Bd/1Ba Suite. 1min to BART",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Oakland",
+      "state": "California",
+      "country": "USA",
+      "guests": 3,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 38,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "smartlock",
+      "description": "Beautifully furnished 1BD/1BA guest suite 10 minutes from San Francisco (Embarcadero Station) and 1 min away from BART.  In one of the best neighborhoods in West Oakland, it is super safe and convenient! We are a few streets from West Oakland BART (Bay Area Rapid Transit) Station and from there you can get to: San Francisco = 7 minutes Downtown Oakland = 5 minutes Berkeley = 17 minutes Oak Airport = 27 minutes SFO = 41 minutes",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/317x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T06:05:59.123Z",
+      "active": true,
+      "amenities": [
+        "077adc4d-8880-4051-b2a4-a6eb06acaed5",
+        "2b8c2fb6-ee85-4bf7-8e20-7229c988e18e",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "962234c6-165e-4f28-bb30-f849133adcc0"
+      ],
+      "reviews": [
+        "03cd913c-9eba-48b2-9e4d-dbb04027e25c",
+        "3b7ceb4e-9a70-4807-ace5-5f55880f2276"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "bf430d97-aea8-47b5-bfff-402bad09ae0c",
+    "fields": {
+      "title": "Apartment-like rooms in PacHeights",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "guests": 4,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 200,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "keypad",
+      "description": "This one-bedroom space comes with a large bedroom with a king-size bed, a living room with a sofa bed that sleeps two, and a full bath and a wet bar with a compact refrigerator/freezer, microwave, mini dishwasher, toaster oven induction burner & sink.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/317x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:54:20.702Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d"
+      ],
+      "reviews": [
+        "2cd4065c-2f01-4d81-bf87-d7ebb79d4361",
+        "aa88bc05-8714-47a7-9f55-f37eeba27780"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "c5f709a9-1226-4aab-be48-5a9962ed5eb6",
+    "fields": {
+      "title": "Japanese-Style Economy Single Room w Shared Bath",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Tokyo",
+      "state": "Tokyo",
+      "country": "Japan",
+      "guests": 1,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 0,
+      "price": 28,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "reception",
+      "description": "\"Juyoh Hotel is located 650 m or an 8-minute walk from Minami-Senju Subway Station. Free WiFi is provided in all guest rooms along with air conditioning and heating.  All guest rooms at this property are private rooms. The hotel provides both Japanese-style rooms with futon bedding and rooms with Western-style beds. Showers and toilets are shared for all guests. A refrigerator, Japanese-style yukata robes and towels are included in rooms. If two persons stay in a single room, we ask you to pay an additional charge for one person.",
+      "featured": false,
+      "main_image": "https://source.unsplash.com/random/318x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:48:15.097Z",
+      "active": true,
+      "amenities": [
+        "16dd42c9-9644-4e8a-900f-9b7f5b8f65aa",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb"
+      ],
+      "reviews": [
+        "995185e3-4996-41ec-a15f-223d37bbe0fa",
+        "fcc68a27-ef44-453e-add6-19c80a7d307f"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "d738e7bb-8fdb-4698-a6ba-684ebf96428b",
+    "fields": {
+      "title": "Wonderful in Paris !",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Paris",
+      "state": "Paris",
+      "country": "France",
+      "guests": 4,
+      "bedroom": 1,
+      "beds": 2,
+      "baths": 1,
+      "price": 33,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "keypad",
+      "description": "Superb architect studio refurbished! for 4 people A large double bed and a sofa bed await you to relax after long days of visiting Paris! You will find there all the comfort of a large studio. The kitchen is fully equipped, Nespresso etc The bathroom is spacious and complete. We provide the lines of beds and 1 towel per person, toilet paper and hand soap  The neighborhood is really great, trendy and very secure.",
+      "featured": true,
+      "main_image": "https://source.unsplash.com/random/319x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T06:34:59.207Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6bb1df50-8ffe-4ae1-b187-9ef5fec072cc",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"
+      ],
+      "reviews": [
+        "69e6a172-87ef-4617-b316-db8d23a2af37",
+        "f7ea37a8-5e25-4cd3-b1c5-4dd29d9f988c"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "e66f0753-6071-4202-82c1-600efc1b5ef8",
+    "fields": {
+      "title": "Private room in an ideally located flat!",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Paris",
+      "state": "Paris",
+      "country": "France",
+      "guests": 2,
+      "bedroom": 1,
+      "beds": 1,
+      "baths": 1,
+      "price": 27,
+      "plus": false,
+      "entire_home": false,
+      "check_in": "lockbox",
+      "description": "Private room in a 50 m\u00b2 apartment, very pleasant and ideally located in the 6th arrondissement. Near the Luxembourg garden and the Montparnasse district, in a beautiful old building. Very quiet room with a beautiful view of the Montparnasse tower. Declaration number: 7510602399383",
+      "featured": true,
+      "main_image": "https://source.unsplash.com/random/320x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T06:29:30.731Z",
+      "active": true,
+      "amenities": [
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "addae2d5-c2f5-47d4-ae86-ee5ff65879e3"
+      ],
+      "reviews": [
+        "936f8cb1-48cf-41dc-8761-30732e2ace03",
+        "ae8a97a3-20cf-44ef-ad42-e9dc8b64f148"
+      ]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "ec6bf0e5-7f17-42cd-8551-1ebf0c56f9b0",
+    "fields": {
+      "title": "Huge Master Bedroom Central Sydney!",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Sydney",
+      "state": "New South Wales",
+      "country": "Australia",
+      "guests": 3,
+      "bedroom": 1,
+      "beds": 2,
+      "baths": 1,
+      "price": 15,
+      "plus": false,
+      "entire_home": true,
+      "check_in": "keypad",
+      "description": "Quite Possibly the Best Location in Sydney!! Just moments from Sydney CBD but situated in a very quiet street  We are Right behind the famous Oxford street with great restaurants and Nightlife + buses running every 3-5 minutes direct to Bondi Beach",
+      "featured": true,
+      "main_image": "https://source.unsplash.com/random/321x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-09T07:37:56.368Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "639c067f-390f-478b-abd8-17870d46968f",
+        "6c8f801d-1497-491a-85e2-fb59810872eb",
+        "bd13b0d3-dbac-45b3-827c-876954c7366d"
+      ],
+      "reviews": ["53587f4e-75c0-4aaf-bc1b-d51bfbb410a5"]
+    }
+  },
+  {
+    "model": "stays.stay",
+    "pk": "fe873fb2-7ecb-4956-8f44-301eb73dbb2e",
+    "fields": {
+      "title": "Private Pool House with Amazing Views!",
+      "host": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "USA",
+      "guests": 6,
+      "bedroom": 4,
+      "beds": 1,
+      "baths": 1,
+      "price": 26,
+      "plus": true,
+      "entire_home": true,
+      "check_in": "keypad",
+      "description": "Private location with breathtaking views and access to pool and spa with free gated parking! Centrally located in LA, close to Downtown LA, Hollywood and our neighboring cities of Glendale and Pasadena.",
+      "featured": true,
+      "main_image": "https://source.unsplash.com/random/322x200",
+      "second_image": "",
+      "third_image": "",
+      "created_at": "2020-04-07T05:44:39.754Z",
+      "active": true,
+      "amenities": [
+        "02cf5797-5622-4aba-8e9a-4a4ba0e745ea",
+        "077adc4d-8880-4051-b2a4-a6eb06acaed5",
+        "16dd42c9-9644-4e8a-900f-9b7f5b8f65aa",
+        "1b31c6c8-6821-4f42-be49-aac54c38c614",
+        "2b8c2fb6-ee85-4bf7-8e20-7229c988e18e",
+        "3aaf128b-9397-4465-b603-2fb6eb02a4fa"
+      ],
+      "reviews": ["e960eaa1-bd05-4b36-9599-bcd305efb177"]
+    }
+  }
+]

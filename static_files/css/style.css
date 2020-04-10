@@ -2,6 +2,15 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#city-places,
 #world .world-inner,
 #image-banner .image-banner-inner {
   padding-top: 75px;
