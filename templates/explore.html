@@ -102,6 +102,9 @@
     <div class="col">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+            <a href="{{ stay.get_absolute_url }}">
+                click me!
+            </a>
           <h5 class="card-title">{{ stay.title }}</h5>
           <h5 class="card-title">{{ stay.price }}</h5>
           <small class="text-muted">Tokyo</small>
@@ -219,6 +222,9 @@
       <div class="col">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
+            <a href="{{ stay.get_absolute_url }}">
+                click me!
+            </a>
             <h5 class="card-title">{{ stay.title }}</h5>
             <h5 class="card-title">{{ stay.price }}</h5>
             <p class="card-text">{{ stay.description|truncatewords:15 }}</p>
