@@ -111,7 +111,7 @@
               <small>{{ stay.city }}</small>
               <div>
                 <span class="stars"><i class="fas fa-star"></i></span>
-                <small>4.75</small>
+                <small>{{ stay.average_ratings | floatformat:2 }}</small>
               </div>
             </div>
             <a href="">

@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.urls import reverse
 import uuid
 import os
+from statistics import mean
 
 from apps.accounts.models import User
 from apps.amenities.models import Amenity
@@ -135,6 +136,12 @@ class Stay(models.Model):
     def get_absolute_url(self):
         """docstring for get_absolute_url"""
         return reverse("stays:stay_detail", kwargs={"id": self.id})
+
+    def average_ratings(self):
+        """Calculates average ratings for each Stay instance"""
+        ratings = [review.rating for review in self.reviews.all()]
+        print(ratings)
+        return mean(ratings)
 
     def __str__(self):
         """docstring for __str__"""
