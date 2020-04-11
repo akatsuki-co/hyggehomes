@@ -9,6 +9,13 @@ from apps.amenities.models import Amenity
 from apps.reviews.models import Review
 
 
+HOME_TYPES = (
+    ('entire_place', 'Entire place'),
+    ('private_room', 'Private room'),
+    ('shared_room', 'Shared room'),
+)
+
+
 def get_filename_ext(filepath):
     """Parses the filename for its extension
 
@@ -107,7 +114,8 @@ class Stay(models.Model):
     baths = models.IntegerField(default=1)
     price = models.DecimalField(decimal_places=2, max_digits=20)
     plus = models.BooleanField(default=False)
-    entire_home = models.BooleanField(default=False)
+    home_types = models.CharField(
+        max_length=30, choices=HOME_TYPES, default='entire_place')
     check_in = models.CharField(max_length=30)
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
