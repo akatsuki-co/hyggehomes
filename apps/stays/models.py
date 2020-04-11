@@ -137,11 +137,12 @@ class Stay(models.Model):
         """docstring for get_absolute_url"""
         return reverse("stays:stay_detail", kwargs={"id": self.id})
 
-    def average_ratings(self):
+    def average_rating(self):
         """Calculates average ratings for each Stay instance"""
         ratings = [review.rating for review in self.reviews.all()]
-        print(ratings)
-        return mean(ratings)
+        # number_of_ratings = len(ratings)
+        avg_rating = mean(ratings)
+        return avg_rating
 
     def __str__(self):
         """docstring for __str__"""

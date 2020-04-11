@@ -61,8 +61,8 @@
         <h4>Reviews</h4>
         <div class="d-flex">
           <i class="fas fa-star green-stars mx-1"></i>
-          <p class="mx-1">{{ stay.average_ratings | floatformat:2 }}</p>
-          <p class="border-left ml-3 pl-3">269 reviews</p>
+          <p class="mx-1">{{stay.average_rating | floatformat:2}}</p>
+          <p class="border-left ml-3 pl-3">{{stay.average_rating}}</p>
         </div>
         <div class="row">
           <div class="col">Cleanliness</div>
@@ -169,7 +169,7 @@
         <div class="card py-4">
           <div class="card-body">
             <h5><span class="price font-weight-bold">$40 </span> per night</h5>
-            <span class="stars"><i class="fas fa-star"></i></span> {{ stay.average_ratings | floatformat:2 }}
+            <span class="stars"><i class="fas fa-star"></i></span> {{ stay.average_rating | floatformat:2 }}
             <span>(269 reviews)</span>
             <hr />
             <div class="row">
