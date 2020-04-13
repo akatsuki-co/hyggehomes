@@ -100,7 +100,7 @@
     <div class="card-deck">
       {% for stay in featured_stays_list %}
         <div class="card rounded">
-          <a href="">
+          <a href="{{ stay.get_absolute_url }}">
             <img
               src="{{ stay.main_image }}"
               class="img-fluid card-img-top"
@@ -114,7 +114,7 @@
                 <small>4.75</small>
               </div>
             </div>
-            <a href="">
+            <a href="{{ stay.get_absolute_url }}">
               <p>{{ stay.title }}</p>
             </a>
             <p><strong>${{stay.price}}</strong> / night</p>
@@ -144,7 +144,7 @@
     <div class="card-deck">
       {% for stay in sf_stays_list %}
       <div class="card rounded">
-        <a href="">
+        <a href="{{ stay.get_absolute_url }}">
           <img
           src="{{ stay.main_image }}""
           alt=""
@@ -159,7 +159,7 @@
               <small>4.75</small>
             </div>
           </div>
-          <a href="">
+          <a href="{{ stay.get_absolute_url }}">
             <p>{{ stay.title }}</p>
           </a>
           <p><strong>${{stay.price}}</strong> / night</p>

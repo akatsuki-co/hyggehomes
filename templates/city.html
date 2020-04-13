@@ -11,11 +11,13 @@
         {% for stay in stays_list %}
         <div class="row border-bottom py-4">
           <div class="col-4">
-            <img class="img-fluid" src="{{stay.main_image}}" alt="" />
+            <a href="{{ stay.get_absolute_url }}">
+              <img class="img-fluid" src="{{stay.main_image}}" />
+            </a>
           </div>
           <div class="col-6">
             <p class="my-0 text-muted">Entire apartment</p>
-            <a href=""><h5>{{stay.title}}</h5></a>
+            <a href="{{ stay.get_absolute_url }}"><h5>{{stay.title}}</h5></a>
             <p class="my-0">
               <span class="guests">{{stay.guests}}</span> guests
               <span>{{stay.bedroom}}</span> bedrooms
