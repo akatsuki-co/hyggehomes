@@ -117,7 +117,7 @@
             <a href="{{ stay.get_absolute_url }}">
               <p>{{ stay.title }}</p>
             </a>
-            <p><strong>${{stay.price}}</strong> / night</p>
+            <p><strong>${{stay.price | stringformat:'d' }}</strong> / night</p>
           </div>
         </div>
         {% if forloop.counter|divisibleby:2 %}
@@ -162,7 +162,7 @@
           <a href="{{ stay.get_absolute_url }}">
             <p>{{ stay.title }}</p>
           </a>
-          <p><strong>${{stay.price}}</strong> / night</p>
+          <p><strong>${{stay.price | stringformat:'d'}}</strong> / night</p>
         </div>
       </div>
       {% if forloop.counter|divisibleby:2 %}

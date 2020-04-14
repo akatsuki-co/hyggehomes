@@ -161,7 +161,9 @@
         <div class="card py-4">
           <div class="card-body">
             <h5>
-              <span class="price font-weight-bold">${{ stay.price }} </span>
+              <span class="price font-weight-bold"
+                >${{ stay.price | stringformat:'d' }}
+              </span>
               per night
             </h5>
             <span class="stars"><i class="fas fa-star"></i></span> 4.93
