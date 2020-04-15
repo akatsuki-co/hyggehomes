@@ -13,6 +13,10 @@ class SearchStaysListView(ListView):
         context = super().get_context_data(**kwargs)
         request = self.request
         query = request.GET.get('q')
-        context['stays_list'] = Stay.objects.search(query)
-        context['city'] = query
+        start = request.GET.get('start')
+        end = request.GET.get('end')
+        qs = Stay.objects.search(query, start, end)
+        if qs:
+            context['stays_list'] = qs
+            context['city'] = query
         return context

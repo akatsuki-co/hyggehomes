@@ -1,8 +1,10 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Q
 from django.urls import reverse
 import uuid
 import os
+
 
 from apps.accounts.models import User
 from apps.bookings.models import Booking
@@ -80,9 +82,17 @@ class StayManager(models.Manager):
         queryset = self.get_queryset().filter(city=city)
         return queryset
 
-    def search(self, query):
+    def search(self, query, start, end):
         """docstring for search"""
-        return self.get_queryset().active().search(query)
+        search_results = []
+        qs = self.get_queryset().active().search(query)
+        if qs:
+            for stay in qs:
+                for booking in stay.bookings.all():
+                    if not booking.check_overlap(
+                            booking.start_date, booking.end_date, start, end):
+                        search_results.append(booking)
+        return search_results
 
 
 class Stay(models.Model):
@@ -127,7 +137,7 @@ class Stay(models.Model):
 
     def __str__(self):
         """docstring for __str__"""
-        return self.title
+        return ('{self.title} - {self.city}')
 
     def __unicode__(self):
         """docstring for __unicode__"""

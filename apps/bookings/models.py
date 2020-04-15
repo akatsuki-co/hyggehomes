@@ -1,7 +1,18 @@
 from django.db import models
 from django.conf import settings
-from django.core.exceptions import ValidationError
 import uuid
+
+
+class BookingManager(models.Manager):
+    """Model Manager for Booking a Stay"""
+    def new_or_get(self, request):
+        user = request.user
+        created = False
+        obj = None
+        if user.is_authenticated:
+            obj, created = self.model.objects.get_or_create(
+                user=user, email=user.email)
+        return obj, created
 
 
 class Booking(models.Model):
@@ -27,22 +38,21 @@ class Booking(models.Model):
             overlap = True
         elif new_start <= fixed_start and new_end >= fixed_end:
             overlap = True
-
         return overlap
 
-    def clean(self, stay):
-        if self.end_date <= self.start_date:
-            raise ValidationError('Ending date must after start date')
+    # def clean(self):
+    #     if self.end_date <= self.start_date:
+    #         raise ValidationError('Ending date must after start date')
 
-        bookings = stay.bookings
-        if bookings.exists():
-            for booking in bookings:
-                if self.check_overlap(booking.start_date, booking.end_date,
-                                      self.start_date, self.end_date):
-                    raise ValidationError(
-                        'There is an overlap with another booking by '
-                        + str(booking.guest.first_name) + ', ' + str(
-                            booking.start_date) + '-' + str(booking.end_date))
+    #     bookings = stay.bookings
+    #     if bookings.exists():
+    #         for booking in bookings:
+    #             if self.check_overlap(booking.start_date, booking.end_date,
+    #                                   self.start_date, self.end_date):
+    #                 raise ValidationError(
+    #                     'There is an overlap with another booking by '
+    #                     + str(booking.guest.first_name) + ', ' + str(
+    #                         booking.start_date) + '-' + str(booking.end_date))
 
     def __str__(self):
         return f'{self.guest.first_name}: {self.start_date} - {self.end_date}'
