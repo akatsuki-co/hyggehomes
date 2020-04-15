@@ -1,8 +1,4 @@
-{% extends "index.html" %}
-
-{% load static %}
-
-{% block content %}
+{% extends "index.html" %} {% load static %} {% block content %}
 
 <!-- Image banner -->
 <section id="image-banner" class="py-5">
@@ -31,20 +27,16 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-          <h1>{{ stay.title }}</h1>
-          <p>{{ stay.city }}, {{ stay.state }} {{ stay.country }}</p>
+        <h1>{{ stay.title }}</h1>
         <p>
-        <span id="guests">{{ stay.guests }}</span> guests <span id="beds">{{ stay.beds }}</span> beds
-          <span id="baths">{{ stay.baths }}</span> bath
+          {{ stay.city }}, {% if stay.country == "USA"%}
+          <span>{{stay.state}}, </span>
+          {% endif%} {{ stay.country }}
         </p>
-        <hr />
-        <h5>Entire home</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <h5>Sparkling clean</h5>
-        <p>Lorem ipsum dolor sit.</p>
-        <h5>Lorem, ipsum.</h5>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, enim!
+          <span id="guests">{{ stay.guests }}</span> guests
+          <span id="beds">{{ stay.beds }}</span> beds
+          <span id="baths">{{ stay.baths }}</span> bath
         </p>
         <hr />
         <p>{{ stay.description }}</p>
@@ -168,8 +160,13 @@
       <div class="col-md-4">
         <div class="card py-4">
           <div class="card-body">
-            <h5><span class="price font-weight-bold">$40 </span> per night</h5>
-            <span class="stars"><i class="fas fa-star"></i></span> {{ stay.average_rating | floatformat:2 }}
+            <h5>
+              <span class="price font-weight-bold"
+                >${{ stay.price | stringformat:'d' }}
+              </span>
+              per night
+            </h5>
+            <span class="stars"><i class="fas fa-star"></i></span> {{ stay.average_rating | floatformat:2 }} 
             <span>(269 reviews)</span>
             <hr />
             <div class="row">
