@@ -1,18 +1,18 @@
 from django.db import models
 from django.conf import settings
 from django.core.exceptions import ValidationError
-
-from apps.stays.models import Stay
+import uuid
 
 
 class Booking(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     guest = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT
     )
-    stay = models.ForeignKey(Stay, on_delete=models.PROTECT)
     start_date = models.DateField(u'Start date', help_text=u'Start date')
     end_date = models.DateField(u'End date', help_text=u'End date')
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = u'Booking'
@@ -30,11 +30,11 @@ class Booking(models.Model):
 
         return overlap
 
-    def clean(self):
+    def clean(self, stay):
         if self.end_date <= self.start_date:
             raise ValidationError('Ending date must after start date')
 
-        bookings = Booking.objects.filter(stay=self.stay)
+        bookings = stay.bookings
         if bookings.exists():
             for booking in bookings:
                 if self.check_overlap(booking.start_date, booking.end_date,

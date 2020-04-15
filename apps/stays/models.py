@@ -5,6 +5,7 @@ import uuid
 import os
 
 from apps.accounts.models import User
+from apps.bookings.models import Booking
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
 
@@ -107,6 +108,7 @@ class Stay(models.Model):
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
     reviews = models.ManyToManyField(Review, blank=True)
+    bookings = models.ManyToManyField(Booking, blank=True)
     featured = models.BooleanField(default=False)
     main_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
