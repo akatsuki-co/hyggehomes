@@ -53,12 +53,7 @@ class StayQuerySet(models.query.QuerySet):
     def search(self, query):
         """docstring for search"""
         lookups = (
-            Q(title__icontains=query) |
-            Q(description__icontains=query) |
-            Q(price__icontains=query) |
-            Q(city__icontains=query) |
-            Q(state__icontains=query) |
-            Q(country__icontains=query)
+            Q(city__icontains=query)
         )
         return self.filter(lookups).distinct()
 
@@ -111,7 +106,7 @@ class Stay(models.Model):
     check_in = models.CharField(max_length=30)
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
-    reviews = models.ManyToManyField(Review)
+    reviews = models.ManyToManyField(Review, blank=True)
     featured = models.BooleanField(default=False)
     main_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
