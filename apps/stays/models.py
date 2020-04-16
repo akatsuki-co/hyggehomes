@@ -87,7 +87,7 @@ class StayManager(models.Manager):
         queryset = self.get_queryset().filter(city=city)
         return queryset
 
-    def search(self, query, start, end):
+    def search(self, query, start, end, guests):
         """docstring for search"""
         queryset = self.get_queryset().active().filter(city=query)
         if not isinstance(start, datetime.date)\
@@ -102,7 +102,7 @@ class StayManager(models.Manager):
                 for booking in stay.bookings.all():
                     if booking.check_overlap(start, end):
                         available = False
-                if available:
+                if available and stay.guests >= int(guests):
                     search_results.append(stay)
         return search_results
 
