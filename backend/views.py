@@ -9,11 +9,11 @@ class ExploreView(ListView):
     queryset = Stay.objects.all()
     template_name = 'explore.html'
     explore_cities = [
-        {'Paris': 'https://unsplash.com/photos/milUxSbp4_A'},
-        {'New York': 'https://unsplash.com/photos/5r5554u-mHo'},
-        {'Sydney': 'https://unsplash.com/photos/qaNcz43MeY8'},
-        {'Cape Town': 'https://unsplash.com/photos/hzR9rDXWbqo'},
-        {'Tokyo': 'https://unsplash.com/photos/alY6_OpdwRQ'},
+        {'Paris': "https://source.unsplash.com/milUxSbp4_A/300x200"},
+        {'New York': "https://source.unsplash.com/5r5554u-mHo/300x200"},
+        {'Sydney': "https://source.unsplash.com/qaNcz43MeY8/300x200"},
+        {'Cape Town': 'https://source.unsplash.com/hzR9rDXWbqo/300x200'},
+        {'Tokyo': 'https://source.unsplash.com/alY6_OpdwRQ/300x200'},
     ]
 
     def get_context_data(self, *args, **kwargs):
