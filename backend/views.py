@@ -8,7 +8,7 @@ class ExploreView(ListView):
     """Several Lists of Stay Views"""
     queryset = Stay.objects.all()
     template_name = 'explore.html'
-    cities = [
+    explore_cities = [
         {'Paris': 'https://unsplash.com/photos/milUxSbp4_A'},
         {'New York': 'https://unsplash.com/photos/5r5554u-mHo'},
         {'Sydney': 'https://unsplash.com/photos/qaNcz43MeY8'},
