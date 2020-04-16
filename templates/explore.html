@@ -4,97 +4,30 @@
 <section id="world" class="py-5">
   <div class="world-inner container">
     <h4 class="py-3">Travel the world with Airbnb</h4>
-    <h3>Here is the array!</h3>
-    {{ explore_cities }}
     <div class="card-deck">
-      <div class="card rounded">
-        <a href="{% url 'places' city='Paris' %}">
-          <img
-            src="https://source.unsplash.com/random/300x200"
-            alt=""
-            class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <a href="{% url 'places' city='Paris' %}">
-            <small class="text-muted">Paris</small>
+      {% for city in explore_cities%}
+        {% for c_string, src in city.items %}
+        <div class="card rounded">
+          <a href="{% url 'places' city=c_string %}">
+            <img
+              src="{{ src }}"
+              alt=""
+              class="img-fluid card-img-top"
+            />
           </a>
+          <div class="card-body">
+            <a href="{% url 'places' city='Paris' %}">
+              <small class="text-muted">{{ c_string }}</small>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="card rounded">
-        <a href="{% url 'places' city='New York' %}">
-          <img
-            src="https://source.unsplash.com/random/301x201"
-            alt=""
-            class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <a href="{% url 'places' city='New York' %}">
-            <small class="text-muted">New York</small>
-          </a>
-        </div>
-      </div>
-      <div class="w-100 d-none d-sm-block d-md-none py-2">
-        <!-- wrap every 2 on sm-->
-      </div>
-      <div class="card rounded">
-        <a href="{% url 'places' city='Sydney' %}">
-          <img
-            src="https://source.unsplash.com/random/302x202"
-            alt=""
-            class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <a href="{% url 'places' city='Sydney' %}">
-            <small class="text-muted">Sydney</small>
-          </a>
-        </div>
-      </div>
-      <div class="w-100 d-none d-md-block d-lg-none py-2">
-        <!-- wrap every 3 on md-->
-      </div>
-      <div class="card rounded">
-        <a href="{% url 'places' city='Cape Town' %}">
-          <img
-            src="https://source.unsplash.com/random/303x203"
-            alt=""
-            class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <a href="{% url 'places' city='Cape Town' %}">
-            <small class="text-muted">Cape Town</small>
-          </a>
-        </div>
-      </div>
-      <div class="w-100 d-none d-sm-block d-md-none py-2">
-        <!-- wrap every 2 on sm-->
-      </div>
-      <div class="w-100 d-none d-lg-block d-xl-none py-2">
-        <!-- wrap every 4 on lg-->
-      </div>
-      <div class="card rounded">
-        <a href="{% url 'places' city='Tokyo' %}">
-          <img
-            src="https://source.unsplash.com/random/304x204"
-            alt=""
-            class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <a href="{% url 'places' city='Tokyo' %}">
-            <small class="text-muted">Tokyo</small>
-          </a>
-        </div>
-      </div>
+        {% endfor %}
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <!-- Top places to Stay -->
-
 <section id="top-places" class="py-3">
   <div class="container">
     <h5>Top-rated places to stay</h5>
