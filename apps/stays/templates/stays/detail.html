@@ -103,6 +103,11 @@
         </div>
         <hr />
         <div class="review-item">
+            <h3>Here's an example of how to get the Review for the first element</h3>
+            {% for review in stay.reviews.all %}
+            {{ review.user }} <br>
+            {{ review.body }} <br>
+            {% endfor %}
           <div class="d-flex align-items-center py-2">
             <img
               src="img/person1.jpg"
