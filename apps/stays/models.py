@@ -140,9 +140,11 @@ class Stay(models.Model):
     def average_rating(self):
         """Calculates average ratings for each Stay instance"""
         ratings = [review.rating for review in self.reviews.all()]
-        # number_of_ratings = len(ratings)
         avg_rating = mean(ratings)
         return avg_rating
+
+    def number_of_reviews(self):
+        return len(self.reviews.all())
 
     def __str__(self):
         """docstring for __str__"""
