@@ -41,6 +41,10 @@
         <hr />
         <p>{{ stay.description }}</p>
         <h5>Amenities</h5>
+        <!-- A list of Amenities -->
+        {% for amenity in stay.amenities.all %}
+        {{ amenity.name }}
+        {% endfor %}
         <div class="row py-2">
           <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
           <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
