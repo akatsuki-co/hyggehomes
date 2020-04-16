@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+import datetime
 import uuid
 import os
 
@@ -79,7 +80,9 @@ class StayManager(models.Manager):
     def search(self, query, start, end):
         """docstring for search"""
         queryset = self.get_queryset().active().filter(city=query)
-        if not start or end:
+        if not isinstance(start, datetime.date)\
+                or not isinstance(end, datetime.date):
+            print('Not equal')
             return queryset
         search_results = []
         qs = queryset.prefetch_related('bookings')
