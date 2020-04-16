@@ -53,7 +53,9 @@ class StayQuerySet(models.query.QuerySet):
 
     def search(self, query):
         """docstring for search"""
-        return self.filter(city=query).distinct()
+        lookups = (
+        )
+        return self.filter(lookups).distinct()
 
 
 class StayManager(models.Manager):
