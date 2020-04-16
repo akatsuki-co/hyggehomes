@@ -1,4 +1,5 @@
 from django.views.generic import ListView
+from datetime import datetime
 
 from apps.stays.models import Stay
 
@@ -15,6 +16,10 @@ class SearchStaysListView(ListView):
         query = request.GET.get('q')
         start = request.GET.get('start')
         end = request.GET.get('end')
+        if start:
+            start = datetime.strptime(start, '%m/%d/%Y').date()
+        if end:
+            end = datetime.strptime(end, '%m/%d/%Y').date()
         qs = Stay.objects.search(query, start, end)
         if qs:
             context['stays_list'] = qs

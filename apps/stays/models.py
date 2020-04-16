@@ -1,6 +1,4 @@
-from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import Q
 from django.urls import reverse
 import uuid
 import os
@@ -40,7 +38,6 @@ def upload_image_path(instance, filename):
     new_filename = instance.title.replace(' ', '_').lower()
     name, ext = get_filename_ext(filename)
     final_filename = f'{new_filename}{ext}'
-    print(final_filename)
     return f'{final_filename}'
 
 
@@ -55,10 +52,7 @@ class StayQuerySet(models.query.QuerySet):
 
     def search(self, query):
         """docstring for search"""
-        lookups = (
-            Q(city__icontains=query)
-        )
-        return self.filter(lookups).distinct()
+        return self.filter(city=query).distinct()
 
 
 class StayManager(models.Manager):
@@ -84,14 +78,19 @@ class StayManager(models.Manager):
 
     def search(self, query, start, end):
         """docstring for search"""
+        queryset = self.get_queryset().active().filter(city=query)
+        if not start or end:
+            return queryset
         search_results = []
-        qs = self.get_queryset().active().search(query)
+        qs = queryset.prefetch_related('bookings')
         if qs:
             for stay in qs:
+                available = True
                 for booking in stay.bookings.all():
-                    if not booking.check_overlap(
-                            booking.start_date, booking.end_date, start, end):
-                        search_results.append(booking)
+                    if booking.check_overlap(start, end):
+                        available = False
+                if available:
+                    search_results.append(stay)
         return search_results
 
 
@@ -137,7 +136,7 @@ class Stay(models.Model):
 
     def __str__(self):
         """docstring for __str__"""
-        return ('{self.title} - {self.city}')
+        return (f'{self.title} - {self.city}')
 
     def __unicode__(self):
         """docstring for __unicode__"""

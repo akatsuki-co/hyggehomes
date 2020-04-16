@@ -29,30 +29,16 @@ class Booking(models.Model):
         verbose_name = u'Booking'
         verbose_name_plural = u'Booking'
 
-    def check_overlap(self, fixed_start, fixed_end, new_start, new_end):
+    def check_overlap(self, new_start, new_end):
         overlap = False
-        if new_start == fixed_end or new_end == fixed_start:
+        if new_start == self.end_date or new_end == self.start_date:
             overlap = False
-        elif (new_start >= fixed_start and new_start <= fixed_end) or\
-             (new_end >= fixed_start and new_end <= fixed_end):
+        elif (new_start >= self.start_date and new_start <= self.end_date) or\
+             (new_end >= self.start_date and new_end <= self.end_date):
             overlap = True
-        elif new_start <= fixed_start and new_end >= fixed_end:
+        elif new_start <= self.start_date and new_end >= self.end_date:
             overlap = True
         return overlap
-
-    # def clean(self):
-    #     if self.end_date <= self.start_date:
-    #         raise ValidationError('Ending date must after start date')
-
-    #     bookings = stay.bookings
-    #     if bookings.exists():
-    #         for booking in bookings:
-    #             if self.check_overlap(booking.start_date, booking.end_date,
-    #                                   self.start_date, self.end_date):
-    #                 raise ValidationError(
-    #                     'There is an overlap with another booking by '
-    #                     + str(booking.guest.first_name) + ', ' + str(
-    #                         booking.start_date) + '-' + str(booking.end_date))
 
     def __str__(self):
         return f'{self.guest.first_name}: {self.start_date} - {self.end_date}'
