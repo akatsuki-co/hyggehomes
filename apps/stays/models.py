@@ -11,9 +11,9 @@ from apps.reviews.models import Review
 
 
 HOME_TYPES = (
-    ('entire_place', 'Entire place'),
-    ('private_room', 'Private room'),
-    ('shared_room', 'Shared room'),
+    ('Entire place', 'Entire place'),
+    ('Private room', 'Private room'),
+    ('Shared room', 'Shared room'),
 )
 
 
