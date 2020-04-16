@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'apps.amenities',
     'apps.bookings',
     'apps.reviews',
-    'apps.stays'
+    'apps.search',
+    'apps.stays',
 
     # Third Party Apps
 ]

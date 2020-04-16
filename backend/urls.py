@@ -11,11 +11,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('explore/', ExploreView.as_view(), name='explore'),
     path('', landing_page, name='landing'),
+    path('places/<city>', StayCityListView.as_view(), name='places'),
     path('stays/', include(
         ('apps.stays.urls', 'stays'),
         namespace='stays')
          ),
-    path('places/<city>', StayCityListView.as_view(), name='places')
+    path('s/', include(
+        ('apps.search.urls', 'search'),
+        namespace='search')
+         ),
 ]
 
 if settings.DEBUG:

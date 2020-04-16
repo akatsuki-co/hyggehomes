@@ -2,6 +2,7 @@
 
 <section id="city-places">
   <div class="container-fluid">
+    {% if stays_list %}
     <div class="row align-items-center">
       <div class="col-lg-6 py-3">
         <h3 class="font-weight-bold pt-3">
@@ -45,6 +46,9 @@
         <div id="map" style="width: 675px; height: 1050px;"></div>
       </div>
     </div>
+    {% else %}
+    <h2>No Search Results were found</h2>
+    {% endif %}
   </div>
 </section>
 
