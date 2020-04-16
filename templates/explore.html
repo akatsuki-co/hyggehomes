@@ -4,6 +4,8 @@
 <section id="world" class="py-5">
   <div class="world-inner container">
     <h4 class="py-3">Travel the world with Airbnb</h4>
+    <h3>Here is the array!</h3>
+    {{ explore_cities }}
     <div class="card-deck">
       <div class="card rounded">
         <a href="{% url 'places' city='Paris' %}">
@@ -111,7 +113,7 @@
               <small>{{ stay.city }}</small>
               <div>
                 <span class="stars"><i class="fas fa-star"></i></span>
-                <small>4.75</small>
+                <small>{{ stay.average_rating | floatformat:2 }}</small>
               </div>
             </div>
             <a href="{{ stay.get_absolute_url }}">
