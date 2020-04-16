@@ -3,10 +3,18 @@ from django.db.models import Q
 from django.urls import reverse
 import uuid
 import os
+from statistics import mean
 
 from apps.accounts.models import User
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
+
+
+HOME_TYPES = (
+    ('Entire place', 'Entire place'),
+    ('Private room', 'Private room'),
+    ('Shared room', 'Shared room'),
+)
 
 
 def get_filename_ext(filepath):
@@ -107,7 +115,8 @@ class Stay(models.Model):
     baths = models.IntegerField(default=1)
     price = models.DecimalField(decimal_places=2, max_digits=20)
     plus = models.BooleanField(default=False)
-    entire_home = models.BooleanField(default=False)
+    home_types = models.CharField(
+        max_length=30, choices=HOME_TYPES, default='entire_place')
     check_in = models.CharField(max_length=30)
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
@@ -127,6 +136,15 @@ class Stay(models.Model):
     def get_absolute_url(self):
         """docstring for get_absolute_url"""
         return reverse("stays:stay_detail", kwargs={"id": self.id})
+
+    def average_rating(self):
+        """Calculates average ratings for each Stay instance"""
+        ratings = [review.rating for review in self.reviews.all()]
+        avg_rating = mean(ratings)
+        return avg_rating
+
+    def number_of_reviews(self):
+        return len(self.reviews.all())
 
     def __str__(self):
         """docstring for __str__"""
