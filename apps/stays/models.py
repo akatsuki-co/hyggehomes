@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Prefetch
 from django.urls import reverse
 import datetime
 import uuid
@@ -80,8 +81,12 @@ class StayManager(models.Manager):
         return self.get_queryset().featured()
 
     def get_by_id(self, id):
-        qs = self.get_queryset().filter(id=id)
-        return qs.first() if qs.count() == 1 else None
+        qs = self.get_queryset().filter(id=id).prefetch_related(
+            Prefetch("amenities")).prefetch_related(Prefetch(
+                "reviews",
+                queryset=Review.objects.select_related("user")
+            ))
+        return qs.first()
 
     def by_city(self, city):
         queryset = self.get_queryset().filter(city=city)
