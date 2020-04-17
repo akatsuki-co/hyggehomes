@@ -89,7 +89,7 @@ class StayManager(models.Manager):
 
     def search(self, query, start, end):
         """docstring for search"""
-        queryset = self.get_queryset().active().filter(city=query)
+        queryset = self.get_queryset().active().filter(city__iexact=query)
         if not isinstance(start, datetime.date)\
                 or not isinstance(end, datetime.date):
             print('Not equal')
@@ -148,29 +148,26 @@ class Stay(models.Model):
         """docstring for get_absolute_url"""
         return reverse("stays:stay_detail", kwargs={"id": self.id})
 
-    def average_rating(self):
+    def ratings(self):
         """Calculates average ratings for each Stay instance"""
-        ratings = [review.rating for review in self.reviews.all()]
-        avg_rating = mean(ratings)
-        return avg_rating
-
-    def number_of_reviews(self):
-        return len(self.reviews.all())
-
-    def average_location_rating(self):
-        location = [review.location for review in self.reviews.all()]
-        avg_location = mean(location)
-        return avg_location
-
-    def average_cleanliness_rating(self):
-        cleanliness = [review.cleanliness for review in self.reviews.all()]
-        avg_cleanliness = mean(cleanliness)
-        return avg_cleanliness
-
-    def average_hospitality_rating(self):
-        hospitality = [review.hospitality for review in self.reviews.all()]
-        avg_hospitality = mean(hospitality)
-        return avg_hospitality
+        reviews = self.reviews.all()
+        ratings = [review.rating for review in reviews]
+        location = [review.location for review in reviews]
+        cleanliness = [review.cleanliness for review in reviews]
+        hospitality = [review.hospitality for review in reviews]
+        average_rating = mean(ratings)
+        number_of_reviews = len(reviews)
+        average_location = mean(location)
+        average_cleanliness = mean(cleanliness)
+        average_hospitality = mean(hospitality)
+        review_ratings = {
+            "average_rating": average_rating,
+            "number_of_reviews": number_of_reviews,
+            "average_location": average_location,
+            "average_cleanliness": average_cleanliness,
+            "average_hospitality": average_hospitality
+        }
+        return review_ratings
 
     def __str__(self):
         """docstring for __str__"""
