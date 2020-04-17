@@ -55,7 +55,7 @@
               <small>{{ stay.city }}</small>
               <div>
                 <span class="stars"><i class="fas fa-star"></i></span>
-                <small>{{ stay.average_rating | floatformat:2 }}</small>
+                <small>{{ stay.ratings.average_rating | floatformat:2 }}</small>
               </div>
             </div>
             <a href="{{ stay.get_absolute_url }}">
@@ -97,7 +97,7 @@
               <small>{{ stay.city }}</small>
               <div>
                 <span class="stars"><i class="fas fa-star"></i></span>
-                <small>4.75</small>
+                <small>{{ stay.ratings.average_rating | floatformat:2 }}</small>
               </div>
             </div>
             <a href="{{ stay.get_absolute_url }}">
