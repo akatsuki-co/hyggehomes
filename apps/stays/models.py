@@ -157,6 +157,21 @@ class Stay(models.Model):
     def number_of_reviews(self):
         return len(self.reviews.all())
 
+    def average_location_rating(self):
+        location = [review.location for review in self.reviews.all()]
+        avg_location = mean(location)
+        return avg_location
+
+    def average_cleanliness_rating(self):
+        cleanliness = [review.cleanliness for review in self.reviews.all()]
+        avg_cleanliness = mean(cleanliness)
+        return avg_cleanliness
+
+    def average_hospitality_rating(self):
+        hospitality = [review.hospitality for review in self.reviews.all()]
+        avg_hospitality = mean(hospitality)
+        return avg_hospitality
+
     def __str__(self):
         """docstring for __str__"""
         return (f'{self.title} - {self.city}')
