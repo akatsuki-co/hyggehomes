@@ -1,9 +1,24 @@
 $(document).ready(function () {
-  $("#datepicker-container .input-daterange").datepicker({
+  // Settings for datepicker on landing page
+  $(".datepicker-landing .input-daterange").datepicker({
     todayHighlight: true,
     autoclose: true,
   })
 
+  // Settings for datepicker on detail page
+  $(".datepicker-detail .input-daterange").datepicker({
+    todayHighlight: true,
+    autoclose: true,
+  })
+
+  // Targets datepicker on landing page upon creation and adds custom class
+  $("body").on("DOMNodeInserted", ".datepicker", () => {
+    if (top.location.pathname == "/") {
+      $(".datepicker").first().addClass("mypicker")
+    }
+  })
+
+  // Loads mapbox only on places and search urls
   if (
     top.location.pathname.startsWith("/places/") ||
     top.location.pathname.startsWith("/s/")
