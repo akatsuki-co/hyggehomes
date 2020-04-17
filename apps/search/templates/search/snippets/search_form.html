@@ -7,6 +7,7 @@
       placeholder="Anywhere"
       name="q"
       value="{{ request.GET.q }}"
+      required
     />
   </div>
   <!-- Datepicker -->
@@ -16,9 +17,9 @@
       <label for="check-in">Check Out</label>
     </div>
     <div class="input-daterange input-group">
-      <input type="text" class="input-sm form-control" name="start" />
+      <input type="text" class="input-sm form-control" name="start" required />
       <span class="input-group-addon mx-2">to</span>
-      <input type="text" class="input-sm form-control" name="end" />
+      <input type="text" class="input-sm form-control" name="end" required />
     </div>
   </div>
   <div class="form-group">
