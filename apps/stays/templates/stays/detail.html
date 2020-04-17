@@ -34,31 +34,54 @@
           {% endif%} {{ stay.country }}
         </p>
         <p>
-          <span id="guests">{{ stay.guests }}</span> guests
-          <span id="beds">{{ stay.beds }}</span> beds
-          <span id="baths">{{ stay.baths }}</span> bath
+          <span id="guests">{{ stay.guests }}</span> guest{% if stay.guests > 1%}s{% endif %}
+          <span id="beds">{{ stay.beds }}</span> bed{% if stay.beds > 1%}s{% endif %}
+          <span id="baths">{{ stay.baths }}</span> bath{% if stay.baths > 1%}s{% endif %}
         </p>
         <hr />
         <p>{{ stay.description }}</p>
         <h5>Amenities</h5>
         <!-- A list of Amenities -->
-        {% for amenity in stay.amenities.all %}
-        {{ amenity.name }}
-        {% endfor %}
         <div class="row py-2">
-          <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
-          <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
-        </div>
-        <div class="row py-2">
-          <div class="col-6"><i class="fas fa-coffee mr-2"></i> Breakfast</div>
-          <div class="col-6"><i class="fas fa-shower mr-2"></i> Showers</div>
+          {% for amenity in stay.amenities.all %}
+            {% if amenity.name == "Wifi" %}
+              <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
+            {% endif %}
+            {% if amenity.name == "Parking" %}
+              <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
+            {% endif %}
+            {% if amenity.name == "Breakfast" %}
+              <div class="col-6"><i class="fas fa-coffee mr-2"></i> Breakfast</div>
+            {% endif %}
+            {% if amenity.name == "Shower" %}
+              <div class="col-6"><i class="fas fa-shower mr-2"></i> Showers</div>
+            {% endif %}
+            {% if amenity.name == "Kitchen" %}
+              <div class="col-6"><i class="fas fa-utensils mr-3"></i>Kitchen</div>
+            {% endif %}
+            {% if amenity.name == "Hair dryer" %}
+            <div class="col-6"><i class="fas fa-heart mr-2"></i> Hair Dryer</div>
+            {% endif %}
+            {% if amenity.name == "Laptop-friendly workspace" %}
+            <div class="col-6"><i class="fas fa-laptop mr-2"></i> Laptop-friendly workspace</div>
+            {% endif %}
+            {% if amenity.name == "TV" %}
+            <div class="col-6"><i class="fas fa-tv mr-2"></i> TV</div>
+            {% endif %}
+            {% if amenity.name == "Dryer" %}
+            <div class="col-6"><i class="fa fa-tshirt mr-2"></i> Dryer</div>
+            {% endif %}
+            {% if amenity.name == "Self check-in" %}
+            <div class="col-6"><i class="fas fa-key mr-3"></i>Self check-in</div>
+            {% endif %}
+          {% endfor %}
         </div>
         <hr />
         <h4>Reviews</h4>
         <div class="d-flex">
           <i class="fas fa-star green-stars mx-1"></i>
           <p class="mx-1">{{stay.ratings.average_rating | floatformat:2}}</p>
-          <p class="border-left ml-3 pl-3">{{stay.ratings.average_rating}}</p>
+          <p class="border-left ml-3 pl-3">({{ stay.ratings.number_of_reviews }} review{% if stay.number_of_reviews > 1 %}s{% endif %})</p>
         </div>
         <div class="row">
           <div class="col">Cleanliness</div>
@@ -67,8 +90,8 @@
               <div
                 class="progress-bar bg-success"
                 role="progressbar"
-                style="width: 90%;"
-                aria-valuenow="90"
+                style="width: 60%;"
+                aria-valuenow="{{stay.cleanliness}}"
                 aria-valuemin="0"
                 aria-valuemax="100"
               ></div>
@@ -106,65 +129,25 @@
           </div>
         </div>
         <hr />
+        {% for review in stay.reviews.all %}
         <div class="review-item">
-            <h3>Here's an example of how to get the Review for the first element</h3>
-            {% for review in stay.reviews.all %}
-            {{ review.user }} <br>
-            {{ review.body }} <br>
-            {% endfor %}
           <div class="d-flex align-items-center py-2">
             <img
-              src="img/person1.jpg"
+              src={% static 'img/person1.jpg' %}
               width="40"
               height="40"
               alt=""
               class="img-fluid rounded circle"
             />
-            <span class="font-weight-bold px-2">Sonya</span>
-            <span>February 2020</span>
+            <span class="font-weight-bold px-2">{{ review.user.first_name }}</span>
+            <span>{{ review.created_at.date }}</span>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            consequatur inventore quos modi tenetur ut sapiente quaerat, ipsa
-            officia ab?
+            {{ review.body }}
           </p>
         </div>
-        <div class="review-item">
-          <div class="d-flex align-items-center py-2">
-            <img
-              src="img/person2.jpg"
-              width="40"
-              height="40"
-              alt=""
-              class="img-fluid rounded circle"
-            />
-            <span class="font-weight-bold px-2">Sonya</span>
-            <span>February 2020</span>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
-            sapiente praesentium autem eius illo quisquam asperiores eum.
-          </p>
+        {% endfor %}
         </div>
-        <div class="review-item">
-          <div class="d-flex align-items-center py-2">
-            <img
-              src="img/person3.jpg"
-              width="40"
-              height="40"
-              alt=""
-              class="img-fluid rounded circle"
-            />
-            <span class="font-weight-bold px-2">Sonya</span>
-            <span>February 2020</span>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
-            sapiente praesentium autem eius illo quisquam asperiores eum.
-          </p>
-        </div>
-      </div>
-
       <!-- Reserve form -->
       <div class="col-md-4">
         <div class="card py-4">

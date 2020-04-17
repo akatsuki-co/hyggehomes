@@ -17,14 +17,20 @@
             </a>
           </div>
           <div class="col-6">
-            <p class="my-0 text-muted">Entire apartment</p>
+            <p class="my-0 text-muted">{{stay.home_types}}</p>
             <a href="{{ stay.get_absolute_url }}"><h5>{{stay.title}}</h5></a>
             <p class="my-0">
-              <span class="guests">{{stay.guests}}</span> guests
-              <span>{{stay.bedroom}}</span> bedrooms
-              <span>{{stay.beds}}</span> beds <span>{{stay.baths}}</span> bath
+              <span class="guests">{{stay.guests}}</span> guest{% if stay.guests > 1%}s{% endif %} *
+              <span>{{stay.bedroom}}</span> bedroom{% if stay.bedroom > 1%}s{% endif %} *
+              <span>{{stay.beds}}</span> bed{% if stay.beds > 1%}s{% endif %} *
+              <span>{{stay.baths}}</span> bath{% if stay.bath > 1%}s{% endif %}
             </p>
-            <p class="my-0">Wifi * Kitchen * Heating * Washer</p>
+            <p class="my-0">
+              {% for amenity in stay.amenities.all %}
+                {{ amenity.name }}
+                {% if not forloop.last %}*{% endif %}
+              {% endfor %}
+            </p>
           </div>
           <div class="col-2">
             <div class="d-flex justify-content-end">
@@ -47,9 +53,9 @@
       </div>
     </div>
     {% else %}
-    <h2>No Search Results were found</h2>
+    <div class="text-center py-5"><h2 class="pt-3">No search results were found!</h2></div>
     {% endif %}
   </div>
 </section>
-
 {% endblock %}
+
