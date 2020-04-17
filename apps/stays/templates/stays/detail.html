@@ -140,7 +140,7 @@
               class="img-fluid rounded circle"
             />
             <span class="font-weight-bold px-2">{{ review.user.first_name }}</span>
-            <span>{{ review.created_at.date }}</span>
+            <span>{{ review.created_at | date:'F Y' }}</span>
           </div>
           <p>
             {{ review.body }}
