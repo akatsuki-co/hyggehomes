@@ -14,7 +14,7 @@ $(document).ready(function () {
   // Targets datepicker on landing page upon creation and adds custom class
   $("body").on("DOMNodeInserted", ".datepicker", () => {
     if (top.location.pathname == "/") {
-      $(".datepicker").first().addClass("mypicker")
+      $(".datepicker").first().addClass("datepicker-01")
     }
   })
 
