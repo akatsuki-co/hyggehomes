@@ -1,0 +1,73 @@
+{% extends "index.html" %} {% load static %} {% block content %}
+
+<section id="myTrips" class="py-5">
+  <div class="container">
+    <h1 class="font-weight-bold">Trips</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="tripTabs"
+          data-toggle="tab"
+          href="#intro"
+          role="tab"
+          >Introduction</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="nav-disco-tab"
+          data-toggle="tab"
+          href="#disco"
+          role="tab"
+          >Discography</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content bg-white">
+      <div
+        class="container tab-pane fade show active"
+        id="upcomingPanel"
+        role="tabpanel"
+        aria-labelledby="tripTabs"
+      >
+        <p>
+          When you’re ready to start planning your next trip, we’re here to
+          help.
+        </p>
+        <img
+          src="https://source.unsplash.com/FBXuXp57eM0/info/600x400"
+          class="img-fluid"
+        />
+      </div>
+      <div
+        class="tab-pane fade"
+        id="past"
+        role="tabpanel"
+        aria-labelledby="nav-disco-tab"
+      >
+        <div class="row">
+          <div class="card">
+            <img src="https://source.unsplash.com/random/300x200" alt="" />
+            <div class="card-body">
+              <small>Jan 12 - 15</small>
+              <h5>Santa Cruz</h5>
+              <a href="#">
+                <p>OCEAN VIEW beach home near Natural Bridges</p>
+              </a>
+            </div>
+            <div class="card-footer">
+              <a href="#">
+                See details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn py-5">Explore Airbnb</a>
+  </div>
+</section>
+
+{% endblock %}
