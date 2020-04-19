@@ -43,36 +43,7 @@
         <!-- Amenities -->
         <div class="row py-2">
           {% for amenity in stay.amenities.all %}
-            {% if amenity.name == "Wifi" %}
-              <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
-            {% endif %}
-            {% if amenity.name == "Parking" %}
-              <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
-            {% endif %}
-            {% if amenity.name == "Breakfast" %}
-              <div class="col-6"><i class="fas fa-coffee mr-2"></i> Breakfast</div>
-            {% endif %}
-            {% if amenity.name == "Shower" %}
-              <div class="col-6"><i class="fas fa-shower mr-2"></i> Showers</div>
-            {% endif %}
-            {% if amenity.name == "Kitchen" %}
-              <div class="col-6"><i class="fas fa-utensils mr-3"></i>Kitchen</div>
-            {% endif %}
-            {% if amenity.name == "Hair dryer" %}
-              <div class="col-6"><i class="fas fa-heart mr-2"></i> Hair Dryer</div>
-            {% endif %}
-            {% if amenity.name == "Laptop-friendly workspace" %}
-              <div class="col-6"><i class="fas fa-laptop mr-2"></i> Laptop-friendly workspace</div>
-            {% endif %}
-            {% if amenity.name == "TV" %}
-              <div class="col-6"><i class="fas fa-tv mr-2"></i> TV</div>
-            {% endif %}
-            {% if amenity.name == "Dryer" %}
-              <div class="col-6"><i class="fa fa-tshirt mr-2"></i> Dryer</div>
-            {% endif %}
-            {% if amenity.name == "Self check-in" %}
-              <div class="col-6"><i class="fas fa-key mr-3"></i>Self check-in</div>
-            {% endif %}
+          <div class="col-6"><i class="{{amenity.icon}}"></i> {{amenity.name}}</div>
           {% endfor %}
         </div>
         <hr />
@@ -156,39 +127,7 @@
             <span class="stars"><i class="fas fa-star"></i></span> {{ stay.ratings.average_rating | floatformat:2 }} 
             <span>({{ stay.ratings.number_of_reviews }} reviews)</span>
             <hr />
-            <div class="form-group datepicker-detail">
-              <div class="d-flex font-weight-bold justify-content-between">
-                <label for="check-in">Check In</label>
-                <label for="check-in">Check Out</label>
-              </div>
-              <div class="input-daterange input-group">
-                <input type="text" class="input-sm form-control datepicker-input" name="start" />
-                <span class="input-group-addon mx-2">to</span>
-                <input type="text" class="input-sm form-control datepicker-input" name="end" />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="form-group">
-                  <select class="form-control">
-                    <option value="1">1 guest</option>
-                    <option value="2">2 guests</option>
-                    <option value="3">3 guests</option>
-                    <option value="4">4 guests</option>
-                    <option value="5">5 guests</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <input
-                    type="submit"
-                    value="Reserve"
-                    class="btn btn-danger btn-block"
-                  />
-                </div>
-              </div>
-            </div>
+            {% include 'stays/partials/reserve_form.html' %}
             <p class="text-center text-muted">You won’t be charged yet.</p>
           </div>
         </div>

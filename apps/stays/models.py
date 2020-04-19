@@ -6,12 +6,10 @@ import uuid
 import os
 from statistics import mean
 
-
 from apps.accounts.models import User
 from apps.bookings.models import Booking
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
-
 
 HOME_TYPES = (
     ('Entire place', 'Entire place'),
@@ -73,7 +71,7 @@ class StayManager(models.Manager):
         return StayQuerySet(self.model, using=self._db)
 
     def all(self):
-        """docstring for all """
+        """docstring for all"""
         return self.get_queryset().active()
 
     def featured(self):
@@ -173,6 +171,17 @@ class Stay(models.Model):
             "average_hospitality": average_hospitality
         }
         return review_ratings
+
+    def reserve_stay(self, user, start_date, end_date, guests):
+        """Reserve a Stay"""
+        if not[x for x in (user, start_date, end_date, guests) if x is None]:
+            for booking in self.bookings.all():
+                if booking.check_overlap(start_date, end_date):
+                    raise ValueError('Stay is unavailable during these dates')
+            self.bookings.create(guest=user, start_date=start_date,
+                                 end_date=end_date, number_of_guests=guests)
+        else:
+            raise ValueError("Booking must have a start/end date")
 
     def __str__(self):
         """docstring for __str__"""
