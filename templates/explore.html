@@ -6,9 +6,9 @@
     <h4 class="py-3">Travel the world with Airbnb</h4>
     <div class="card-deck">
       {% for city in explore_cities%}
-        {% for c_string, src in city.items %}
+        {% for city_name, src in city.items %}
           <div class="card rounded">
-            <a href="{% url 'places' city=c_string %}">
+            <a href="{% url 'places' city=city_name %}">
               <img
                 src="{{ src }}"
                 alt=""
@@ -16,8 +16,8 @@
               />
             </a>
             <div class="card-body">
-              <a href="{% url 'places' city=c_string %}">
-                <small class="text-muted">{{ c_string }}</small>
+              <a href="{% url 'places' city=city_name %}">
+                <small class="text-muted">{{ city_name }}</small>
               </a>
             </div>
           </div>
