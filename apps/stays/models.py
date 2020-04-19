@@ -5,12 +5,10 @@ import uuid
 import os
 from statistics import mean
 
-
 from apps.accounts.models import User
 from apps.bookings.models import Booking
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
-
 
 HOME_TYPES = (
     ('Entire place', 'Entire place'),
@@ -72,7 +70,7 @@ class StayManager(models.Manager):
         return StayQuerySet(self.model, using=self._db)
 
     def all(self):
-        """docstring for all """
+        """docstring for all"""
         return self.get_queryset().active()
 
     def featured(self):
@@ -153,6 +151,14 @@ class Stay(models.Model):
         ratings = [review.rating for review in self.reviews.all()]
         avg_rating = mean(ratings)
         return avg_rating
+
+    def reserve_stay(self, user, start_date, end_date, guests):
+        """Reserve a Stay"""
+        if not[x for x in (user, start_date, end_date, guests) if x is None]:
+            self.bookings.create(guest=user, start_date=start_date,
+                                 end_date=end_date, number_of_guests=guests)
+        else:
+            print("Booking must have a start/end date and number of guests")
 
     def number_of_reviews(self):
         return len(self.reviews.all())
