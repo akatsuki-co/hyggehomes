@@ -10,6 +10,7 @@ class Amenity(models.Model):
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=30)
+    icon = models.CharField(max_length=50)
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

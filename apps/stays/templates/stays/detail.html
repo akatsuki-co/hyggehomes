@@ -43,36 +43,7 @@
         <!-- Amenities -->
         <div class="row py-2">
           {% for amenity in stay.amenities.all %}
-            {% if amenity.name == "Wifi" %}
-              <div class="col-6"><i class="fas fa-wifi mr-2"></i> Wifi</div>
-            {% endif %}
-            {% if amenity.name == "Parking" %}
-              <div class="col-6"><i class="fas fa-parking mr-2"></i> Parking</div>
-            {% endif %}
-            {% if amenity.name == "Breakfast" %}
-              <div class="col-6"><i class="fas fa-coffee mr-2"></i> Breakfast</div>
-            {% endif %}
-            {% if amenity.name == "Shower" %}
-              <div class="col-6"><i class="fas fa-shower mr-2"></i> Showers</div>
-            {% endif %}
-            {% if amenity.name == "Kitchen" %}
-              <div class="col-6"><i class="fas fa-utensils mr-3"></i>Kitchen</div>
-            {% endif %}
-            {% if amenity.name == "Hair dryer" %}
-              <div class="col-6"><i class="fas fa-heart mr-2"></i> Hair Dryer</div>
-            {% endif %}
-            {% if amenity.name == "Laptop-friendly workspace" %}
-              <div class="col-6"><i class="fas fa-laptop mr-2"></i> Laptop-friendly workspace</div>
-            {% endif %}
-            {% if amenity.name == "TV" %}
-              <div class="col-6"><i class="fas fa-tv mr-2"></i> TV</div>
-            {% endif %}
-            {% if amenity.name == "Dryer" %}
-              <div class="col-6"><i class="fa fa-tshirt mr-2"></i> Dryer</div>
-            {% endif %}
-            {% if amenity.name == "Self check-in" %}
-              <div class="col-6"><i class="fas fa-key mr-3"></i>Self check-in</div>
-            {% endif %}
+          <div class="col-6"><i class="{{amenity.icon}}"></i> {{amenity.name}}</div>
           {% endfor %}
         </div>
         <hr />
