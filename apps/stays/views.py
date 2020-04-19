@@ -28,8 +28,13 @@ def reservation_success(request):
         stay_id = request.POST.get('stay')
         if start:
             start = datetime.strptime(start, '%m/%d/%Y').date()
+        else:
+            raise Http404('Start date must not be None')
         if end:
             end = datetime.strptime(end, '%m/%d/%Y').date()
-        stay = Stay.objects.get_by_id(stay_id)
+        else:
+            raise Http404('End date must not be None')
+        stay = Stay.objects.filter(id=stay_id)\
+            .prefetch_related('bookings').first()
         stay.reserve_stay(user, start, end, guests)
     return render(request, 'stays/reserved.html')
