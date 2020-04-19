@@ -19,7 +19,7 @@ class StayDetailView(DetailView):
         return instance
 
 
-def reservation_success(request):
+def make_reservation(request):
     if request.method == 'POST':
         user = request.user
         start = request.POST.get('start')
