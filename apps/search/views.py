@@ -16,11 +16,12 @@ class SearchStaysListView(ListView):
         query = request.GET.get('q')
         start = request.GET.get('start')
         end = request.GET.get('end')
+        guests = request.GET.get('guests')
         if start:
             start = datetime.strptime(start, '%m/%d/%Y').date()
         if end:
             end = datetime.strptime(end, '%m/%d/%Y').date()
-        qs = Stay.objects.search(query, start, end)
+        qs = Stay.objects.search(query, start, end, guests)
         if qs:
             context['stays_list'] = qs
             context['city'] = query
