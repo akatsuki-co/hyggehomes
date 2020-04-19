@@ -1,6 +1,5 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import DetailView
 from django.http import Http404
-from django.shortcuts import render
 
 from .models import Stay
 

@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Prefetch
 from django.urls import reverse
 import datetime
 import uuid
@@ -78,16 +79,20 @@ class StayManager(models.Manager):
         return self.get_queryset().featured()
 
     def get_by_id(self, id):
-        qs = self.get_queryset().filter(id=id)
-        return qs.first() if qs.count() == 1 else None
+        qs = self.get_queryset().filter(id=id).prefetch_related(
+            Prefetch("amenities")).prefetch_related(Prefetch(
+                "reviews",
+                queryset=Review.objects.select_related("user")
+            ))
+        return qs.first()
 
     def by_city(self, city):
         queryset = self.get_queryset().filter(city=city)
         return queryset
 
-    def search(self, query, start, end):
+    def search(self, query, start, end, guests):
         """docstring for search"""
-        queryset = self.get_queryset().active().filter(city=query)
+        queryset = self.get_queryset().active().filter(city__iexact=query)
         if not isinstance(start, datetime.date)\
                 or not isinstance(end, datetime.date):
             print('Not equal')
@@ -100,7 +105,7 @@ class StayManager(models.Manager):
                 for booking in stay.bookings.all():
                     if booking.check_overlap(start, end):
                         available = False
-                if available:
+                if available and stay.guests >= int(guests):
                     search_results.append(stay)
         return search_results
 
@@ -146,11 +151,26 @@ class Stay(models.Model):
         """docstring for get_absolute_url"""
         return reverse("stays:stay_detail", kwargs={"id": self.id})
 
-    def average_rating(self):
+    def ratings(self):
         """Calculates average ratings for each Stay instance"""
-        ratings = [review.rating for review in self.reviews.all()]
-        avg_rating = mean(ratings)
-        return avg_rating
+        reviews = self.reviews.all()
+        ratings = [review.rating for review in reviews]
+        location = [review.location for review in reviews]
+        cleanliness = [review.cleanliness for review in reviews]
+        hospitality = [review.hospitality for review in reviews]
+        average_rating = mean(ratings)
+        number_of_reviews = len(reviews)
+        average_location = mean(location)
+        average_cleanliness = mean(cleanliness)
+        average_hospitality = mean(hospitality)
+        review_ratings = {
+            "average_rating": average_rating,
+            "number_of_reviews": number_of_reviews,
+            "average_location": average_location,
+            "average_cleanliness": average_cleanliness,
+            "average_hospitality": average_hospitality
+        }
+        return review_ratings
 
     def reserve_stay(self, user, start_date, end_date, guests):
         """Reserve a Stay"""
@@ -159,9 +179,6 @@ class Stay(models.Model):
                                  end_date=end_date, number_of_guests=guests)
         else:
             print("Booking must have a start/end date and number of guests")
-
-    def number_of_reviews(self):
-        return len(self.reviews.all())
 
     def __str__(self):
         """docstring for __str__"""

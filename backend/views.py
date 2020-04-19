@@ -20,7 +20,7 @@ class ExploreView(ListView):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
         explore_cities = self.explore_cities
-        qs = Stay.objects.all()
+        qs = Stay.objects.all().prefetch_related('reviews')
         context['explore_cities'] = explore_cities
         context['sf_stays_list'] = qs.filter(city="San Francisco")[:4]
         context['featured_stays_list'] = qs.filter(featured=True)[:4]
