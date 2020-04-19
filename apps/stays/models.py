@@ -175,10 +175,13 @@ class Stay(models.Model):
     def reserve_stay(self, user, start_date, end_date, guests):
         """Reserve a Stay"""
         if not[x for x in (user, start_date, end_date, guests) if x is None]:
+            for booking in self.bookings.all():
+                if booking.check_overlap(start_date, end_date):
+                    raise ValueError('Stay is unavailable during these dates')
             self.bookings.create(guest=user, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
         else:
-            print("Booking must have a start/end date and number of guests")
+            raise ValueError("Booking must have a start/end date")
 
     def __str__(self):
         """docstring for __str__"""
