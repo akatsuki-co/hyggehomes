@@ -1,6 +1,7 @@
 from django.views.generic import DetailView
 from django.http import Http404
 from django.shortcuts import render
+from datetime import datetime
 
 from .models import Stay
 
@@ -24,6 +25,11 @@ def reservation_success(request):
         start = request.POST.get('start')
         end = request.POST.get('end')
         guests = request.POST.get('guests')
-        print(user)
-        stay = request.POST.get('stay')
+        stay_id = request.POST.get('stay')
+        if start:
+            start = datetime.strptime(start, '%m/%d/%Y').date()
+        if end:
+            end = datetime.strptime(end, '%m/%d/%Y').date()
+        stay = Stay.objects.get_by_id(stay_id)
+        stay.reserve_stay(user, start, end, guests)
     return render(request, 'stays/reserved.html')

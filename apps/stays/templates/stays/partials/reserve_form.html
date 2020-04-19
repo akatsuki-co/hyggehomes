@@ -1,5 +1,6 @@
 <form action='{% url "stays:success" %}' method="POST">
     {% csrf_token %}
+    <input type="hidden" name="stay" value={{stay.id}} />
     <div class="form-group datepicker-detail">
         <div class="d-flex font-weight-bold justify-content-between">
             <label for="check-in">Check In</label>
