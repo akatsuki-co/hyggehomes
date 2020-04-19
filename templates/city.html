@@ -3,59 +3,60 @@
 <section id="city-places">
   <div class="container-fluid">
     {% if stays_list %}
-    <div class="row align-items-center">
-      <div class="col-lg-6 py-3">
-        <h3 class="font-weight-bold pt-3">
-          Stays in <span id="search-city">{{city}}</span>
-        </h3>
-        <!-- Stays -->
-        {% for stay in stays_list %}
-        <div class="row border-bottom py-4">
-          <div class="col-4">
-            <a href="{{ stay.get_absolute_url }}">
-              <img class="img-fluid" src="{{stay.main_image}}" />
-            </a>
-          </div>
-          <div class="col-6">
-            <p class="my-0 text-muted">{{stay.home_types}}</p>
-            <a href="{{ stay.get_absolute_url }}"><h5>{{stay.title}}</h5></a>
-            <p class="my-0">
-              <span class="guests">{{stay.guests}}</span> guest{% if stay.guests > 1%}s{% endif %} *
-              <span>{{stay.bedroom}}</span> bedroom{% if stay.bedroom > 1%}s{% endif %} *
-              <span>{{stay.beds}}</span> bed{% if stay.beds > 1%}s{% endif %} *
-              <span>{{stay.baths}}</span> bath{% if stay.bath > 1%}s{% endif %}
-            </p>
-            <p class="my-0">
-              {% for amenity in stay.amenities.all %}
-                {{ amenity.name }}
-                {% if not forloop.last %}*{% endif %}
-              {% endfor %}
-            </p>
-          </div>
-          <div class="col-2">
-            <div class="d-flex justify-content-end">
-              <div>
-                <span class="stars"><i class="fas fa-star"></i></span>
-                <small>{{ stay.average_rating|floatformat:2 }}</small>
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-3">
+          <h3 class="font-weight-bold pt-3">
+            Stays in <span id="search-city">{{ city }}</span>
+          </h3>
+          <!-- Stays -->
+          {% for stay in stays_list %}
+            <div class="row border-bottom py-4">
+              <div class="col-4">
+                <a href="{{ stay.get_absolute_url }}">
+                  <img class="img-fluid" src="{{stay.main_image}}" />
+                </a>
+              </div>
+              <div class="col-6">
+                <p class="my-0 text-muted">{{ stay.home_types }}</p>
+                <a href="{{ stay.get_absolute_url }}"><h5>{{ stay.title }}</h5></a>
+                <p class="my-0">
+                  <span>{{ stay.guests }}</span> guest{% if stay.guests > 1 %}s{% endif %} *
+                  <span>{{ stay.bedroom }}</span> bedroom{% if stay.bedroom > 1 %}s{% endif %} *
+                  <span>{{ stay.beds }}</span> bed{% if stay.beds > 1 %}s{% endif %} *
+                  <span>{{ stay.baths }}</span> bath{% if stay.bath > 1 %}s{% endif %}
+                </p>
+                <p class="my-0">
+                  {% for amenity in stay.amenities.all %}
+                    {{ amenity.name }}
+                    {% if not forloop.last %}*{% endif %}
+                  {% endfor %}
+                </p>
+              </div>
+              <div class="col-2">
+                <div class="d-flex justify-content-end">
+                  <div>
+                    <span class="stars"><i class="fas fa-star"></i></span>
+                    <small>{{ stay.average_rating | floatformat:2 }}</small>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <p>${{ stay.price | stringformat:'d' }} / night</p>
+                </div>
               </div>
             </div>
-            <div class="d-flex justify-content-end">
-              <p>${{ stay.price | stringformat:'d' }} / night</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
+        <div class="col-lg-6 d-flex justify-content-center align-items-center pt-4">
+          <div id="map" style="width: 675px; height: 1050px;"></div>
+        </div>
       </div>
-      <div
-        class="col-lg-6 d-flex justify-content-center align-items-center pt-4"
-      >
-        <div id="map" style="width: 675px; height: 1050px;"></div>
-      </div>
-    </div>
     {% else %}
-    <div class="text-center py-5"><h2 class="pt-3">No search results were found!</h2></div>
+      <div class="text-center py-5">
+        <h2 class="pt-3">No search results were found!</h2>
+      </div>
     {% endif %}
   </div>
 </section>
+
 {% endblock %}
 

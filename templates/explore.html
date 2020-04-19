@@ -7,33 +7,30 @@
     <div class="card-deck">
       {% for city in explore_cities%}
         {% for c_string, src in city.items %}
-        <div class="card rounded">
-          <a href="{% url 'places' city=c_string %}">
-            <img
-              src="{{ src }}"
-              alt=""
-              class="img-fluid card-img-top"
-            />
-          </a>
-          <div class="card-body">
-            <a href="{% url 'places' city='Paris' %}">
-              <small class="text-muted">{{ c_string }}</small>
+          <div class="card rounded">
+            <a href="{% url 'places' city=c_string %}">
+              <img
+                src="{{ src }}"
+                alt=""
+                class="img-fluid card-img-top"
+              />
             </a>
+            <div class="card-body">
+              <a href="{% url 'places' city=c_string %}">
+                <small class="text-muted">{{ c_string }}</small>
+              </a>
+            </div>
           </div>
-        </div>
         {% endfor %}
         {% if forloop.counter|divisibleby:2 %}
-        <div class="w-100 d-none d-sm-block d-md-none py-2">
-        </div>
-      {% endif %}
-      {% if forloop.counter|divisibleby:3 %}
-        <div class="w-100 d-none d-md-block d-lg-none py-2">
-        </div>
-      {% endif %}
-      {% if forloop.counter|divisibleby:4 %}
-        <div class="w-100 d-none d-lg-block d-xl-none py-2">
-        </div> 
-      {% endif %}
+          <div class="w-100 d-none d-sm-block d-md-none py-2"></div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:3 %}
+          <div class="w-100 d-none d-md-block d-lg-none py-2"></div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:4 %}
+          <div class="w-100 d-none d-lg-block d-xl-none py-2"></div> 
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -58,26 +55,23 @@
               <small>{{ stay.city }}</small>
               <div>
                 <span class="stars"><i class="fas fa-star"></i></span>
-                <small>{{ stay.average_rating | floatformat:2 }}</small>
+                <small>{{ stay.ratings.average_rating | floatformat:2 }}</small>
               </div>
             </div>
             <a href="{{ stay.get_absolute_url }}">
               <p>{{ stay.title }}</p>
             </a>
-            <p><strong>${{stay.price | stringformat:'d' }}</strong> / night</p>
+            <p><strong>${{ stay.price | stringformat:'d' }}</strong> / night</p>
           </div>
         </div>
         {% if forloop.counter|divisibleby:2 %}
-          <div class="w-100 d-none d-sm-block d-md-none py-2">
-          </div>
+          <div class="w-100 d-none d-sm-block d-md-none py-2"></div>
         {% endif %}
         {% if forloop.counter|divisibleby:3 %}
-          <div class="w-100 d-none d-md-block d-lg-none py-2">
-          </div>
+          <div class="w-100 d-none d-md-block d-lg-none py-2"></div>
         {% endif %}
         {% if forloop.counter|divisibleby:4 %}
-          <div class="w-100 d-none d-lg-block d-xl-none py-2">
-          </div> 
+          <div class="w-100 d-none d-lg-block d-xl-none py-2"></div> 
         {% endif %}
       {% endfor %}
     </div>
@@ -90,45 +84,40 @@
     <h5 class="py-2">Places to stay in San Francisco</h5>
     <div class="card-deck">
       {% for stay in sf_stays_list %}
-      <div class="card rounded">
-        <a href="{{ stay.get_absolute_url }}">
-          <img
-          src="{{ stay.main_image }}""
-          alt=""
-          class="img-fluid card-img-top"
-          />
-        </a>
-        <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <small>{{ stay.city }}</small>
-            <div>
-              <span class="stars"><i class="fas fa-star"></i></span>
-              <small>4.75</small>
-            </div>
-          </div>
+        <div class="card rounded">
           <a href="{{ stay.get_absolute_url }}">
-            <p>{{ stay.title }}</p>
+            <img
+              src="{{ stay.main_image }}""
+              alt=""
+              class="img-fluid card-img-top"
+            />
           </a>
-          <p><strong>${{stay.price | stringformat:'d'}}</strong> / night</p>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <small>{{ stay.city }}</small>
+              <div>
+                <span class="stars"><i class="fas fa-star"></i></span>
+                <small>{{ stay.ratings.average_rating | floatformat:2 }}</small>
+              </div>
+            </div>
+            <a href="{{ stay.get_absolute_url }}">
+              <p>{{ stay.title }}</p>
+            </a>
+            <p><strong>${{stay.price | stringformat:'d'}}</strong> / night</p>
+          </div>
         </div>
-      </div>
-      {% if forloop.counter|divisibleby:2 %}
-        <div class="w-100 d-none d-sm-block d-md-none py-2">
-        </div>
-      {% endif %}
-      {% if forloop.counter|divisibleby:3 %}
-        <div class="w-100 d-none d-md-block d-lg-none py-2">
-        </div>
-      {% endif %}
-      {% if forloop.counter|divisibleby:4 %}
-        <div class="w-100 d-none d-lg-block d-xl-none py-2">
-        </div> 
-      {% endif %}
+        {% if forloop.counter|divisibleby:2 %}
+          <div class="w-100 d-none d-sm-block d-md-none py-2"></div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:3 %}
+          <div class="w-100 d-none d-md-block d-lg-none py-2"></div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:4 %}
+          <div class="w-100 d-none d-lg-block d-xl-none py-2"></div> 
+        {% endif %}
       {% endfor %}
-      </div>
     </div>
   </div>
 </section>
 
 {% endblock %}
-  
