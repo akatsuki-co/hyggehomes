@@ -18,8 +18,12 @@
         <li class="nav-item">
           <a href="{% url 'explore' %}" class="nav-link text-dark">Explore</a>
         </li>
+        {% if not request.user.is_authenticated %}
         <li class="nav-item">
-            <a href="{% url 'user:trips' id=request.user.id %}" class="nav-link text-dark">My Trips</a>
+            <a href="{% url 'login' %}" class="nav-link text-dark">Sign in</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'register' %}" class="nav-link text-dark">Register</a>
         </li>
         <li id="signup-navlink" class="nav-item">
           <a
@@ -37,6 +41,14 @@
             >Sign In</a
           >
         </li>
+        {% else %}
+        <li class="nav-item">
+            <a href="{% url 'user:trips' id=request.user.id %}" class="nav-link text-dark">My Trips</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'logout' %}" class="nav-link text-dark">Logout</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>
