@@ -5,13 +5,13 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from .views import landing_page, StayCityListView, ExploreView
-from apps.accounts.views import RegisterView, LoginView
+from apps.accounts.views import RegisterView, login_view
 from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', LoginView.as_view(), name='login'),
+    path('login/', login_view, name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegisterView.as_view(), name='register'),
     path('explore/', ExploreView.as_view(), name='explore'),

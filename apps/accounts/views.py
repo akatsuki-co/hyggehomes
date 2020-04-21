@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
 from django.views.generic import CreateView, FormView, ListView
 from django.shortcuts import redirect
@@ -14,23 +15,22 @@ class RegisterView(CreateView):
     success_url = '/explore/'
 
 
-class LoginView(FormView):
-    form_class = LoginForm
-    success_url = '/explore/'
-    template_name = 'accounts/login.html'
-
-    def form_valid(self, form):
-        """Method to check if form is valid"""
-        request = self.request
-        email = form.cleaned_data.get('email')
-        password = form.cleaned_data.get('password')
-        user = authenticate(request, username=email, password=password)
-        print("User Authenticated!")
-        if user:
+def login_view(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+        print(email)
+        print(password)
+        user = authenticate(email=email, password=password)
+        if user is not None:
             login(request, user)
-            print('Logged In!')
+            messages.success(request, 'You are now logged in')
             return redirect('/explore/')
-        return super(LoginView, self).form_invalid(form)
+        else:
+            messages.error(request, 'Invalid credentials')
+            return redirect('login')
+    else:
+        return redirect('landing')
 
 
 class TripsView(ListView):
