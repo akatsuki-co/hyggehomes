@@ -11,7 +11,8 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-        <form>
+          <form action="{% url 'landing' %}" method="post">
+              {% csrf_token %}
           <div class="form-group">
             <label for="name">Email</label>
             <input type="email" class="form-control" />
@@ -24,12 +25,12 @@
             <label for="confirmPassword">Confirm Password</label>
             <input type="password" class="form-control" />
           </div>
+          <div class="modal-footer mx-3 mb-3">
+            <button class="btn btn-danger btn-block" data-dismiss="modal">
+              Submit
+            </button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer mx-3 mb-3">
-        <button class="btn btn-danger btn-block" data-dismiss="modal">
-          Submit
-        </button>
       </div>
     </div>
   </div>
