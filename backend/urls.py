@@ -20,6 +20,10 @@ urlpatterns = [
         ('apps.search.urls', 'search'),
         namespace='search')
          ),
+    path('user/', include(
+        ('apps.accounts.urls', 'user'),
+        namespace='user')
+         ),
 ]
 
 if settings.DEBUG:

@@ -18,6 +18,9 @@
         <li class="nav-item">
           <a href="{% url 'explore' %}" class="nav-link text-dark">Explore</a>
         </li>
+        <li class="nav-item">
+            <a href="{% url 'user:trips' id=request.user.id %}" class="nav-link text-dark">My Trips</a>
+        </li>
         <li id="signup-navlink" class="nav-item">
           <a
             data-toggle="modal"

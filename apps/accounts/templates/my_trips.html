@@ -1,5 +1,10 @@
 {% extends "index.html" %} {% load static %} {% block content %}
 
+<!-- Testing to show booked Stays -->
+{% for trip in trips %}
+{{trip.title}}
+{% endfor %}
+
 <section id="myTrips" class="py-5">
   <div class="container">
     <h1 class="font-weight-bold">Trips</h1>
