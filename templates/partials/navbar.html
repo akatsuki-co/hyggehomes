@@ -20,7 +20,7 @@
         </li>
         {% if not request.user.is_authenticated %}
         <li class="nav-item">
-            <a href="{% url 'register' %}" class="nav-link text-dark">Register</a>
+          <a href="{% url 'register' %}" class="nav-link text-dark">Register</a>
         </li>
         <li id="signup-navlink" class="nav-item">
           <a
@@ -40,10 +40,14 @@
         </li>
         {% else %}
         <li class="nav-item">
-            <a href="{% url 'user:trips' id=request.user.id %}" class="nav-link text-dark">My Trips</a>
+          <a
+            href="{% url 'user:trips' id=request.user.id %}"
+            class="nav-link text-dark"
+            >My Trips</a
+          >
         </li>
-        <li id="signup-button" class="nav-item mx-3">
-            <a href="{% url 'logout' %}" class="btn btn-outline-secondary rounded nav-link text-dark">Logout</a>
+        <li id="logout-navlink" class="nav-item">
+          <a href="{% url 'logout' %}" class="nav-link text-dark">Logout</a>
         </li>
         {% endif %}
       </ul>
