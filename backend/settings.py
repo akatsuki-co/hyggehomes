@@ -1,3 +1,4 @@
+from django.contrib.messages import constants as messages
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -131,3 +132,9 @@ STATICFILES_DIRS = [
 # Media Files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
