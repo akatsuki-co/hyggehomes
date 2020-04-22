@@ -2,76 +2,80 @@
 
 <section id="myTrips" class="py-5">
   <div class="container">
-    <h1 class="font-weight-bold">Trips</h1>
+    <h4 class="font-weight-bold py-3">Trips</h4>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a
           class="nav-link active"
-          id="tripTabs"
+          id="nav-upcoming-tab"
           data-toggle="tab"
-          href="#intro"
+          href="#upcomingPanel"
           role="tab"
-          >Introduction</a
+          >Upcoming</a
         >
       </li>
       <li class="nav-item">
         <a
           class="nav-link"
-          id="nav-disco-tab"
+          id="nav-past-tab"
           data-toggle="tab"
-          href="#disco"
+          href="#pastPanel"
           role="tab"
-          >Discography</a
+          >Past</a
         >
       </li>
     </ul>
-    <div class="tab-content bg-white">
+    <div class="tab-content">
       <div
-        class="container tab-pane fade show active"
+        class="container tab-pane fade show active py-3"
         id="upcomingPanel"
         role="tabpanel"
-        aria-labelledby="tripTabs"
+        aria-labelledby="nav-upcoming-tab"
       >
-        <p>
+        <p class="text-muted py-3">
           When you’re ready to start planning your next trip, we’re here to
           help.
         </p>
         <img
-          src="https://source.unsplash.com/FBXuXp57eM0/info/600x400"
+          src="{% static 'img/couch.jpg' %}"
           class="img-fluid"
+          style="opacity: 0.7;"
         />
+        <button type="button" class="btn btn-lg btn-dark my-5">
+          Explore Airbnb
+        </button>
       </div>
-<!-- Testing to show booked Stays -->
-{% for stay in trips %}
-{{stay.title}}
-{% endfor %}
-
       <div
         class="tab-pane fade"
-        id="past"
+        id="pastPanel"
         role="tabpanel"
-        aria-labelledby="nav-disco-tab"
+        aria-labelledby="nav-past-tab"
       >
-        <div class="row">
-          <div class="card">
-            <img src="https://source.unsplash.com/random/300x200" alt="" />
-            <div class="card-body">
-              <small>Jan 12 - 15</small>
-              <h5>Santa Cruz</h5>
-              <a href="#">
-                <p>OCEAN VIEW beach home near Natural Bridges</p>
-              </a>
+        <div class="container">
+          <div class="row">
+            {% for stay in trips %}
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://source.unsplash.com/random/300x200" alt="" />
+                <div class="card-body">
+                  <small>--> stay dates (Jan 12 15) <--</small>
+                  <h5>{{stay.city}}</h5>
+                  <a href="#">
+                    <p>{{stay.title}}</p>
+                  </a>
+                </div>
+                <div class="card-footer">
+                  <a href="#">
+                    See details
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="card-footer">
-              <a href="#">
-                See details
-              </a>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
-    <a href="#" class="btn btn py-5">Explore Airbnb</a>
   </div>
 </section>
 
