@@ -41,6 +41,11 @@
           class="img-fluid"
         />
       </div>
+<!-- Testing to show booked Stays -->
+{% for stay in trips %}
+{{stay.title}}
+{% endfor %}
+
       <div
         class="tab-pane fade"
         id="past"
