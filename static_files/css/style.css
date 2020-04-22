@@ -10,6 +10,7 @@ a:hover {
   text-decoration: none;
 }
 
+#register .container,
 #city-places,
 #world .world-inner,
 #image-banner .image-banner-inner {
