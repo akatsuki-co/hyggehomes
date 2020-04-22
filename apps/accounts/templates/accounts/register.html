@@ -4,6 +4,7 @@
   <div class="container">
     <div class="row justify-content-center mx-3">
       <div class="col-md-5">
+        {% include 'partials/alerts.html' %}
         <form method="post">
           <h5 class="text-center">Please Register</h5>
           {% csrf_token %}
