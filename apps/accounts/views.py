@@ -1,10 +1,12 @@
 from django import forms
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
+from django.db.models import Prefetch
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
 from apps.stays.models import Stay
+from apps.bookings.models import Booking
 
 User = get_user_model()
 
@@ -57,6 +59,7 @@ class TripsView(ListView):
     def get_context_data(self, *args, **kwargs):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
-        trips = Stay.objects.filter(bookings__guest=self.request.user)
+        trips = Stay.objects.all().filter(bookings__guest=self.request.user)\
+            .active().prefetch_related('bookings')
         context['trips'] = trips
         return context

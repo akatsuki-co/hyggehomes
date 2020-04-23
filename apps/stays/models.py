@@ -80,7 +80,7 @@ class StayManager(models.Manager):
 
     def get_by_id(self, id):
         qs = self.get_queryset().filter(id=id).prefetch_related(
-            Prefetch("amenities")).prefetch_related(Prefetch(
+            Prefetch('amenities')).prefetch_related(Prefetch(
                 "reviews",
                 queryset=Review.objects.select_related("user")
             ))
