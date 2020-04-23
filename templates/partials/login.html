@@ -8,6 +8,7 @@
         </button>
       </div>
       <div class="modal-body mx-3">
+          {% include 'partials/alerts.html' %}
           <form action="{% url 'login' %}" method="post">
               {% csrf_token %}
           <div class="form-group">

@@ -16,7 +16,9 @@ def register_view(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
         if password1 and password2 and password1 != password2:
-            raise forms.ValidationError("Passwords don't match")
+            messages.error(request, "Passwords do not match!")
+            return redirect('register')
+            # raise forms.ValidationError("Passwords don't match")
         if password1 and password2 and password1 == password2:
             new_user, created = User.objects.get_or_create(
                 email=email, password=password1)
