@@ -56,16 +56,16 @@
             {% for stay in trips %}
             <div class="col-md-4">
               <div class="card">
-                <img src="https://source.unsplash.com/random/300x200" alt="" />
+                  <img src="{{ stay.main_image }}" alt="main_image" />
                 <div class="card-body">
-                  <small>--> stay dates (Jan 12 15) <--</small>
-                  <h5>{{stay.city}}</h5>
-                  <a href="#">
+                    <small>{{stay.bookings.first.start_date}} - {{stay.bookings.first.end_date}}</small>
+                  <h5 class="mt-2" >{{stay.city}}</h5>
+                  <a href="{{ stay.get_absolute_url }}">
                     <p>{{stay.title}}</p>
                   </a>
                 </div>
                 <div class="card-footer">
-                  <a href="#">
+                  <a href="{{ stay.get_absolute_url }}">
                     See details
                   </a>
                 </div>
