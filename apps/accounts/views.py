@@ -21,6 +21,8 @@ def register_view(request):
             new_user, created = User.objects.get_or_create(
                 email=email, password=password1)
             if created:
+                new_user.set_password(password2)
+                new_user.save()
                 login(request, new_user)
             else:
                 messages.error(request, 'User with email already exists')
@@ -36,7 +38,7 @@ def login_view(request):
         email = request.POST['email']
         password = request.POST['password']
         user = authenticate(email=email, password=password)
-        if user is not None:
+        if user:
             login(request, user)
             messages.success(request, 'You are now logged in')
             return redirect('/explore/')
