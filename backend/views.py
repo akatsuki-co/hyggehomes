@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.db.models import Prefetch
 from django.views.generic import ListView
 
 from apps.stays.models import Stay
+from apps.reviews.models import Review
 
 
 class ExploreView(ListView):
@@ -40,6 +42,11 @@ class StayCityListView(ListView):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
         city = self.kwargs['city']
-        context['stays_list'] = Stay.objects.all().filter(city=city)
+        context['stays_list'] = Stay.objects.all().filter(city=city)\
+            .prefetch_related(Prefetch('amenities')).prefetch_related(Prefetch(
+                'reviews',
+                queryset=Review.objects.select_related('user')
+            ))
+
         context['city'] = city
         return context
