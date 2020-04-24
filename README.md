@@ -31,6 +31,8 @@ This repository contains a Airbnb clone created with Python and Django.
 
 `python3 manage.py runserver`
 
+- Navigate to http://localhost:8000 to view our development site.
+
 ## Views
 
 ### Landing
