@@ -16,3 +16,6 @@ media/
 
 # VScode
 .vscode/settings.json
+
+# DS_Store
+**/.DS_Store
