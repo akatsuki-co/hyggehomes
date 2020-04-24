@@ -102,12 +102,14 @@
         {% for review in stay.reviews.all %}
           <div class="review-item">
             <div class="d-flex align-items-center py-2">
+                {% if review.user.user_profile %}
               <img
-                src={% static 'img/person1.jpg' %}
+                  src="/static/img/{{ review.user.user_profile }}"
                 width="40"
                 height="40"
                 class="img-fluid rounded circle"
               />
+              {% endif %}
               <span class="font-weight-bold px-2">{{ review.user.first_name }}</span>
               <span>{{ review.created_at | date:'F Y' }}</span>
             </div>

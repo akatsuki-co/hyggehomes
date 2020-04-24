@@ -2,7 +2,40 @@ from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
+import os
 import uuid
+
+
+def get_filename_ext(filepath):
+    """Parses the filename for its extension
+
+    Arguments:
+        filepath {path} -- filepath of the image uploaded
+
+    Returns:
+        name -- name of the image file
+        ext -- type of extension of the file
+    """
+    base_name = os.path.basename(filepath)
+    name, ext = os.path.splitext(base_name)
+    return name, ext
+
+
+def upload_image_path(instance, filename):
+    """Creates the path for the new uploaded image
+
+    Arguments:
+        instance {file} -- instance of the uploaded file
+        filename {path} -- path of the instance file
+
+    Returns:
+        path -- path of the uploaded image file
+    """
+    full_name = f'{instance.first_name} {instance.last_name}'
+    new_filename = full_name.replace(' ', '_').lower()
+    name, ext = get_filename_ext(filename)
+    final_filename = f'{new_filename}{ext}'
+    return f'{final_filename}'
 
 
 class UserManager(BaseUserManager):
@@ -88,6 +121,8 @@ class User(AbstractBaseUser):
         verbose_name='email address',
         max_length=255, unique=True
     )
+    user_profile = models.ImageField(
+        upload_to=upload_image_path, null=True, blank=True)
     first_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     last_name = models.CharField(
