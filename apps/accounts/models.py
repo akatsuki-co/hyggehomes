@@ -31,7 +31,8 @@ def upload_image_path(instance, filename):
     Returns:
         path -- path of the uploaded image file
     """
-    new_filename = instance.title.replace(' ', '_').lower()
+    full_name = f'{instance.first_name} {instance.last_name}'
+    new_filename = full_name.replace(' ', '_').lower()
     name, ext = get_filename_ext(filename)
     final_filename = f'{new_filename}{ext}'
     return f'{final_filename}'
