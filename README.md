@@ -53,6 +53,10 @@ This repository contains a Airbnb clone created with Python and Django.
 
 ![Detail](./static_files/img/detail.png)
 
+### My Trips
+
+![My Trips](./static_files/img/my_trips.png)
+
 ## To Dos
 
 - Deploy app on Azure
