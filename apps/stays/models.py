@@ -127,7 +127,6 @@ class Stay(models.Model):
     beds = models.IntegerField(default=1)
     baths = models.IntegerField(default=1)
     price = models.DecimalField(decimal_places=2, max_digits=20)
-    plus = models.BooleanField(default=False)
     home_types = models.CharField(
         max_length=30, choices=HOME_TYPES, default='entire_place')
     check_in = models.CharField(max_length=30)
@@ -137,10 +136,6 @@ class Stay(models.Model):
     bookings = models.ManyToManyField(Booking, blank=True)
     featured = models.BooleanField(default=False)
     main_image = models.ImageField(
-        upload_to=upload_image_path, null=True, blank=True)
-    second_image = models.ImageField(
-        upload_to=upload_image_path, null=True, blank=True)
-    third_image = models.ImageField(
         upload_to=upload_image_path, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
