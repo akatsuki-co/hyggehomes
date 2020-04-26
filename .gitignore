@@ -1,5 +1,6 @@
 # Environment
 env/
+backend/.env
 
 # Database
 db.sqlite3
