@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'apps.stays',
 
     # Third Party Apps
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+STRIPE_SECRET_KEY = '<your test secret key here>'
+STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
