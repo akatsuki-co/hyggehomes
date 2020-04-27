@@ -67,5 +67,12 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
     <!-- Custom JS -->
     <script src="{% static 'js/main.js' %}"></script>
+    <!-- Stripe Checkout -->
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="{{ key }}"
+      data-description="A Django Charge"
+      data-amount="500"
+      data-locale="auto">
+    </script>
   </body>
 </html>

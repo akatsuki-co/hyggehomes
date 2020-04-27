@@ -174,6 +174,7 @@ class Stay(models.Model):
                     raise ValueError('Stay is unavailable during these dates')
             self.bookings.create(guest=user, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
+            return True
         else:
             raise ValueError("Booking must have a start/end date")
 

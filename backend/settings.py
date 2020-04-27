@@ -14,6 +14,8 @@ SECRET_KEY = env.str('SECRET_KEY')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
+STRIPE_SECRET_KEY = env.str('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = env.str('STRIPE_PUBLISHABLE_KEY')
 
 # Application definition
 
@@ -142,5 +144,3 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-STRIPE_SECRET_KEY = '<your test secret key here>'
-STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
