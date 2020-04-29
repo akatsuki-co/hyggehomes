@@ -75,7 +75,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-<<<<<<< HEAD
 DATABASES = {'default': env.db()}
 
 # DATABASES = {
@@ -88,18 +87,6 @@ DATABASES = {'default': env.db()}
 #        'PORT': '5432'
 #    }
 #}
-=======
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'xdxyhwco',
-        'USER': 'xdxyhwco',
-        'PASSWORD': 'eXQBFWLGxYwoMub-aOH8-c--3teK8sRh',
-        'HOST': 'drona.db.elephantsql.com',
-        'PORT': '5432'
-    }
-}
->>>>>>> 218bc4a3f4872e814dc41cda2de624ea83098042
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
