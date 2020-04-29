@@ -1,7 +1,6 @@
 import environ
 from django.contrib.messages import constants as messages
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,17 +75,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'xdxyhwco',
-        'USER': 'xdxyhwco',
-        'PASSWORD': 'eXQBFWLGxYwoMub-aOH8-c--3teK8sRh',
-        'HOST': 'drona.db.elephantsql.com',
-        'PORT': '5432'
+DATABASES = {'default': env.db()}
 
-    }
-}
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'xdxyhwco',
+#        'USER': 'xdxyhwco',
+#        'PASSWORD': 'eXQBFWLGxYwoMub-aOH8-c--3teK8sRh',
+#        'HOST': 'drona.db.elephantsql.com',
+#        'PORT': '5432'
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -141,6 +141,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
