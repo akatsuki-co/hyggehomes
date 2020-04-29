@@ -30,7 +30,7 @@ $(document).ready(function () {
       "cape town": [18.4241, -33.9249],
       tokyo: [139.7525, 35.6852],
       "san francisco": [-122.431297, 37.74572],
-      "bogota":[74.0721, 4.7110]
+      bogota: [-74.0721, 4.711],
     }
     const searchCity = $("#search-city")["0"].innerText.toLowerCase()
     mapboxgl.accessToken =
