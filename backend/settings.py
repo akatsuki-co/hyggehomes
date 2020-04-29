@@ -84,7 +84,6 @@ DATABASES = {
         'PASSWORD': 'eXQBFWLGxYwoMub-aOH8-c--3teK8sRh',
         'HOST': 'drona.db.elephantsql.com',
         'PORT': '5432'
-
     }
 }
 
