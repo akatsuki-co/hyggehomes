@@ -140,8 +140,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 218bc4a3f4872e814dc41cda2de624ea83098042
