@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.views.generic import DetailView
 from django.http import Http404
 from django.shortcuts import redirect
@@ -20,6 +21,8 @@ class StayDetailView(DetailView):
         return instance
 
     def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect('/register')
         if request.method == 'POST':
             user = request.user
             start = request.POST.get('start')
@@ -36,7 +39,14 @@ class StayDetailView(DetailView):
                 raise Http404('End date must not be None')
             stay = Stay.objects.filter(id=stay_id)\
                 .prefetch_related('bookings').first()
-            stay.reserve_stay(user, start, end, guests)
+            reserved = stay.reserve_stay(user, start, end, guests)
+            if not reserved:
+                messages.error(
+                    request,
+                    'This Stay is no longer available during those dates'
+                )
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}))
             return redirect(
                 reverse('user:trips', kwargs={"id": request.user.id})
             )
