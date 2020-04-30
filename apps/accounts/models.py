@@ -121,8 +121,8 @@ class User(AbstractBaseUser):
         verbose_name='email address',
         max_length=255, unique=True
     )
-    user_profile = models.ImageField(
-        upload_to=upload_image_path, null=True, blank=True)
+    user_profile = models.CharField(
+        max_length=100, default=None, blank=True, null=True)
     first_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     last_name = models.CharField(

@@ -16,6 +16,11 @@ HOME_TYPES = (
     ('Private room', 'Private room'),
     ('Shared room', 'Shared room'),
 )
+CHECK_IN_TYPES = {
+    ('Keypad', 'Keypad'),
+    ('Lockbox', 'Lockbox'),
+    ('Smartlock', 'Smartlock')
+}
 
 
 def get_filename_ext(filepath):
@@ -128,8 +133,9 @@ class Stay(models.Model):
     baths = models.IntegerField(default=1)
     price = models.DecimalField(decimal_places=2, max_digits=20)
     home_types = models.CharField(
-        max_length=30, choices=HOME_TYPES, default='entire_place')
-    check_in = models.CharField(max_length=30)
+        max_length=30, choices=HOME_TYPES, default='Entire place')
+    check_in = models.CharField(
+        max_length=30, choices=CHECK_IN_TYPES, default='Lockbox')
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
     reviews = models.ManyToManyField(Review, blank=True)
@@ -171,9 +177,11 @@ class Stay(models.Model):
         if not[x for x in (user, start_date, end_date, guests) if x is None]:
             for booking in self.bookings.all():
                 if booking.check_overlap(start_date, end_date):
-                    raise ValueError('Stay is unavailable during these dates')
+                    # raise ValueError('Stay is unavailable during these dates')
+                    return False
             self.bookings.create(guest=user, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
+            return True
         else:
             raise ValueError("Booking must have a start/end date")
 
