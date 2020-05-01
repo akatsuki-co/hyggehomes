@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import (
-    BaseUserManager, AbstractBaseUser
+    BaseUserManager, AbstractBaseUser, PermissionsMixin
 )
 import os
 import uuid
@@ -76,6 +76,7 @@ class GuestManager(BaseUserManager):
         )
 
         user.set_password(password)
+        print(user.password)
         user.first_name = first_name,
         user.last_name = last_name,
         user.active = is_active
@@ -110,7 +111,7 @@ class GuestManager(BaseUserManager):
         return user
 
 
-class Guest(AbstractBaseUser):
+class Guest(AbstractBaseUser, PermissionsMixin):
     """The Guest model for each registered user
 
     Arguments:
@@ -128,6 +129,7 @@ class Guest(AbstractBaseUser):
     last_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
