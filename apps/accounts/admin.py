@@ -2,17 +2,23 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib import admin
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import Guest
+from .models import User
 
 
 class GuestAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
-    model = Guest
+    model = User
     list_display = ('email', 'staff', 'active',)
     list_filter = ('email', 'staff', 'active',)
     fieldsets = (
-        (None, {'fields': ('email', 'password', 'user_profile', 'first_name', 'last_name')}),
+        (None, {'fields': (
+            'email',
+            'password',
+            'user_profile',
+            'first_name',
+            'last_name'
+        )}),
         ('Permissions', {'fields': ('staff', 'active')}),
     )
     add_fieldsets = (
@@ -31,4 +37,4 @@ class GuestAdmin(UserAdmin):
     ordering = ('email',)
 
 
-admin.site.register(Guest, GuestAdmin)
+admin.site.register(User, GuestAdmin)

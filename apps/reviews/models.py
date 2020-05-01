@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 
-from apps.accounts.models import Guest
+from apps.accounts.models import User
 
 
 class Review(models.Model):
@@ -11,7 +11,7 @@ class Review(models.Model):
         models {Model} -- Django builtin Model
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    guest = models.ForeignKey(Guest, on_delete=models.PROTECT)
+    guest = models.ForeignKey(User, on_delete=models.PROTECT)
     body = models.CharField(max_length=1250)
     rating = models.IntegerField(default=5, blank=True, null=True)
     location = models.IntegerField(default=5, blank=True, null=True)

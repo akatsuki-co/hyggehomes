@@ -6,7 +6,7 @@ import uuid
 import os
 from statistics import mean
 
-from apps.accounts.models import Guest
+from apps.accounts.models import User
 from apps.bookings.models import Booking
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
@@ -123,7 +123,7 @@ class Stay(models.Model):
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=50)
-    host = models.ForeignKey(Guest, on_delete=models.PROTECT)
+    host = models.ForeignKey(User, on_delete=models.PROTECT)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
     country = models.CharField(max_length=30)

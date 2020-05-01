@@ -1,6 +1,6 @@
 [
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "00f160f7-9f2e-45b9-8c59-c77118ebe0d0",
   "fields": {
     "password": "password",
@@ -16,7 +16,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "077059fc-c388-4acc-a752-b947228a3d49",
   "fields": {
     "password": "password",
@@ -32,7 +32,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "119e7322-283b-4ade-be79-2af1ee98ea2d",
   "fields": {
     "password": "password",
@@ -48,7 +48,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "141e9ed5-c19b-4f1b-84aa-5187f7511fae",
   "fields": {
     "password": "password",
@@ -64,7 +64,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "173f62d6-451d-4776-bc48-37daa70f7f49",
   "fields": {
     "password": "password",
@@ -80,7 +80,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "1a02794d-6f29-42cf-a6ed-4ab98c13f611",
   "fields": {
     "password": "password",
@@ -96,7 +96,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "1af02488-bfdb-433d-bb3d-547109fb3d89",
   "fields": {
     "password": "password",
@@ -112,7 +112,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "36e750b6-bac5-45ae-8c0a-53f6e9c0bc66",
   "fields": {
     "password": "password",
@@ -128,7 +128,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "48a89a19-cfc2-457f-81fa-7b497ad5c421",
   "fields": {
     "password": "password",
@@ -144,7 +144,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "593915db-67f9-4f71-9357-87296419a166",
   "fields": {
     "password": "password",
@@ -160,7 +160,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "67df1e81-7091-41aa-bc76-06588ba632dd",
   "fields": {
     "password": "password",
@@ -176,7 +176,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "6d6a0ba6-5b8c-4ed9-b587-77b9158ad7b5",
   "fields": {
     "password": "password",
@@ -192,7 +192,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "7b0b888f-9acb-4760-ab3b-b38773a4d086",
   "fields": {
     "password": "password",
@@ -208,7 +208,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "850ae741-71d1-4ecb-a6bc-81a3bce68ef3",
   "fields": {
     "password": "password",
@@ -224,7 +224,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "a3b0a341-2e45-40a1-9184-2dfb730b1895",
   "fields": {
     "password": "password",
@@ -240,7 +240,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "bc9a7c88-34f3-4758-8693-ac5fdde4b271",
   "fields": {
     "password": "password",
@@ -256,7 +256,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "e58a9dcb-6765-468a-a5a2-aa477978d452",
   "fields": {
     "password": "pbkdf2_sha256$180000$gf5N8NtkrETK$k23NA/M1NurokjUefUjco5OBPCOTbNUpA+Sl5pXCCTY=",
@@ -272,7 +272,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "ee7a281e-b15f-4c3a-81a1-5ad834248541",
   "fields": {
     "password": "password",
@@ -288,7 +288,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "efac7252-9d0b-4672-8e2b-078040118fc9",
   "fields": {
     "password": "password",
@@ -304,7 +304,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "f0417003-d21c-412e-8784-ab32818d27ab",
   "fields": {
     "password": "password",
@@ -320,7 +320,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
   "fields": {
     "password": "Rache6499",
@@ -336,7 +336,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "f4fdba10-2f8e-49a2-8edb-d75d81447300",
   "fields": {
     "password": "pbkdf2_sha256$180000$8eKw89g6rway$vluk4JhwQf2XS56Yppf0WSBBO+5cm0Bx/V2aOVqTJ+I=",
@@ -352,7 +352,7 @@
   }
 },
 {
-  "model": "accounts.guest",
+  "model": "accounts.user",
   "pk": "fea130de-e20f-4217-bd26-dfc254d2c5f5",
   "fields": {
     "password": "password",
@@ -571,7 +571,7 @@
   "model": "bookings.booking",
   "pk": "102d1ac8-e788-4729-951d-bfb337bc57a8",
   "fields": {
-    "guest": "e58a9dcb-6765-468a-a5a2-aa477978d452",
+    "user": "e58a9dcb-6765-468a-a5a2-aa477978d452",
     "number_of_guests": 1,
     "start_date": "2020-04-21",
     "end_date": "2020-04-29",
@@ -582,7 +582,7 @@
   "model": "reviews.review",
   "pk": "03cd913c-9eba-48b2-9e4d-dbb04027e25c",
   "fields": {
-    "guest": "6d6a0ba6-5b8c-4ed9-b587-77b9158ad7b5",
+    "user": "6d6a0ba6-5b8c-4ed9-b587-77b9158ad7b5",
     "body": "The place is nice. The check in is terrible. 5pm.... I checked in at 5pm after asking for a early check in. I didn\u2019t get a early check in because the cleaners was cleaning. I get there. The place was dusty. Prior to checking in. I asked for extra towels did not get it. Messaged the host and still didn\u2019t get it. I spent more time in communication with the host than enjoying my stay!! \u2b50\ufe0f\u2b50\ufe0f",
     "rating": 5,
     "location": 80,
@@ -595,7 +595,7 @@
   "model": "reviews.review",
   "pk": "061e77bb-56c7-466a-960d-9ab8113c3f7b",
   "fields": {
-    "guest": "a3b0a341-2e45-40a1-9184-2dfb730b1895",
+    "user": "a3b0a341-2e45-40a1-9184-2dfb730b1895",
     "body": "Calm Gatagaya is a travelers apartment building - almost like a hostel but with individual apartments. The space we were in was comfortable with more than enough space for 5 people. We were able to do laundry, cook, use the fridge, shower, and more without issue! The house is about 5 min walk from the nearest subway station, which is then only two stops to Shinjuku. There's a little market street around the corner and plenty of accessible food and convenience stores. Was happy with the stay and would stay again!",
     "rating": 5,
     "location": 80,
@@ -608,7 +608,7 @@
   "model": "reviews.review",
   "pk": "0a63b769-e8f0-40bc-a123-6082893d20b5",
   "fields": {
-    "guest": "ee7a281e-b15f-4c3a-81a1-5ad834248541",
+    "user": "ee7a281e-b15f-4c3a-81a1-5ad834248541",
     "body": "The bungalow was lovely and stocked with everything our family of four needed! Also Terri was super responsive to small and larger questions! We would gladly stay there again.",
     "rating": 5,
     "location": 80,
@@ -621,7 +621,7 @@
   "model": "reviews.review",
   "pk": "0b78cc0a-0786-4a39-b2a2-342bce58d0e8",
   "fields": {
-    "guest": "f0417003-d21c-412e-8784-ab32818d27ab",
+    "user": "f0417003-d21c-412e-8784-ab32818d27ab",
     "body": "Extremely well located, kind and competent staff, good value for money, nice breakfast. On noisy side but our corner room (really lovely) faced two streets and rooms facing corridors are quieter. Definitely recommend.",
     "rating": 5,
     "location": 80,
@@ -634,7 +634,7 @@
   "model": "reviews.review",
   "pk": "1834e643-9d1a-4e75-b7c6-76a8aa681eaf",
   "fields": {
-    "guest": "36e750b6-bac5-45ae-8c0a-53f6e9c0bc66",
+    "user": "36e750b6-bac5-45ae-8c0a-53f6e9c0bc66",
     "body": "This is a very small space, but it's perfect for one or two people who want to explore Paris. We didn't spend much time at the house, and the location is FANTASTIC- great restaurants, bars, and public transportation nearby. Hosts are incredibly friendly and gave great neighborhood tips.",
     "rating": 5,
     "location": 80,
@@ -647,7 +647,7 @@
   "model": "reviews.review",
   "pk": "2cd4065c-2f01-4d81-bf87-d7ebb79d4361",
   "fields": {
-    "guest": "efac7252-9d0b-4672-8e2b-078040118fc9",
+    "user": "efac7252-9d0b-4672-8e2b-078040118fc9",
     "body": "Cynthia's place is very clean, comfortable and a great spot if your are visiting SF. It was our 2nd time staying in this spot. The layout of the rooms was quite comfortable for my husband and our 19 yr old daughter. The neighborhood has many restaurants and cafes to suit everyone's tastes. The bus lines are convenient as well. We ended up renting a car for a couple days during the stay and didn't have any problem finding parking nearby. This is the type of place you hope is always available for you if you are lucky enough to return to beautiful SF.",
     "rating": 5,
     "location": 80,
@@ -660,7 +660,7 @@
   "model": "reviews.review",
   "pk": "316d5c9b-97f8-478e-8729-1e69ecfbca85",
   "fields": {
-    "guest": "173f62d6-451d-4776-bc48-37daa70f7f49",
+    "user": "173f62d6-451d-4776-bc48-37daa70f7f49",
     "body": "Perfect little retreat spot, up in the hills of Glen Park. Big windows let in lots of light, with no neighbors looking in. Bed was comfy and space was larger than it looked in the pictures. Perfect for a work trip or a quick getaway. The hill up to the spot is super steep, so plan on taking lyfts, especially from the airport, if you have luggage. Liz lives above the studio, but studio feels super private. Great for walking down to Glen Park for crepes or beers or market shopping. Easy to get to Bart + the mission. Loved it.",
     "rating": 5,
     "location": 80,
@@ -673,7 +673,7 @@
   "model": "reviews.review",
   "pk": "36d2ab8b-2ebf-4170-9f7f-3f96f8db32b6",
   "fields": {
-    "guest": "67df1e81-7091-41aa-bc76-06588ba632dd",
+    "user": "67df1e81-7091-41aa-bc76-06588ba632dd",
     "body": "Victor's place is a wow factor. From outside the house, the sight and atmosphere of the ocean paid for its price already. A little hiccups on parking space, but always expect that around bay area. My fiance and I decided to bring our own towels, bed sheets and covers because of this \"virus\" but when we see the room. We want to forget about what we brought. Place is virtually clean, spotless. View from the room is amazing. Part city lights, part garden. We went ahead and followed our original plan. To use our own and disinfect regardless. And oh, Victor's cable has 90 Days Fiance! Which is my fiance and I favorite TV show. That's a plus. Also, he is kind enough to put water and some snacks inside the room. The bathroom has floor heater and complete with body wash, shampoo and conditioner. And it wasn't generic. This place is highly recommended.",
     "rating": 5,
     "location": 80,
@@ -686,7 +686,7 @@
   "model": "reviews.review",
   "pk": "3b7ceb4e-9a70-4807-ace5-5f55880f2276",
   "fields": {
-    "guest": "f0417003-d21c-412e-8784-ab32818d27ab",
+    "user": "f0417003-d21c-412e-8784-ab32818d27ab",
     "body": "I was completely disappointed with my stay. Two adult guests were provided with one USED toilet paper roll (no replacements at all!), no tissues at all, one bath towel each, one hand towel, and one wash cloth to share for a 5 day stay!!! This is so unacceptable it\u2019s not even funny. The house was hard to find because the number on the house is wrong and the town is to be completely honest terrifying. There was a park next door where unsettling characters and drug addicts hung out at and there was no bolt lock on the door or screen in one of the windows. We felt so unsafe we didn\u2019t even want to open the windows at night and it was so hot in there because we weren\u2019t even provided a fan that we woke up drenched every morning. The description says that there would be disposable utensils provided and even though this was not completely untrue all they gave us was sporks and we had no knives at all. We had to go out and buy some at the store, we left the extras behind so future guests don\u2019t have to do the same. We were here when SF got shut down and had to buy groceries in order to eat and the mini fridge barely worked and all of our food got warm. Due to all of these reasons we even left a day and half early because we didn\u2019t want to be",
     "rating": 2,
     "location": 80,
@@ -699,7 +699,7 @@
   "model": "reviews.review",
   "pk": "3dda3c6a-f23a-499d-aab0-e7a9357b7a10",
   "fields": {
-    "guest": "00f160f7-9f2e-45b9-8c59-c77118ebe0d0",
+    "user": "00f160f7-9f2e-45b9-8c59-c77118ebe0d0",
     "body": "Overall a good stay for a night. Staff was professional. Great location. The lobby smelled a bit like cigarette smoke, so those sensitive to such smells should expect this. The room was fine though.",
     "rating": 4,
     "location": 80,
@@ -712,7 +712,7 @@
   "model": "reviews.review",
   "pk": "46dec4e7-8149-4389-ab76-49923c9d2606",
   "fields": {
-    "guest": "48a89a19-cfc2-457f-81fa-7b497ad5c421",
+    "user": "48a89a19-cfc2-457f-81fa-7b497ad5c421",
     "body": "Great place if you're specifically wanting a place to yourself that is also very close to many amenities (train station, convenience stores, etc), but otherwise just find a hostel. No shower or bath as shown, which led to many mornings washing my hair in the sink, but also allows (forces) you to get a more \"authentic\" experience by utilizing one of the nearby public baths. I greatly enjoyed the public bath and could do without a daily wash. All in all, this is a great place to sleep, store your luggage, and sometimes eat a takeout dinner in peace. Otherwise, look elsewhere.",
     "rating": 5,
     "location": 80,
@@ -725,7 +725,7 @@
   "model": "reviews.review",
   "pk": "4d450aed-d16a-4a4a-91b4-e566cd5309cc",
   "fields": {
-    "guest": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
+    "user": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
     "body": "Would highly recommend to anyone looking for a great deal in a prime location. Really great for solo travellers but rooms are small and being over 6 foot may cause issues",
     "rating": 5,
     "location": 80,
@@ -738,7 +738,7 @@
   "model": "reviews.review",
   "pk": "4d56452f-af04-4394-b97f-6038fa16194c",
   "fields": {
-    "guest": "119e7322-283b-4ade-be79-2af1ee98ea2d",
+    "user": "119e7322-283b-4ade-be79-2af1ee98ea2d",
     "body": "The location is fantastic, check in was easy and the room was clean! Everything we needed.",
     "rating": 5,
     "location": 80,
@@ -751,7 +751,7 @@
   "model": "reviews.review",
   "pk": "50ba4619-f370-4f6d-9562-060352562544",
   "fields": {
-    "guest": "00f160f7-9f2e-45b9-8c59-c77118ebe0d0",
+    "user": "00f160f7-9f2e-45b9-8c59-c77118ebe0d0",
     "body": "Good spot, nice clean, stylish apartment. Building has a good vibe to it and there is a nice convenient market downstairs.",
     "rating": 5,
     "location": 80,
@@ -764,7 +764,7 @@
   "model": "reviews.review",
   "pk": "53587f4e-75c0-4aaf-bc1b-d51bfbb410a5",
   "fields": {
-    "guest": "7b0b888f-9acb-4760-ab3b-b38773a4d086",
+    "user": "7b0b888f-9acb-4760-ab3b-b38773a4d086",
     "body": "As described, and great value for the location to everything. Nothing spectacular or luxurious, but good value and convenient to everything. Overall good stay.",
     "rating": 4,
     "location": 80,
@@ -777,7 +777,7 @@
   "model": "reviews.review",
   "pk": "54d6ef7e-0a0c-446c-94f6-443ed4616370",
   "fields": {
-    "guest": "bc9a7c88-34f3-4758-8693-ac5fdde4b271",
+    "user": "bc9a7c88-34f3-4758-8693-ac5fdde4b271",
     "body": "The apartment is clean, modern and fully stocked. We had everything we needed during our 5-night stay. Simon was friendly and quick to answer any questions / requests that we had. Easy to Uber to/from anywhere in the city from the apartment. Based on the reviews, we know that many people felt comfortable walking around - unfortunately, we didn't feel this way and made sure to drive anywhere at night.",
     "rating": 4,
     "location": 80,
@@ -790,7 +790,7 @@
   "model": "reviews.review",
   "pk": "58e1e710-937e-4b2f-9bee-f5ab958afdbb",
   "fields": {
-    "guest": "67df1e81-7091-41aa-bc76-06588ba632dd",
+    "user": "67df1e81-7091-41aa-bc76-06588ba632dd",
     "body": "Small place but good",
     "rating": 5,
     "location": 80,
@@ -803,7 +803,7 @@
   "model": "reviews.review",
   "pk": "5b9ebea6-881e-44f3-9c8c-2f8ae9076440",
   "fields": {
-    "guest": "850ae741-71d1-4ecb-a6bc-81a3bce68ef3",
+    "user": "850ae741-71d1-4ecb-a6bc-81a3bce68ef3",
     "body": "Cannot recommend Christine\u2019s place enough. Incredibly interesting and hospitable host as well as an amazingly convenient location. Quality Airbnb.",
     "rating": 5,
     "location": 80,
@@ -816,7 +816,7 @@
   "model": "reviews.review",
   "pk": "5c16c50e-60a1-4a1d-9f1b-75b5d6f30fee",
   "fields": {
-    "guest": "077059fc-c388-4acc-a752-b947228a3d49",
+    "user": "077059fc-c388-4acc-a752-b947228a3d49",
     "body": "It\u2019s okay for the price. Extremely close everything. I\u2019m not sure if the suggestion for parking is still in the ad, but it\u2019s nearly 40 minutes from the AirBnb walking.",
     "rating": 5,
     "location": 80,
@@ -829,7 +829,7 @@
   "model": "reviews.review",
   "pk": "69e6a172-87ef-4617-b316-db8d23a2af37",
   "fields": {
-    "guest": "7b0b888f-9acb-4760-ab3b-b38773a4d086",
+    "user": "7b0b888f-9acb-4760-ab3b-b38773a4d086",
     "body": "Appartement tr\u00e9s bien plac\u00e9 et propre. Tr\u00e9s bien pour passer un ou deux jours, cependant, il manque du rangement si l'on veut venir au del\u00e0, puis, le paravent affich\u00e9 dans les photos pour s\u00e9parer l'espace chambre du cot\u00e9 salon n'y est plus.",
     "rating": 5,
     "location": 80,
@@ -842,7 +842,7 @@
   "model": "reviews.review",
   "pk": "6b0ead29-c9b8-40fc-b8ea-7a8946002777",
   "fields": {
-    "guest": "119e7322-283b-4ade-be79-2af1ee98ea2d",
+    "user": "119e7322-283b-4ade-be79-2af1ee98ea2d",
     "body": "Great place to stay",
     "rating": 5,
     "location": 80,
@@ -855,7 +855,7 @@
   "model": "reviews.review",
   "pk": "7cd28f33-000a-4dc6-bd6b-7827de939246",
   "fields": {
-    "guest": "1a02794d-6f29-42cf-a6ed-4ab98c13f611",
+    "user": "1a02794d-6f29-42cf-a6ed-4ab98c13f611",
     "body": "Located outside of the city with a spectacular view!",
     "rating": 5,
     "location": 80,
@@ -868,7 +868,7 @@
   "model": "reviews.review",
   "pk": "7dbfbffd-846f-4c97-a3aa-5bc37785842d",
   "fields": {
-    "guest": "efac7252-9d0b-4672-8e2b-078040118fc9",
+    "user": "efac7252-9d0b-4672-8e2b-078040118fc9",
     "body": "Great location. This is a great room for someone looking to get the most out of a quick visit to SF. The unit was clean and the check in process was very easy.",
     "rating": 5,
     "location": 80,
@@ -881,7 +881,7 @@
   "model": "reviews.review",
   "pk": "7fd382e8-9b54-4bea-b2cc-23a257871745",
   "fields": {
-    "guest": "077059fc-c388-4acc-a752-b947228a3d49",
+    "user": "077059fc-c388-4acc-a752-b947228a3d49",
     "body": "Expect good communication, easy check in, and a fabulous location inside San Francisco!",
     "rating": 5,
     "location": 80,
@@ -894,7 +894,7 @@
   "model": "reviews.review",
   "pk": "813a321a-df8c-4736-9ea1-64fd8f461dc7",
   "fields": {
-    "guest": "1a02794d-6f29-42cf-a6ed-4ab98c13f611",
+    "user": "1a02794d-6f29-42cf-a6ed-4ab98c13f611",
     "body": "The room was very nice and authentic feeling. It was in a great location, super close to the station and 7/11. It does get kind of cold at night even with the heater on and the room with the toilet was rather small but other then that it was perfect for our use.",
     "rating": 5,
     "location": 80,
@@ -907,7 +907,7 @@
   "model": "reviews.review",
   "pk": "885dbece-504c-4795-88f1-8241ae7eac5c",
   "fields": {
-    "guest": "bc9a7c88-34f3-4758-8693-ac5fdde4b271",
+    "user": "bc9a7c88-34f3-4758-8693-ac5fdde4b271",
     "body": "If you are looking for a place to stay in the heart of NYC LOOK NO FURTHER!!!! This place is PRISTINE and located in the heart of midtown Manhattan steps from the Theater district and conveniently located near the subway. I could not have expected better from my two night stay. Gavin and Martin are SUPERIOR hosts. They are very accommodating and very responsive. Did I mention how clean the place is and THE DECOR just charming!?! OH EMM GEE. Book this place!!!!",
     "rating": 5,
     "location": 80,
@@ -920,7 +920,7 @@
   "model": "reviews.review",
   "pk": "8a9f6fc9-a51b-426e-8fef-8a97b897f44c",
   "fields": {
-    "guest": "1af02488-bfdb-433d-bb3d-547109fb3d89",
+    "user": "1af02488-bfdb-433d-bb3d-547109fb3d89",
     "body": "A great clean awesome space. In a great working class neighborhood. Walking distance from coffee shops and awesome local fare. I will definitely repeat.",
     "rating": 5,
     "location": 80,
@@ -933,7 +933,7 @@
   "model": "reviews.review",
   "pk": "8df38bff-1475-4e65-b327-607d7de6b263",
   "fields": {
-    "guest": "6d6a0ba6-5b8c-4ed9-b587-77b9158ad7b5",
+    "user": "6d6a0ba6-5b8c-4ed9-b587-77b9158ad7b5",
     "body": "Christine is a great host. She went way beyond what any AirBnB host has done with helping us get around Paris and making us comfortable in her home. We highly recommend staying at her home.",
     "rating": 5,
     "location": 80,
@@ -946,7 +946,7 @@
   "model": "reviews.review",
   "pk": "90319981-ca6f-4757-82ff-8f4d03773eb2",
   "fields": {
-    "guest": "850ae741-71d1-4ecb-a6bc-81a3bce68ef3",
+    "user": "850ae741-71d1-4ecb-a6bc-81a3bce68ef3",
     "body": "My fianc\u00e9 and I stayed here for a three-day weekend in San Francisco, and it was a perfect home base for our adventures. The unit is one bedroom and a spacious, full bathroom. The place was clean and had everything we needed. It got a little warm during the days (thanks to the large windows and sunshine) but we were able to cool off with the included fan and curtains. It must be stated that this place is on the same block as Rich Table, where we had an all-time great meal. RT Rotisserie is around the corner as well and also had fantastic food. Hayes Valley is a very nice neighborhood with tons of good coffee, ice cream, restaurants and shops within a few blocks. We were also able to walk to The Castro, Mission, and Alamo Square, and Land\u2019s End and Chinatown were easy Lyfts away. Overall, this was a great space to stay, and I would recommend it to anyone looking to get to know the city.",
     "rating": 5,
     "location": 80,
@@ -959,7 +959,7 @@
   "model": "reviews.review",
   "pk": "936f8cb1-48cf-41dc-8761-30732e2ace03",
   "fields": {
-    "guest": "593915db-67f9-4f71-9357-87296419a166",
+    "user": "593915db-67f9-4f71-9357-87296419a166",
     "body": "Really loved the view and the location! Thomas was super helpful and quick to respond to messages.",
     "rating": 4,
     "location": 80,
@@ -972,7 +972,7 @@
   "model": "reviews.review",
   "pk": "995185e3-4996-41ec-a15f-223d37bbe0fa",
   "fields": {
-    "guest": "67df1e81-7091-41aa-bc76-06588ba632dd",
+    "user": "67df1e81-7091-41aa-bc76-06588ba632dd",
     "body": "If you're looking for a great value, this is the place to stay--simple, clean and resourceful. I recommend this place for anyone that needs a place to sleep and shower. Everybody is friendly. It's a good walk to the train station.",
     "rating": 5,
     "location": 80,
@@ -985,7 +985,7 @@
   "model": "reviews.review",
   "pk": "aa88bc05-8714-47a7-9f55-f37eeba27780",
   "fields": {
-    "guest": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
+    "user": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
     "body": "Cynthia was an excellent host and was proactive about communication before and during my stay. Her home is beautiful and was perfect for a work trip, and the location is top notch.",
     "rating": 5,
     "location": 80,
@@ -998,7 +998,7 @@
   "model": "reviews.review",
   "pk": "ae8a97a3-20cf-44ef-ad42-e9dc8b64f148",
   "fields": {
-    "guest": "a3b0a341-2e45-40a1-9184-2dfb730b1895",
+    "user": "a3b0a341-2e45-40a1-9184-2dfb730b1895",
     "body": "Thomas place is small, but well located. Really close to the train from the airport as well as multiple metro lines. Thomas was a wonderful host.",
     "rating": 4,
     "location": 80,
@@ -1011,7 +1011,7 @@
   "model": "reviews.review",
   "pk": "b9b8662e-b6d5-486e-a89d-8e0cc2f34a1e",
   "fields": {
-    "guest": "f0417003-d21c-412e-8784-ab32818d27ab",
+    "user": "f0417003-d21c-412e-8784-ab32818d27ab",
     "body": "Literally the perfect location. Close to everything. Very clean place and has everything you would need. Great style and very up to date. Galvin greeted us and made us feel welcome. Great host!",
     "rating": 5,
     "location": 80,
@@ -1024,7 +1024,7 @@
   "model": "reviews.review",
   "pk": "c5bd0e24-2f5a-45b5-a10e-f24421624dee",
   "fields": {
-    "guest": "48a89a19-cfc2-457f-81fa-7b497ad5c421",
+    "user": "48a89a19-cfc2-457f-81fa-7b497ad5c421",
     "body": "Beautiful place. Tidy. Stylish. I would stay here again. Just make sure to ask any questions ahead of time. Their response time in my case was 18-28 hours.",
     "rating": 5,
     "location": 80,
@@ -1037,7 +1037,7 @@
   "model": "reviews.review",
   "pk": "d7d98ef0-74f9-4f89-b701-933b95d3f7c2",
   "fields": {
-    "guest": "077059fc-c388-4acc-a752-b947228a3d49",
+    "user": "077059fc-c388-4acc-a752-b947228a3d49",
     "body": "Check in was our biggest issue with this listing. Would advise the host to clarify her check in instructions before next guest. Besides issues with check in, everything else was clean. Apartment is very small but if you are ok with that this is the place for you. Very close to train station so easy to access to public transportation. Also many restaurants close by.",
     "rating": 4,
     "location": 80,
@@ -1050,7 +1050,7 @@
   "model": "reviews.review",
   "pk": "d868c0fc-1a24-404d-8c78-43499d7aa476",
   "fields": {
-    "guest": "141e9ed5-c19b-4f1b-84aa-5187f7511fae",
+    "user": "141e9ed5-c19b-4f1b-84aa-5187f7511fae",
     "body": "A nice, warm and cozy place. Clean and modern. Tucked in a quiet neighborhood. Enjoyed the stay. Great communication with host. Five stars",
     "rating": 5,
     "location": 80,
@@ -1063,7 +1063,7 @@
   "model": "reviews.review",
   "pk": "e960eaa1-bd05-4b36-9599-bcd305efb177",
   "fields": {
-    "guest": "141e9ed5-c19b-4f1b-84aa-5187f7511fae",
+    "user": "141e9ed5-c19b-4f1b-84aa-5187f7511fae",
     "body": "Awesome Place!",
     "rating": 5,
     "location": 80,
@@ -1076,7 +1076,7 @@
   "model": "reviews.review",
   "pk": "ef1f8c5d-8c07-44bb-9461-5ea0482dc728",
   "fields": {
-    "guest": "077059fc-c388-4acc-a752-b947228a3d49",
+    "user": "077059fc-c388-4acc-a752-b947228a3d49",
     "body": "This studio was larger than I expected, with high ceilings, and a separate kitchen. Elizabeth was so quick to respond to any question, she was always pleasant and enthusiastic. The neighborhood is beautiful, a short walk to great views, a quiet and peaceful area, and a short walk to a very nice group of shops, with a great bookstore & a few really nice restaurants, and Glen Canyon Park is a great place to walk where you\u2019re always around families and people, so very comfortable and safe.",
     "rating": 5,
     "location": 80,
@@ -1089,7 +1089,7 @@
   "model": "reviews.review",
   "pk": "f7ea37a8-5e25-4cd3-b1c5-4dd29d9f988c",
   "fields": {
-    "guest": "173f62d6-451d-4776-bc48-37daa70f7f49",
+    "user": "173f62d6-451d-4776-bc48-37daa70f7f49",
     "body": "they are friendly for the little exchange that I could have, the cleanliness is to be desired, I could see the sheets of the mattress with cigarette holes of bits of food on the sofa, which made me really displeased and did not put me in confidence to sleep in this sofa bed ... the sheets located under the sofa were dirty but the rest everything was fine! It is a nice apartment well located and close to everything. You have to be vigilant at the door which gives access to the building which works twice out of 10 which is annoying when it is late there at night ...",
     "rating": 4,
     "location": 80,
@@ -1102,7 +1102,7 @@
   "model": "reviews.review",
   "pk": "f8aafaa1-0bb8-47d3-b3ff-e44873636c87",
   "fields": {
-    "guest": "1af02488-bfdb-433d-bb3d-547109fb3d89",
+    "user": "1af02488-bfdb-433d-bb3d-547109fb3d89",
     "body": "I loved staying here! It\u2019s a great location for exploring Cape Town and Simon was so accommodating about check-in. I was especially grateful that he made it possible for me to store my luggage after checkout, so that I could have a full day of sightseeing before heading to the airport. The apartment is so comfortable and well appointed and has a great view of the harbor. I highly recommend staying here!",
     "rating": 5,
     "location": 80,
@@ -1115,7 +1115,7 @@
   "model": "reviews.review",
   "pk": "fa2d6ce0-81d1-40ff-9e8f-8fe5cfc32ed6",
   "fields": {
-    "guest": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
+    "user": "f1e2a2e5-5502-41bb-8076-bbc094dd9eb3",
     "body": "Marc is a great host the apt is great. I had a fantastic stay.",
     "rating": 5,
     "location": 80,
@@ -1128,7 +1128,7 @@
   "model": "reviews.review",
   "pk": "fcc68a27-ef44-453e-add6-19c80a7d307f",
   "fields": {
-    "guest": "173f62d6-451d-4776-bc48-37daa70f7f49",
+    "user": "173f62d6-451d-4776-bc48-37daa70f7f49",
     "body": "Thank you to Ms. Nancy and the other valuable staff for my amazing stay! It was a huge blessing to be able to have a great first experience and stay in Japan. They are extremely respectful and the place is spotless. Highly recommended.",
     "rating": 5,
     "location": 80,
