@@ -3,6 +3,9 @@ env/
 venv/
 backend/.env
 
+# EC2 pem file
+airbnb-clone.pem
+
 # Database
 db.sqlite3
 
