@@ -45,7 +45,8 @@ class UserManager(BaseUserManager):
         serializers {ModelSerializer} -- Django builtin Serializer
     """
     def create_user(self, email, password, first_name=None, last_name=None,
-                    is_active=True, is_staff=False, is_admin=False):
+                    is_active=True, is_staff=False, is_admin=False,
+                    is_superuser=False):
         """Creates a User instance
 
         Arguments:
@@ -81,6 +82,7 @@ class UserManager(BaseUserManager):
         user.active = is_active
         user.staff = is_staff
         user.admin = is_admin
+        user.is_superuser = is_superuser
         user.save(using=self._db)
         return user
 
@@ -106,6 +108,7 @@ class UserManager(BaseUserManager):
         )
         user.staff = True
         user.admin = True
+        user.is_superuser = True
         user.save(using=self._db)
         return user
 
