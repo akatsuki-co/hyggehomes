@@ -6,7 +6,7 @@ import uuid
 import os
 from statistics import mean
 
-from apps.accounts.models import User
+from apps.accounts.models import Guest
 from apps.bookings.models import Booking
 from apps.amenities.models import Amenity
 from apps.reviews.models import Review
@@ -87,7 +87,7 @@ class StayManager(models.Manager):
         qs = self.get_queryset().filter(id=id).prefetch_related(
             Prefetch('amenities')).prefetch_related(Prefetch(
                 "reviews",
-                queryset=Review.objects.select_related("user")
+                queryset=Review.objects.select_related('guest')
             ))
         return qs.first()
 
@@ -123,7 +123,7 @@ class Stay(models.Model):
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=50)
-    host = models.ForeignKey(User, on_delete=models.PROTECT)
+    host = models.ForeignKey(Guest, on_delete=models.PROTECT)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
     country = models.CharField(max_length=30)
@@ -172,14 +172,13 @@ class Stay(models.Model):
         }
         return review_ratings
 
-    def reserve_stay(self, user, start_date, end_date, guests):
+    def reserve_stay(self, guest, start_date, end_date, guests):
         """Reserve a Stay"""
-        if not[x for x in (user, start_date, end_date, guests) if x is None]:
+        if not[x for x in (guest, start_date, end_date, guests) if x is None]:
             for booking in self.bookings.all():
                 if booking.check_overlap(start_date, end_date):
-                    # raise ValueError('Stay is unavailable during these dates')
                     return False
-            self.bookings.create(guest=user, start_date=start_date,
+            self.bookings.create(guest=guest, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
             return True
         else:
