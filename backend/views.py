@@ -45,7 +45,7 @@ class StayCityListView(ListView):
         context['stays_list'] = Stay.objects.all().filter(city=city)\
             .prefetch_related(Prefetch('amenities')).prefetch_related(Prefetch(
                 'reviews',
-                queryset=Review.objects.select_related('guest')
+                queryset=Review.objects.select_related('user')
             ))
 
         context['city'] = city

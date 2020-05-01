@@ -76,7 +76,6 @@ class UserManager(BaseUserManager):
         )
 
         user.set_password(password)
-        print(user.password)
         user.first_name = first_name,
         user.last_name = last_name,
         user.active = is_active
@@ -129,7 +128,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)

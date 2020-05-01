@@ -1,11 +1,12 @@
 from django.db import models
+from django.conf import settings
 import uuid
 
 from apps.accounts.models import User
 
 
 class Review(models.Model):
-    """The Review model is for guest reviews on each Trail.
+    """The Review model is for user reviews on each Trail.
 
     Arguments:
         models {Model} -- Django builtin Model
@@ -20,4 +21,4 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.created_at) + ' ' + self.guest.first_name
+        return str(self.created_at) + ' ' + self.user.first_name

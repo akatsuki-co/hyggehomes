@@ -17,14 +17,13 @@ def register_view(request):
         if password1 and password2 and password1 != password2:
             messages.error(request, "Passwords do not match!")
             return redirect('register')
-            # raise forms.ValidationError("Passwords don't match")
         if password1 and password2 and password1 == password2:
-            new_guest, created = User.objects.get_or_create(
+            new_user, created = User.objects.get_or_create(
                 email=email, password=password1)
             if created:
-                new_guest.set_password(password2)
-                new_guest.save()
-                login(request, new_guest)
+                new_user.set_password(password2)
+                new_user.save()
+                login(request, new_user)
             else:
                 messages.error(request, 'User with email already exists')
             return redirect('explore')
@@ -38,9 +37,9 @@ def login_view(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        guest = authenticate(email=email, password=password)
-        if guest:
-            login(request, guest)
+        user = authenticate(email=email, password=password)
+        if user:
+            login(request, user)
             messages.success(request, 'You are now logged in')
             return redirect('/explore/')
         else:

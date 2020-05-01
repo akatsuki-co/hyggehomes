@@ -6,12 +6,12 @@ import uuid
 class BookingManager(models.Manager):
     """Model Manager for Booking a Stay"""
     def new_or_get(self, request):
-        guest = request.user
+        user = request.user
         created = False
         obj = None
-        if guest.is_authenticated:
+        if user.is_authenticated:
             obj, created = self.model.objects.get_or_create(
-                guest=guest, email=guest.email)
+                user=user, email=user.email)
         return obj, created
 
 
