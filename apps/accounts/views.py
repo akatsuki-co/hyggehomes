@@ -1,11 +1,14 @@
+from django import forms
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
+from django.db.models import Prefetch
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
 from apps.stays.models import Stay
+from apps.bookings.models import Booking
 
-Guest = get_user_model()
+User = get_user_model()
 
 
 def register_view(request):
@@ -19,14 +22,14 @@ def register_view(request):
             return redirect('register')
             # raise forms.ValidationError("Passwords don't match")
         if password1 and password2 and password1 == password2:
-            new_guest, created = Guest.objects.get_or_create(
+            new_user, created = User.objects.get_or_create(
                 email=email, password=password1)
             if created:
-                new_guest.set_password(password2)
-                new_guest.save()
-                login(request, new_guest)
+                new_user.set_password(password2)
+                new_user.save()
+                login(request, new_user)
             else:
-                messages.error(request, 'Guest with email already exists')
+                messages.error(request, 'User with email already exists')
             return redirect('explore')
         else:
             messages.error(request, 'Invalid Password')
@@ -38,9 +41,9 @@ def login_view(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        guest = authenticate(email=email, password=password)
-        if guest:
-            login(request, guest)
+        user = authenticate(email=email, password=password)
+        if user:
+            login(request, user)
             messages.success(request, 'You are now logged in')
             return redirect('/explore/')
         else:
@@ -51,7 +54,7 @@ def login_view(request):
 
 
 class TripsView(ListView):
-    """View for Showing all Guest trips"""
+    """View for Showing all User trips"""
     queryset = Stay.objects.all()
     template_name = 'accounts/my_trips.html'
 
