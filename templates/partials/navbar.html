@@ -41,7 +41,7 @@
         {% else %}
         <li class="nav-item">
           <a
-            href="{% url 'guest:trips' id=request.user.id %}"
+            href="{% url 'user:trips' id=request.user.id %}"
             class="nav-link text-dark"
             >My Trips</a
           >

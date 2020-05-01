@@ -25,9 +25,9 @@ urlpatterns = [
         ('apps.search.urls', 'search'),
         namespace='search')
          ),
-    path('guest/', include(
-        ('apps.accounts.urls', 'guest'),
-        namespace='guest')
+    path('user/', include(
+        ('apps.accounts.urls', 'user'),
+        namespace='user')
          ),
 ]
 
