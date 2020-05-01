@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import (
-    BaseUserManager, AbstractBaseUser
+    BaseUserManager, AbstractBaseUser, PermissionsMixin
 )
 import os
 import uuid
@@ -38,15 +38,15 @@ def upload_image_path(instance, filename):
     return f'{final_filename}'
 
 
-class UserManager(BaseUserManager):
-    """This is the Object Manager for the User Model
+class GuestManager(BaseUserManager):
+    """This is the Object Manager for the Guest Model
 
     Arguments:
         serializers {ModelSerializer} -- Django builtin Serializer
     """
     def create_user(self, email, password, first_name=None, last_name=None,
                     is_active=True, is_staff=False, is_admin=False):
-        """Creates a User instance
+        """Creates a Guest instance
 
         Arguments:
             email {string} -- email of the new user
@@ -64,18 +64,19 @@ class UserManager(BaseUserManager):
             ValueError: If there is no password
 
         Returns:
-            User -- Returns the new user instance
+            Guest -- Returns the new user instance
         """
         if not email:
-            raise ValueError('Users must have an email address')
+            raise ValueError('Guests must have an email address')
         if not password:
-            raise ValueError('Users must have a password')
+            raise ValueError('Guests must have a password')
 
         user = self.model(
             email=self.normalize_email(email)
         )
 
         user.set_password(password)
+        print(user.password)
         user.first_name = first_name,
         user.last_name = last_name,
         user.active = is_active
@@ -110,8 +111,8 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractBaseUser):
-    """The User model for each registered user
+class Guest(AbstractBaseUser, PermissionsMixin):
+    """The Guest model for each registered user
 
     Arguments:
         models {Model} -- Django builtin Model
@@ -128,6 +129,7 @@ class User(AbstractBaseUser):
     last_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
@@ -135,13 +137,13 @@ class User(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    objects = UserManager()
+    objects = GuestManager()
 
     def get_full_name(self):
-        """Retreives the full name of a User
+        """Retreives the full name of a Guest
 
         Returns:
-            string -- Full name of the User
+            string -- Full name of the Guest
         """
         return self.full_name
 
@@ -170,7 +172,7 @@ class User(AbstractBaseUser):
 class Host(models.Model):
     """Profile for Hosts"""
     user = models.OneToOneField(
-        User,
+        Guest,
         on_delete=models.PROTECT,
     )
     email = models.EmailField()

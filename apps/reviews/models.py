@@ -1,19 +1,17 @@
 from django.db import models
-from django.conf import settings
 import uuid
+
+from apps.accounts.models import Guest
 
 
 class Review(models.Model):
-    """The Review model is for user reviews on each Trail.
+    """The Review model is for guest reviews on each Trail.
 
     Arguments:
         models {Model} -- Django builtin Model
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.PROTECT
-    )
+    guest = models.ForeignKey(Guest, on_delete=models.PROTECT)
     body = models.CharField(max_length=1250)
     rating = models.IntegerField(default=5, blank=True, null=True)
     location = models.IntegerField(default=5, blank=True, null=True)
@@ -22,4 +20,4 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.created_at) + ' ' + self.user.first_name
+        return str(self.created_at) + ' ' + self.guest.first_name
