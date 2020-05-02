@@ -177,7 +177,6 @@ class Stay(models.Model):
         if not[x for x in (user, start_date, end_date, guests) if x is None]:
             for booking in self.bookings.all():
                 if booking.check_overlap(start_date, end_date):
-                    # raise ValueError('Stay is unavailable during these dates')
                     return False
             self.bookings.create(user=user, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
