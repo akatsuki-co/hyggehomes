@@ -8,6 +8,7 @@ airbnb-clone.pem
 
 # Database
 db.sqlite3
+fixtures/
 
 # Static files
 static/

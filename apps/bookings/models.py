@@ -42,4 +42,4 @@ class Booking(models.Model):
         return overlap
 
     def __str__(self):
-        return f'{self.guest.first_name}: {self.start_date} - {self.end_date}'
+        return f'{self.user.first_name}: {self.start_date} - {self.end_date}'

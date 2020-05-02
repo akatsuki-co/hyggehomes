@@ -8,7 +8,7 @@ class GuestAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = User
-    list_display = ('email', 'staff', 'active',)
+    list_display = ('first_name', 'email', 'staff', 'active',)
     list_filter = ('email', 'staff', 'active',)
     fieldsets = (
         (None, {'fields': (

@@ -19,13 +19,14 @@ def register_view(request):
             return redirect('register')
         if password1 and password2 and password1 == password2:
             new_user, created = User.objects.get_or_create(
-                email=email, password=password1)
+                email=email)
             if created:
                 new_user.set_password(password2)
                 new_user.save()
                 login(request, new_user)
             else:
                 messages.error(request, 'User with email already exists')
+                return redirect('register')
             return redirect('explore')
         else:
             messages.error(request, 'Invalid Password')
@@ -57,7 +58,7 @@ class TripsView(ListView):
     def get_context_data(self, *args, **kwargs):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
-        trips = Stay.objects.all().filter(bookings__guest=self.request.user)\
+        trips = Stay.objects.all().filter(bookings__user=self.request.user)\
             .active().prefetch_related('bookings')
         context['trips'] = trips
         return context

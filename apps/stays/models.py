@@ -16,11 +16,11 @@ HOME_TYPES = (
     ('Private room', 'Private room'),
     ('Shared room', 'Shared room'),
 )
-CHECK_IN_TYPES = {
+CHECK_IN_TYPES = (
     ('Keypad', 'Keypad'),
     ('Lockbox', 'Lockbox'),
     ('Smartlock', 'Smartlock')
-}
+)
 
 
 def get_filename_ext(filepath):
@@ -179,7 +179,7 @@ class Stay(models.Model):
                 if booking.check_overlap(start_date, end_date):
                     # raise ValueError('Stay is unavailable during these dates')
                     return False
-            self.bookings.create(guest=user, start_date=start_date,
+            self.bookings.create(user=user, start_date=start_date,
                                  end_date=end_date, number_of_guests=guests)
             return True
         else:
