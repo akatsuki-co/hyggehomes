@@ -2,6 +2,8 @@ from django.db import models
 from django.conf import settings
 import uuid
 
+from apps.accounts.models import User
+
 
 class Review(models.Model):
     """The Review model is for user reviews on each Trail.
@@ -10,10 +12,7 @@ class Review(models.Model):
         models {Model} -- Django builtin Model
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.PROTECT
-    )
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
     body = models.CharField(max_length=1250)
     rating = models.IntegerField(default=5, blank=True, null=True)
     location = models.IntegerField(default=5, blank=True, null=True)

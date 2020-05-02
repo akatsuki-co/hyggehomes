@@ -17,7 +17,7 @@ class BookingManager(models.Manager):
 
 class Booking(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    guest = models.ForeignKey(
+    user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT
     )
@@ -42,4 +42,4 @@ class Booking(models.Model):
         return overlap
 
     def __str__(self):
-        return f'{self.guest.first_name}: {self.start_date} - {self.end_date}'
+        return f'{self.user.first_name}: {self.start_date} - {self.end_date}'

@@ -1,13 +1,15 @@
 from django.conf import settings
+from django.contrib import messages
 from django.views.generic import DetailView
 from django.http import Http404
 from django.shortcuts import redirect
 from django.urls import reverse
 from datetime import datetime
 
+import stripe
+
 from .models import Stay
 
-import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -30,6 +32,8 @@ class StayDetailView(DetailView):
         return context
 
     def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect('/register')
         if request.method == 'POST':
             user = request.user
             start = request.POST.get('start')
@@ -47,8 +51,8 @@ class StayDetailView(DetailView):
             stay = Stay.objects.filter(id=stay_id)\
                 .prefetch_related('bookings').first()
             days = end - start
-            booking = stay.reserve_stay(user, start, end, guests)
-            if booking:
+            reserved = stay.reserve_stay(user, start, end, guests)
+            if reserved:
                 charge_price = stay.price * 100 * days.days
                 stripe.Charge.create(
                     amount=int(charge_price),
@@ -57,7 +61,12 @@ class StayDetailView(DetailView):
                     source=request.POST['stripeToken']
                 )
             else:
-                raise ValueError('Something went wrong...')
+                messages.error(
+                    request,
+                    'This Stay is no longer available during those dates'
+                )
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}))
             return redirect(
                 reverse('user:trips', kwargs={"id": request.user.id})
             )

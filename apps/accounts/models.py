@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import (
-    BaseUserManager, AbstractBaseUser
+    BaseUserManager, AbstractBaseUser, PermissionsMixin
 )
 import os
 import uuid
@@ -45,7 +45,8 @@ class UserManager(BaseUserManager):
         serializers {ModelSerializer} -- Django builtin Serializer
     """
     def create_user(self, email, password, first_name=None, last_name=None,
-                    is_active=True, is_staff=False, is_admin=False):
+                    is_active=True, is_staff=False, is_admin=False,
+                    is_superuser=False):
         """Creates a User instance
 
         Arguments:
@@ -74,13 +75,13 @@ class UserManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email)
         )
-
         user.set_password(password)
         user.first_name = first_name,
         user.last_name = last_name,
         user.active = is_active
         user.staff = is_staff
         user.admin = is_admin
+        user.is_superuser = is_superuser
         user.save(using=self._db)
         return user
 
@@ -106,11 +107,12 @@ class UserManager(BaseUserManager):
         )
         user.staff = True
         user.admin = True
+        user.is_superuser = True
         user.save(using=self._db)
         return user
 
 
-class User(AbstractBaseUser):
+class User(AbstractBaseUser, PermissionsMixin):
     """The User model for each registered user
 
     Arguments:
@@ -121,8 +123,8 @@ class User(AbstractBaseUser):
         verbose_name='email address',
         max_length=255, unique=True
     )
-    user_profile = models.ImageField(
-        upload_to=upload_image_path, null=True, blank=True)
+    user_profile = models.CharField(
+        max_length=100, default=None, blank=True, null=True)
     first_name = models.CharField(
         max_length=60, default=None, blank=True, null=True)
     last_name = models.CharField(
