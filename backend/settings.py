@@ -14,6 +14,8 @@ SECRET_KEY = env.str('SECRET_KEY')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
+STRIPE_SECRET_KEY = env.str('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = env.str('STRIPE_PUBLISHABLE_KEY')
 
 # Application definition
 
@@ -34,6 +36,7 @@ INSTALLED_APPS = [
     'apps.stays',
 
     # Third Party Apps
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -75,18 +78,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {'default': env.db()}
-
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'xdxyhwco',
-       'USER': 'xdxyhwco',
-       'PASSWORD': 'eXQBFWLGxYwoMub-aOH8-c--3teK8sRh',
-       'HOST': 'drona.db.elephantsql.com',
-       'PORT': '5432'
-   }
-}
+DATABASES = {'default': env.db()}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -141,3 +133,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+

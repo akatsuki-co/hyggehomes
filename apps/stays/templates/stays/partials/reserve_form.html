@@ -26,11 +26,15 @@
         </div>
         <div class="col-md-12">
             <div class="form-group">
-                <input
-                    type="submit"
-                    value="Reserve"
-                    class="btn btn-danger btn-block"
-                    />
+                <button type="submit" class="btn btn-danger btn-block">
+                <script src="https://checkout.stripe.com/checkout.js" style="visibility: hidden" 
+                  data-key="{{ key }}"
+                  data-description=""
+                  data-amount=""
+                  data-locale="auto">
+                </script>
+                Submit
+                </button>
             </div>
         </div>
     </div>
