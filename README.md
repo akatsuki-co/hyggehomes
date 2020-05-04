@@ -1,37 +1,55 @@
 # Airbnb clone
 
-This repository contains a Airbnb clone created with Python and Django.
+This repository contains a web application to search and book vacation homes created with Python 3.6+, HTML and CSS.
+
+### Tech Stack
+- Frontend libraries:
+  - Bootstrap
+  - Jquery
+  - FontAwesome
+- Backend framework
+  - Django 3.0
+- Databases
+  - SQLite (development)
+  - PostgreSQL (production)
+- Deployment
+  - Amazon Web Services EC2 (Ubuntu 18.04)
+
+This is a portfolio project made by 2 computer science students who want to showcase our web development skills.
+
+Ryuichi Miyazaki: [LinkedIn](https://www.linkedin.com/in/rmiyazaki/)
+Tu Vo: [LinkedIn](https://www.linkedin.com/in/tu-vo/)
+
+Check out our other projects at: [Akatsuki Co](https://github.com/akatsuki-co)
 
 ## Table of Contents
 
-- [Requirements](#requirements)
-  - [Installation](#installation)
-- [Views](#views)
 - [Features](#features)
-- [To Dos](#to-dos)
-- [Special Thanks](#special-thanks)
+- [Views](#views)
+- [Models](#models)
+- [Status](#status)
 - [Authors](#authors)
 
-## Requirements
+## Features
 
-- Python 3.6+
-- Django 3.0+
+Users can:
 
-### Installation
+- register
+- login
+- view featured stays
+- browse top cities
+- search stays by city and/or location
+- book stays
 
-- On your terminal, clone the repository with Git:
+### API Integrations
 
-`git clone https://github.com/akatsuki-co/_airbnb.git`
+#### Stripe
 
-- In order to install Python dependencies, run this command from the root of the repo:
+We accept and process credit card payments for bookings using Stripe's API.
 
-`pip install -r requirements.txt`
+#### Unsplash
 
-- To run the dev server, use the following command:
-
-`python3 manage.py runserver`
-
-- Navigate to http://localhost:8000 to view our development site.
+Images for all of the stays are completely random and are rendered dynamically using Unsplash's API.
 
 ## Views
 
@@ -43,11 +61,9 @@ This repository contains a Airbnb clone created with Python and Django.
 
 ![Explore](./static_files/img/explore.png)
 
-
 ### City
 
 ![City](./static_files/img/city.png)
-
 
 ### Detail
 
@@ -57,9 +73,26 @@ This repository contains a Airbnb clone created with Python and Django.
 
 ![My Trips](./static_files/img/my_trips.png)
 
-## To Dos
+## Models
 
-- Deploy app on Azure
+Our data has 4 schemas:
+
+- Stay
+- Amenity
+- User
+- Booking
+
+![Database Schema](./static_files/img/database_schema.png)
+
+### Relationships
+
+A user has a one-to-many relationship to review, booking and stay.
+A stay has a many-to-many relationship to amenity, review, and booking.
+
+## Status
+
+Project is complete and deployed!
+Check it out here: (http://3.22.112.117/)
 
 ## Authors
 
@@ -67,4 +100,3 @@ Created by:
 
 - [Ryuichi Miyazaki](https://github.com/rmiyazaki6499)
 - [Tu Vo](https://github.com/tuvo1106)
-
