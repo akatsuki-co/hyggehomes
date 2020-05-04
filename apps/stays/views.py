@@ -54,11 +54,16 @@ class StayDetailView(DetailView):
             reserved = stay.reserve_stay(user, start, end, guests)
             if reserved:
                 charge_price = stay.price * 100 * days.days
+                if charge_price == 0:
+                    charge_price = stay.price * 100
                 stripe.Charge.create(
                     amount=int(charge_price),
                     currency='usd',
                     description=f'Stay at {stay.title} by {user}',
                     source=request.POST['stripeToken']
+                )
+                return redirect(
+                    reverse('user:trips', kwargs={"id": request.user.id})
                 )
             else:
                 messages.error(
@@ -67,6 +72,4 @@ class StayDetailView(DetailView):
                 )
                 return redirect(reverse(
                     "stays:stay_detail", kwargs={"id": stay.id}))
-            return redirect(
-                reverse('user:trips', kwargs={"id": request.user.id})
-            )
+            return redirect('')

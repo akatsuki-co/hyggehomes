@@ -32,10 +32,8 @@ class Booking(models.Model):
 
     def check_overlap(self, new_start, new_end):
         overlap = False
-        if new_start == self.end_date or new_end == self.start_date:
-            overlap = False
-        elif (new_start >= self.start_date and new_start <= self.end_date) or\
-             (new_end >= self.start_date and new_end <= self.end_date):
+        if (new_start >= self.start_date and new_start <= self.end_date) or\
+           (new_end >= self.start_date and new_end <= self.end_date):
             overlap = True
         elif new_start <= self.start_date and new_end >= self.end_date:
             overlap = True
