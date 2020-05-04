@@ -16,8 +16,9 @@ This repository contains a web application to search and book vacation homes cre
   - Bootstrap
   - Jquery
   - FontAwesome
+  - Datepicker
 - Backend framework
-  - Django 3.0
+  - Django 3.0 and Jinja2
 - Databases
   - SQLite (development)
   - PostgreSQL (production)
@@ -53,6 +54,10 @@ We accept and process credit card payments for bookings using Stripe's API.
 #### Unsplash
 
 Images for all of the stays are completely random and are rendered dynamically using Unsplash's API.
+
+### Mapbox
+
+Maps of cities are rendered using Mapbox's API.
 
 ## Views
 
