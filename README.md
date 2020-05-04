@@ -55,7 +55,7 @@ We accept and process credit card payments for bookings using Stripe's API.
 
 Images for all of the stays are completely random and are rendered dynamically using Unsplash's API.
 
-### Mapbox
+#### Mapbox
 
 Maps of cities are rendered using Mapbox's API.
 
