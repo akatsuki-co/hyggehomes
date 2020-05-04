@@ -2,7 +2,16 @@
 
 This repository contains a web application to search and book vacation homes created with Python 3.6+, HTML and CSS.
 
-### Tech Stack
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Views](#views)
+- [Models](#models)
+- [Status](#status)
+- [Authors](#authors)
+
+## Tech Stack
 - Frontend libraries:
   - Bootstrap
   - Jquery
@@ -18,17 +27,11 @@ This repository contains a web application to search and book vacation homes cre
 This is a portfolio project made by 2 computer science students who want to showcase our web development skills.
 
 Ryuichi Miyazaki: [LinkedIn](https://www.linkedin.com/in/rmiyazaki/)
+
 Tu Vo: [LinkedIn](https://www.linkedin.com/in/tu-vo/)
 
 Check out our other projects at: [Akatsuki Co](https://github.com/akatsuki-co)
 
-## Table of Contents
-
-- [Features](#features)
-- [Views](#views)
-- [Models](#models)
-- [Status](#status)
-- [Authors](#authors)
 
 ## Features
 
