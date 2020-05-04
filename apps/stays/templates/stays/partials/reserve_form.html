@@ -27,15 +27,18 @@
         <div class="col-md-12">
             <div class="form-group">
                 <button type="submit" class="btn btn-danger btn-block">
-                <script src="https://checkout.stripe.com/checkout.js" style="visibility: hidden" 
-                  data-key="{{ key }}"
-                  data-description=""
-                  data-amount=""
-                  data-locale="auto">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="{{ key }}"
+                    data-description="TEST CARD # 4242 4242 4242 4242"
+                    data-amount=""
+                    data-locale="auto">
+                </script>
+                <script>
+                    document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
                 </script>
                 Submit
                 </button>
             </div>
         </div>
     </div>
-</form>         
+<!-- </form> -->         
