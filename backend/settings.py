@@ -1,21 +1,21 @@
+import environ
 from django.contrib.messages import constants as messages
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+env = environ.Env()
+environ.Env.read_env()
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+DEBUG = env.bool('DEBUG', default=False)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')+euve2wshufr51_plb$1h8e50oi8-_0=r8uopf4fjow3^@eu7'
+SECRET_KEY = env.str('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
-ALLOWED_HOSTS = []
-
+STRIPE_SECRET_KEY = env.str('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = env.str('STRIPE_PUBLISHABLE_KEY')
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'apps.stays',
 
     # Third Party Apps
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {'default': env.db()}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -137,3 +133,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+

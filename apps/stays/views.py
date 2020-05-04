@@ -1,10 +1,17 @@
+from django.conf import settings
+from django.contrib import messages
 from django.views.generic import DetailView
 from django.http import Http404
 from django.shortcuts import redirect
 from django.urls import reverse
 from datetime import datetime
 
+import stripe
+
 from .models import Stay
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class StayDetailView(DetailView):
@@ -19,7 +26,14 @@ class StayDetailView(DetailView):
             raise Http404("Stay doesn't exist")
         return instance
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['key'] = settings.STRIPE_PUBLISHABLE_KEY
+        return context
+
     def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect('/register')
         if request.method == 'POST':
             user = request.user
             start = request.POST.get('start')
@@ -36,7 +50,26 @@ class StayDetailView(DetailView):
                 raise Http404('End date must not be None')
             stay = Stay.objects.filter(id=stay_id)\
                 .prefetch_related('bookings').first()
-            stay.reserve_stay(user, start, end, guests)
-            return redirect(
-                reverse('user:trips', kwargs={"id": request.user.id})
-            )
+            days = end - start
+            reserved = stay.reserve_stay(user, start, end, guests)
+            if reserved:
+                charge_price = stay.price * 100 * days.days
+                if charge_price == 0:
+                    charge_price = stay.price * 100
+                stripe.Charge.create(
+                    amount=int(charge_price),
+                    currency='usd',
+                    description=f'Stay at {stay.title} by {user}',
+                    source=request.POST['stripeToken']
+                )
+                return redirect(
+                    reverse('user:trips', kwargs={"id": request.user.id})
+                )
+            else:
+                messages.error(
+                    request,
+                    'This Stay is no longer available during those dates'
+                )
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}))
+            return redirect('')

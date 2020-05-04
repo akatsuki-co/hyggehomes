@@ -1,12 +1,9 @@
-from django import forms
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
-from django.db.models import Prefetch
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
 from apps.stays.models import Stay
-from apps.bookings.models import Booking
 
 User = get_user_model()
 
@@ -20,16 +17,16 @@ def register_view(request):
         if password1 and password2 and password1 != password2:
             messages.error(request, "Passwords do not match!")
             return redirect('register')
-            # raise forms.ValidationError("Passwords don't match")
         if password1 and password2 and password1 == password2:
             new_user, created = User.objects.get_or_create(
-                email=email, password=password1)
+                email=email)
             if created:
                 new_user.set_password(password2)
                 new_user.save()
                 login(request, new_user)
             else:
                 messages.error(request, 'User with email already exists')
+                return redirect('register')
             return redirect('explore')
         else:
             messages.error(request, 'Invalid Password')
@@ -61,7 +58,7 @@ class TripsView(ListView):
     def get_context_data(self, *args, **kwargs):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
-        trips = Stay.objects.all().filter(bookings__guest=self.request.user)\
+        trips = Stay.objects.all().filter(bookings__user=self.request.user)\
             .active().prefetch_related('bookings')
         context['trips'] = trips
         return context

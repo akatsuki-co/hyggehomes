@@ -17,7 +17,7 @@ class BookingManager(models.Manager):
 
 class Booking(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    guest = models.ForeignKey(
+    user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT
     )
@@ -32,14 +32,12 @@ class Booking(models.Model):
 
     def check_overlap(self, new_start, new_end):
         overlap = False
-        if new_start == self.end_date or new_end == self.start_date:
-            overlap = False
-        elif (new_start >= self.start_date and new_start <= self.end_date) or\
-             (new_end >= self.start_date and new_end <= self.end_date):
+        if (new_start >= self.start_date and new_start <= self.end_date) or\
+           (new_end >= self.start_date and new_end <= self.end_date):
             overlap = True
         elif new_start <= self.start_date and new_end >= self.end_date:
             overlap = True
         return overlap
 
     def __str__(self):
-        return f'{self.guest.first_name}: {self.start_date} - {self.end_date}'
+        return f'{self.user.first_name}: {self.start_date} - {self.end_date}'
