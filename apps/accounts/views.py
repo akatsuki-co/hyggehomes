@@ -59,6 +59,6 @@ class TripsView(ListView):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
         trips = Stay.objects.all().filter(bookings__user=self.request.user)\
-            .active().prefetch_related('bookings')
+            .active().prefetch_related('bookings').distinct()
         context['trips'] = trips
         return context
