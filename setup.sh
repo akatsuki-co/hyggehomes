@@ -4,9 +4,6 @@ read -p "What is your public IP?: "  IP
 
 PROJECT=$(basename "$PWD")
 USER=$(logname)
-echo $USER
-echo $PROJECT
-echo $IP
 
 echo Updating Packages
 # Update Packages
@@ -28,7 +25,7 @@ echo downloading Project Dependencies
 pip3 install -r requirements.txt
 
 echo downloading gunicorn
-sudo pip3 install gunicorn
+pip install gunicorn
 
 echo Migrating project...
 # Check for changes in the model schema and build the database
@@ -38,7 +35,7 @@ python3 manage.py makemigrations && python3 manage.py migrate
 python manage.py collectstatic
 
 echo Configuring Gunicorn Socket file...
-cat > /etc/systemd/system/gunicorn.socket << EOF
+sudo cat > /etc/systemd/system/gunicorn.socket << EOF
 [Unit]
 Description=gunicorn socket
 
@@ -50,7 +47,7 @@ WantedBy=sockets.target
 EOF
 
 echo Configuring Gunicorn Service file
-cat > /etc/systemd/system/gunicorn.service << EOF
+sudo cat > /etc/systemd/system/gunicorn.service << EOF
 [Unit]
 Description=gunicorn daemon
 Requires=gunicorn.socket
@@ -81,7 +78,7 @@ echo Checking the existence of gunicorn.sock
 file /run/gunicorn.sock
 
 echo Configure NGINX file
-cat > /etc/nginx/sites-available/$PROJECT << EOF
+sudo cat > /etc/nginx/sites-available/$PROJECT << EOF
 server {
     listen 80;
     server_name $IP;
