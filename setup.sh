@@ -1,5 +1,6 @@
 #!/bin/bash
 
+read -p "Did you create the .env file for your settings?"
 read -p "What is your public IP?: "  IP
 
 PROJECT=$(basename "$PWD")
