@@ -2,7 +2,11 @@
 
 read -p "What is your public IP?: "  IP
 
-PROJECT = basename "$PWD"
+PROJECT=$(basename "$PWD")
+USER=$(logname)
+echo $USER
+echo $PROJECT
+echo $IP
 
 echo Updating Packages
 # Update Packages
@@ -11,7 +15,7 @@ sudo apt upgrade
 
 echo Installing Python3, Postgres, NGINX and gunicorn
 # Install Python 3, Postgres & NGINX
-sudo apt install python3-pip python3-dev python3-venv libpq-dev postgresql postgresql-contrib nginx gunicorn curl
+sudo apt install python3-pip python3-dev python3-venv libpq-dev postgresql postgresql-contrib nginx curl
 
 echo creating virtual environment...
 # Create Virtual Environment and Activate it
@@ -22,6 +26,9 @@ source env/bin/activate
 echo downloading Project Dependencies
 # Download Project Dependencies
 pip3 install -r requirements.txt
+
+echo downloading gunicorn
+sudo pip3 install gunicorn
 
 echo Migrating project...
 # Check for changes in the model schema and build the database
@@ -53,10 +60,10 @@ After=network.target
 User=$USER
 Group=www-data
 WorkingDirectory=/home/$USER/$PROJECT
-ExecStart=/home/$USER/$PROJECT/env/bin/gunicorn \
-          --access-logfile - \
-          --workers 3 \
-          --bind unix:/run/gunicorn.sock \
+ExecStart=/home/$USER/$PROJECT/env/bin/gunicorn \\
+          --access-logfile - \\
+          --workers 3 \\
+          --bind unix:/run/gunicorn.sock \\
           backend.wsgi:application
 
 [Install]
