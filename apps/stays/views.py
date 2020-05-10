@@ -34,7 +34,6 @@ class StayDetailView(DetailView):
     def raise_error(self, request, stay, error_message):
         if error_message:
             messages.error(request, error_message)
-            print('We are in the method...')
             return redirect(reverse(
                 "stays:stay_detail", kwargs={"id": stay.id}
             ))
