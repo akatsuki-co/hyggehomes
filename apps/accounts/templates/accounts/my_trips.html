@@ -1,84 +1,112 @@
 {% extends "index.html" %} {% load static %} {% block content %}
 
 <section id="myTrips" class="py-5">
-  <div class="container">
-    <h4 class="font-weight-bold py-3">Trips</h4>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          id="nav-upcoming-tab"
-          data-toggle="tab"
-          href="#upcomingPanel"
-          role="tab"
-          >Upcoming</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          id="nav-past-tab"
-          data-toggle="tab"
-          href="#pastPanel"
-          role="tab"
-          >Past</a
-        >
-      </li>
-    </ul>
-    <div class="tab-content">
-      <div
-        class="container tab-pane fade show active py-3"
-        id="upcomingPanel"
-        role="tabpanel"
-        aria-labelledby="nav-upcoming-tab"
-      >
-        <p class="text-muted py-3">
-          When you’re ready to start planning your next trip, we’re here to
-          help.
-        </p>
-        <img
-          src="{% static 'img/couch.jpg' %}"
-          class="img-fluid"
-          style="opacity: 0.7;"
-        />
-        <button type="button" class="btn btn-lg btn-dark my-5">
-          Explore Airbnb
-        </button>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="pastPanel"
-        role="tabpanel"
-        aria-labelledby="nav-past-tab"
-      >
-        <div class="container">
-          <div class="row">
-            {% for stay in trips %}
-                {% for booking in stay.bookings.all %}
-                    <div class="col-md-4">
-                      <div class="card">
-                          <img src="{{ stay.main_image }}" alt="main_image" />
-                        <div class="card-body">
-                            <small>{{ booking.start_date }} - {{ booking.end_date }}</small>
-                          <h5 class="mt-2" >{{ stay.city }}</h5>
-                          <a href="{{ stay.get_absolute_url }}">
-                            <p>{{ stay.title }}</p>
-                          </a>
-                        </div>
-                        <div class="card-footer">
-                          <a href="{{ stay.get_absolute_url }}">
-                            See details
-                          </a>
-                        </div>
-                      </div>
+    <div class="container">
+        <h4 class="font-weight-bold py-3">Trips</h4>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a
+                    class="nav-link active"
+                    id="nav-upcoming-tab"
+                    data-toggle="tab"
+                    href="#upcomingPanel"
+                    role="tab"
+                    >Upcoming</a
+                >
+            </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            id="nav-past-tab"
+                            data-toggle="tab"
+                            href="#pastPanel"
+                            role="tab"
+                            >Past</a
+                        >
+                    </li>
+        </ul>
+        <div class="tab-content">
+            <div
+                class="container tab-pane fade show active py-3"
+                id="upcomingPanel"
+                role="tabpanel"
+                aria-labelledby="nav-upcoming-tab"
+                >
+                {% if not upcoming_trips %}
+                <p class="text-muted py-3">
+                When you’re ready to start planning your next trip, we’re here to
+                help.
+                </p>
+                <img
+                    src="{% static 'img/couch.jpg' %}"
+                    class="img-fluid"
+                    style="opacity: 0.7;"
+                    />
+                <button type="button" class="btn btn-lg btn-dark my-5">
+                    Explore Airbnb
+                </button>
+                {% else %}
+                <div class="container">
+                    <div class="row">
+                        {% for stay in upcoming_trips %}
+                            {% for booking in stay.upcoming_bookings_by_guest %}
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="{{ stay.main_image }}" alt="main_image" />
+                                    <div class="card-body">
+                                        <small>{{ booking.start_date }} - {{ booking.end_date  }}</small>
+                                        <h5 class="mt-2" >{{ stay.city }}</h5>
+                                        <a href="{{ stay.get_absolute_url  }}">
+                                            <p>{{ stay.title  }}</p>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="{{ stay.get_absolute_url  }}">
+                                            See details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
                     </div>
-                {% endfor %}
-            {% endfor %}
-          </div>
+                </div>
+                {% endif %}
+            </div>
+            <div
+                class="tab-pane fade"
+                id="pastPanel"
+                role="tabpanel"
+                aria-labelledby="nav-past-tab"
+                >
+                <div class="container">
+                    <div class="row">
+                        {% for stay in past_trips %}
+                            {% for booking in stay.past_bookings_by_guest %}
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="{{ stay.main_image }}" alt="main_image" />
+                                    <div class="card-body">
+                                        <small>{{ booking.start_date }} - {{ booking.end_date }}</small>
+                                        <h5 class="mt-2" >{{ stay.city }}</h5>
+                                        <a href="{{ stay.get_absolute_url }}">
+                                            <p>{{ stay.title }}</p>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="{{ stay.get_absolute_url }}">
+                                            See details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 {% endblock %}
