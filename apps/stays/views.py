@@ -57,10 +57,16 @@ class StayDetailView(DetailView):
                 raise Http404('End date must not be None')
             stay = Stay.objects.filter(id=stay_id)\
                 .prefetch_related('bookings').first()
-            days = end - start
             if start < date.today() or end < date.today():
                 messages.error(request,
                                'You are trying to reserve in the past')
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}
+                ))
+            days = end - start
+            if days.days == 0:
+                messages.error(request,
+                               'You must reserve for at least one day')
                 return redirect(reverse(
                     "stays:stay_detail", kwargs={"id": stay.id}
                 ))
