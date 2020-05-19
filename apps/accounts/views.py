@@ -1,9 +1,12 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
+from django.db.models import Prefetch
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
+from datetime import date
 
 from apps.stays.models import Stay
+from apps.bookings.models import Booking
 
 User = get_user_model()
 
@@ -58,7 +61,21 @@ class TripsView(ListView):
     def get_context_data(self, *args, **kwargs):
         """Method for getting context data"""
         context = super().get_context_data(**kwargs)
-        trips = Stay.objects.all().filter(bookings__user=self.request.user)\
-            .active().prefetch_related('bookings')
-        context['trips'] = trips
+        trips = Stay.objects.filter(bookings__user=self.request.user)\
+            .active().prefetch_related(
+                Prefetch('bookings',
+                         queryset=Booking.objects.filter(
+                             user=self.request.user))).distinct()
+        upcoming_trips = []
+        past_trips = []
+        for trip in trips:
+            for booking in trip.bookings.all():
+                if trip not in past_trips and\
+                        booking.end_date < date.today():
+                    past_trips.append(trip)
+                if trip not in upcoming_trips and\
+                        booking.end_date >= date.today():
+                    upcoming_trips.append(trip)
+        context['upcoming_trips'] = upcoming_trips
+        context['past_trips'] = past_trips
         return context

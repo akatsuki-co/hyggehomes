@@ -83,12 +83,13 @@ Maps of cities are rendered using Mapbox's API.
 
 ## Models
 
-Our data has 4 schemas:
+Our data has 5 schemas:
 
-- Stay
 - Amenity
-- User
 - Booking
+- Review
+- Stay
+- User
 
 ![Database Schema](./static_files/img/database_schema.png)
 

@@ -139,7 +139,8 @@ class Stay(models.Model):
     description = models.CharField(max_length=1250)
     amenities = models.ManyToManyField(Amenity)
     reviews = models.ManyToManyField(Review, blank=True)
-    bookings = models.ManyToManyField(Booking, blank=True)
+    bookings = models.ManyToManyField(
+        Booking, blank=True, related_name='stay')
     featured = models.BooleanField(default=False)
     main_image = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -183,6 +184,24 @@ class Stay(models.Model):
             return True
         else:
             raise ValueError("Booking must have a start/end date")
+
+    def upcoming_bookings_by_guest(self):
+        """Qeuryset of Bookings by guest"""
+        bookings = []
+        for booking in self.bookings.all():
+            if booking.end_date >= datetime.date.today():
+                bookings.append(booking)
+        bookings.sort(key=lambda booking: booking.start_date)
+        return bookings
+
+    def past_bookings_by_guest(self):
+        """Qeuryset of Bookings by guest"""
+        bookings = []
+        for booking in self.bookings.all():
+            if booking.end_date < datetime.date.today():
+                bookings.append(booking)
+        bookings.sort(key=lambda booking: booking.start_date)
+        return bookings
 
     def __str__(self):
         """docstring for __str__"""

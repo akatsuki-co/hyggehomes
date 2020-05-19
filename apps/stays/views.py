@@ -4,7 +4,7 @@ from django.views.generic import DetailView
 from django.http import Http404
 from django.shortcuts import redirect
 from django.urls import reverse
-from datetime import datetime
+from datetime import datetime, date
 
 import stripe
 
@@ -31,6 +31,13 @@ class StayDetailView(DetailView):
         context['key'] = settings.STRIPE_PUBLISHABLE_KEY
         return context
 
+    def raise_error(self, request, stay, error_message):
+        if error_message:
+            messages.error(request, error_message)
+            return redirect(reverse(
+                "stays:stay_detail", kwargs={"id": stay.id}
+            ))
+
     def post(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
             return redirect('/register')
@@ -50,7 +57,19 @@ class StayDetailView(DetailView):
                 raise Http404('End date must not be None')
             stay = Stay.objects.filter(id=stay_id)\
                 .prefetch_related('bookings').first()
+            if start < date.today() or end < date.today():
+                messages.error(request,
+                               'You are trying to reserve in the past')
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}
+                ))
             days = end - start
+            if days.days == 0:
+                messages.error(request,
+                               'You must reserve for at least one day')
+                return redirect(reverse(
+                    "stays:stay_detail", kwargs={"id": stay.id}
+                ))
             reserved = stay.reserve_stay(user, start, end, guests)
             if reserved:
                 charge_price = stay.price * 100 * days.days
