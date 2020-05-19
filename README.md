@@ -1,6 +1,6 @@
-# Airbnb clone
+# Hygge Homes
 
-This repository contains a web application to search and book vacation homes created with Python 3.6+, HTML and CSS.
+This repository contains a web application to search and book vacation homes created with Python 3.6+, HTML and CSS. The inspiration for this project is to make a Airbnb clone.
 
 ## Table of Contents
 
@@ -24,6 +24,7 @@ This repository contains a web application to search and book vacation homes cre
   - PostgreSQL (production)
 - Deployment
   - Amazon Web Services EC2 (Ubuntu 18.04)
+  - Amazon Web Services Elastic IP
 
 This is a portfolio project made by 2 computer science students who want to showcase our web development skills.
 
@@ -101,7 +102,7 @@ A stay has a many-to-many relationship to amenity, review, and booking.
 ## Status
 
 Project is complete and deployed!
-Check it out here: (http://3.22.112.117/)
+Check it out here: (we are currently getting a domain name)
 
 ## Authors
 
