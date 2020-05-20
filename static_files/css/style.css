@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -36,8 +36,13 @@ a:hover {
   border-radius: 25px !important;
 }
 
+.fa-home,
 .stars {
   color: red;
+}
+
+.brand {
+  letter-spacing: 1px;
 }
 
 .green-stars {
