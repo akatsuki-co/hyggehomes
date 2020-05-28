@@ -1,5 +1,6 @@
 <form action='' method="POST">
     {% csrf_token %}
+    <fieldset>
     <input type="hidden" name="stay" value={{stay.id}} />
     <div class="form-group datepicker-detail">
         <div class="d-flex font-weight-bold justify-content-between">
@@ -43,4 +44,5 @@
             </div>
         </div>
     </div>
-<!-- </form> -->         
+    <fieldset>
+</form>
