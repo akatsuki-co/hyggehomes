@@ -80,7 +80,7 @@ Maps of cities are rendered using Mapbox's API.
 
 ### My Trips
 
-![My Trips](./static_files/img/my_trips.png)
+![My Trips](./static_files/img/mytrips.png)
 
 ## Models
 
