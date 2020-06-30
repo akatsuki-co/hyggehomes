@@ -1,6 +1,9 @@
 # Hygge Homes
 
-This repository contains a web application to search and book vacation homes created with Python 3.6+, HTML and CSS. The inspiration for this project is to make a Airbnb clone.
+This repository contains a full-stack web application to search and book vacation homes created with Python 3.6+, HTML and CSS.
+
+What is Hygge? Hygge is a Danish and Norwegian word for a mood of coziness and comfortable conviviality with feelings of wellness and contentment.
+This inspiration for this project is to create a site where users can search and find the perfect spot for their vacation home, much like Airbnb.
 
 ## Table of Contents
 
