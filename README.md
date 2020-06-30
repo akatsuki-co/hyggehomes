@@ -102,7 +102,7 @@ A stay has a many-to-many relationship to amenity, review, and booking.
 ## Status
 
 Project is complete and deployed!
-Check it out here: (we are currently getting a domain name)
+Check it out here: ![Hygge Homes](https://hyggehomes.dev)
 
 ## Authors
 
