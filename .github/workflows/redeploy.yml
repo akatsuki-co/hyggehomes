@@ -18,6 +18,6 @@ jobs:
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY   }}
                   aws-region: us-east-2
                   instance-ids: ${{ secrets.INSTANCE_ID   }}
-                  comment: Deploy hyygehomes master 
+                  comment: Deploy hyggehomes master 
                   working-directory: /home/ubuntu/hyggehomes
                   command: /bin/sh sudo redeploy.sh
