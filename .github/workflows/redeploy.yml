@@ -20,4 +20,4 @@ jobs:
                   instance-ids: ${{ secrets.INSTANCE_ID   }}
                   comment: Deploy hyggehomes master 
                   working-directory: /home/ubuntu/hyggehomes
-                  command: /bin/sh redeploy.sh
+                  command: /bin/sh ./scripts/redeploy.sh
