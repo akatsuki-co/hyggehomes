@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  django-app:
+    build: '.'
+    env_file:
+      - 'backend/.env'
+    image: 'rmiyazaki6499/hyggehomes'
+    tty: true
+    stdin_open: true
+    ports:
+      - '8000:8000'
