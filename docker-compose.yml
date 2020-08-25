@@ -4,7 +4,7 @@ services:
   hyggehomes:
     build: '.'
     env_file:
-      - 'backend/.env'
+      - 'backend/.env-dev'
     image: 'rmiyazaki6499/hyggehomes'
     tty: true
     stdin_open: true
