@@ -8,6 +8,7 @@ This inspiration for this project is to create a site where users can search and
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
+- [Running the development server](#running-the-development-server)
 - [Features](#features)
 - [Views](#views)
 - [Models](#models)
@@ -38,11 +39,11 @@ Tu Vo: [LinkedIn](https://www.linkedin.com/in/tu-vo/)
 Check out our other projects at: [Akatsuki Co](https://github.com/akatsuki-co)
 
 
-### Setting up the `hyggehomes` development server with Docker
+## Running the development server
 
-For those that are not interested in setting up the project manually or would simply not have to worry about downloading python and its dependencies, we have created a Dockerfile and docker-compose.yml file to help create a container with everything you would need to run the project.
+For those that are interested in running the development server, we have containerized the project with Docker for convenience.
 
-#### Install Docker
+### Install Docker
 
 To make this as easy as possible, we will be using *Docker Compose* to creat our container.
 
@@ -59,7 +60,7 @@ $ docker-compose --version
 docker-compose version 1.26.2, build eefe0d31
 ```
 
-#### Build and Run the Container
+### Build and Run the Container
 
 - Clone the repo to your local machine:
 
@@ -85,7 +86,7 @@ $ docker exec -it hyggehomes_hyggehomes_1 bash
 
 This will take you into the bash session within the container.
 
-#### Cleaning up the Container and Image
+### Cleaning up the Container and Image
 
 To stop the container from running, use `<Ctrl-C>` twice.
 To close down the container use the command:
